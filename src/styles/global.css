@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: "AlYermook";
+  src: url("/fonts/ae_AlYermook-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Arabic";
+  src: url("/fonts/Adobe-Arabic-SHIN-Typo-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "KoSans";
+  src: url("/fonts/kosans-demo.regular.otf") format("opentype");
+
+}
+
+@font-face {
+  font-family: "Logirent";
+  src: url("/fonts/Logirentdemo-Ea5y8.otf") format("opentype");
+ 
+}
+
+@font-face {
+  font-family: "Cortoba";
+  src: url("/fonts/ae_Cortoba-Regular.ttf") format("truetype");
+  /* font-weight: 400;
+  font-style: normal; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+
+:root {
+  --color-dark-gray: #393C3D;
+  --color-green: #016938;
+  --color-black: #070808;
+}
