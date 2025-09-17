@@ -1,12 +1,20 @@
 
 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home/Home";
+
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-2xl font-bold text-gray-800">
-        Vite + React + Tailwind Setup
-      </h1>
-    </div>
+   <>
+   
+   <Navbar/>
+   <Home/>
+
+    <Footer/>
+   
+   </>
   );
 }
 
