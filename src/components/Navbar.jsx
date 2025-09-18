@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md pt-[97px] pb-[37px]">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent border-b border-black/20 pt-[97px] pb-[37px]">
       <div className="max-w-[1220px] mx-auto px-4 py-4 flex items-center justify-between">
 
         {/* Left - Logo */}

@@ -1,6 +1,4 @@
-
 @import "tailwindcss";
-
 
 @font-face {
   font-family: "AlYermook";
@@ -26,8 +24,7 @@
 
 /* Then define your custom theme tokens (fonts, colors) using @theme syntax or in tailwind.config.js */
 @theme {
-
-  --color-dark-gray: #393C3D;
+  --color-dark-gray: #393c3d;
   --color-green: #016938;
   --color-custom-black: #070808;
 
@@ -39,4 +36,9 @@
   --font-cortoba: "Cortoba", serif;
 }
 
-
+/* Outline Text Utility */
+.text-outline-white {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+}
