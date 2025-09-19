@@ -39,6 +39,11 @@
 /* Outline Text Utility */
 .text-outline-white {
   color: transparent;
-  -webkit-text-stroke: 1px white;
-  text-stroke: 1px white;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
+}
+.text-outline-black {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
 }

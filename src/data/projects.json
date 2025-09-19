@@ -1,0 +1,322 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Dead Sea Parkway",
+      "slug": "dead-sea-parkway",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "Jordan"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      ],
+      "details": {
+        "sector": ["Transportation", "Planning & Design"],
+        "location": "Jordan",
+        "clients": [
+          "Ministry of Public Works and Housing (MPWH)",
+          "Japan International Cooperation Agency (JICA)",
+          "PACIFIC Consultants International (currently Oriental Consultants)",
+          "Yamashita Sekkei Inc., both of Japan"
+        ],
+        "periodsOfServices": "2003-2007"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    },
+    {
+      "id": 12,
+      "title": "Amaar Group Tower",
+      "slug": "amaar-group-tower",
+      "card": {
+        "thumbnail": "/our-projects/thumbnail/project.png",
+        "location": "UAE - Abu Dhabi"
+      },
+      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "sliderImages": [
+        "/our-projects/slider/slider-1.jpg",
+        "/our-projects/slider/slider-2.jpg",
+        "/our-projects/slider/slider-3.jpg",
+        "/our-projects/slider/slider-4.jpg"
+      ],
+      "description": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
+        "This is where you can place a longer description for the Amaar Group Tower project."
+      ],
+      "details": {
+        "sector": ["Residential", "Architecture & Design"],
+        "location": "UAE - Abu Dhabi",
+        "clients": ["Amaar Group"],
+        "periodsOfServices": "2010-2014"
+      }
+    }
+  ]
+}
