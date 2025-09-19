@@ -8,7 +8,7 @@ import youtube from "../assets/footer/youtube.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#393C3D] text-white">
-      <div className="max-w-[1240px] mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-[1312px] mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
           <img src={logo} alt="Logo" className="h-12 w-auto mb-6" />
           <ul className="space-y-3 font-kosans text-[16px] leading-[24px]">

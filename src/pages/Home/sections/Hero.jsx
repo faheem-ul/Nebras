@@ -12,7 +12,7 @@ const Hero = () => {
         className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="max-w-[1440px] mx-auto px-4 h-full flex items-center">
+        <div className="max-w-[1312px] mx-auto px-4 h-full flex items-center">
           {/* Welcome Message */}
           <Text className="text-white font-logirent text-[32px] sm:text-[48px] md:text-[65px] leading-tight">
             Welcome <br /> Message
