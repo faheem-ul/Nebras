@@ -11,7 +11,7 @@ const Hero = () => {
             
             {/* Big Hero Background */}
             <div
-                className="relative w-full h-[600px] sm:h-[750px] md:h-[900px] bg-cover bg-center"
+                className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] bg-cover bg-center"
                 style={{ backgroundImage: `url(${heroBg})` }}
             >
                 <div className="max-w-[1440px] mx-auto px-4 h-full flex items-center">

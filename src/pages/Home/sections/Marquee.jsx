@@ -33,4 +33,5 @@ const ImageMarquee = () => {
     );
 };
 
+
 export default ImageMarquee;

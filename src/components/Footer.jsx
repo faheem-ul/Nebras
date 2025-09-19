@@ -78,7 +78,7 @@ const Footer = () => {
               placeholder="ENTER YOUR EMAIL"
               className="w-full pl-4 pr-[120px] py-3 rounded-full text-black bg-white outline-none placeholder-[#DDDDDD]-400 font-kosans text-[16px]"
             />
-            <button className="absolute top-1 right-1 bottom-1 px-6 bg-green text-white rounded-full font-kosans text-[14px]">
+            <button className="absolute top-1 right-1 bottom-1 px-6 bg-green text-white rounded-full font-kosans text-[14px] cursor-pointer">
               SUBSCRIBE
             </button>
           </div>

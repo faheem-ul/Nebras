@@ -38,13 +38,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 pb-6 flex flex-col gap-4">
-          <a href="#" className="font-logirent font-normal text-lg leading-none text-gray-800 hover:text-green-600">العربية</a>
-          <a href="#" className="font-logirent font-normal text-lg leading-none text-gray-800 hover:text-green-600">Home</a>
-          <a href="#" className="font-logirent font-normal text-lg leading-none text-gray-800 hover:text-green-600">Our Projects</a>
-          <a href="#" className="font-logirent font-normal text-lg leading-none text-gray-800 hover:text-green-600">About Us</a>
-          <a href="#" className="font-logirent font-normal text-lg leading-none text-gray-800 hover:text-green-600">Insights</a>
-
+        <div className="md:hidden bg-white pt-[20px] px-4 pb-6 flex flex-col gap-4 items-center">
+          <Link to="" className="font-logirent font-normal text-lg leading-none hover:text-green-600">العربية</Link>
+          <Link to="/" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Home</Link>
+          <Link to="" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Our Projects</Link>
+          <Link to="about-us" className="font-logirent font-normal text-lg leading-none hover:text-green-600">About Us</Link>
+          <Link to="" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Insights</Link>
 
           <button className="mt-4 px-6 py-2 bg-green text-white rounded-md font-logirent font-normal text-lg leading-none">
             Contact Us
