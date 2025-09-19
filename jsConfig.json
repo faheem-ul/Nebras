@@ -7,7 +7,8 @@
       "@/lib/*": ["src/lib/*"],
       "@/ui/*": ["src/components/ui/*"],
       "@/hooks/*": ["src/hooks/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@/assets/*": ["src/assets/*"]
     }
   }
 }
