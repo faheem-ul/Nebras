@@ -1,51 +1,68 @@
-import Text from '@/components/ui/Text'
 import React from 'react'
+
+import Text from '@/components/ui/Text'
+
+import mission from '@/assets/about/mission.jpg'
+import vission from '@/assets/about/vission.jpg'
 
 const MissionVission = () => {
     return (
-        <section className="w-full bg-white px-6 py-16">
+        <section className="w-full bg-white py-10 md:py-[70px]">
+
             {/* Info */}
-            <div className='max-w-[821px] mx-auto'>
-                <Text className="text-[24px] leading-[42px]">Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </Text>
+            <div className="max-w-[821px] mx-auto px-5">
+                <Text className="text-base leading-6 md:text-[24px] md:leading-[42px] text-center md:text-left">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.
+                </Text>
             </div>
-            <div className="max-w-[1312px] w-full mx-auto flex flex-col gap-4">
 
-                <h2 className="text-[36px] md:text-[65px] font-logirent leading-tight">
-                    What We Do
-                </h2>
+            {/* Our Mission */}
+            <div className="flex flex-col md:flex-row items-center justify-between max-w-[1312px] w-full mx-auto mt-10 md:mt-[107px] gap-8 px-5">
+                {/* Image Column */}
+                <div className="w-full md:max-w-[600px] flex-shrink-0">
+                    <img
+                        src={mission}
+                        alt="Mission"
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
 
-                <div className="grid md:grid-cols-2 gap-10 items-start">
-
-                    <div>
-                        <img
-                            // src={whatWeDoImage}
-                            alt="What we do"
-                            className="w-full object-cover"
-                        />
-                    </div>
-
-
-                    <div>
-                        <p className="max-w-[770px] text-[18px] md:text-[24px] font-kosans mb-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                        </p>
-                        <p className="max-w-[770px] text-[18px] md:text-[24px] font-kosans mb-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book.
-                        </p>
-                        <p className="max-w-[770px] text-[18px] md:text-[24px] font-kosans mb-6">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text
-                            ever since the 1500s, when an unknown printer took a galley of type
-                            and scrambled it to make a type specimen book.
-                        </p>
-                    </div>
+                {/* Text Column */}
+                <div className="flex-1">
+                    <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                    </Text>
                 </div>
             </div>
+
+            {/* Our Vision */}
+            <div className="flex flex-col md:flex-row-reverse items-center justify-between max-w-[1312px] w-full mx-auto mt-10 md:mt-[70px] gap-8 px-5">
+                {/* Image Column */}
+                <div className="w-full md:max-w-[600px] flex-shrink-0">
+                    <img
+                        src={vission}
+                        alt="Vision"
+                        className="w-full h-auto object-cover"
+                    />
+                </div>
+
+                {/* Text Column */}
+                <div className="flex-1">
+                    <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                    </Text>
+                </div>
+            </div>
+
         </section>
     )
 }

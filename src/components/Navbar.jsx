@@ -1,30 +1,30 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../assets/NavLogo.png";
+import logo from "../assets/nebras-lobo-green.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent border-b border-black/20 pt-[97px] pb-[37px]">
-      <div className="max-w-[1220px] mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[70px] md:pt-[97px] pb-[37px]">
+      <div className="max-w-[1312px] mx-auto px-5  flex items-center justify-between">
 
         {/* Left - Logo */}
-        <img src={logo} alt="Logo" className="h-10 w-auto cursor-pointer" />
+        <img src={logo} alt="Logo" className="h-auto w-[120px] md:w-[166px] cursor-pointer" />
 
         {/* Right - Nav Links (Desktop) */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center justify-end gap-8 flex-wrap">
           <Link to="" className="font-logirent font-normal text-lg leading-none hover:text-green-600">العربية</Link>
           <Link to="/" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Home</Link>
           <Link to="" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Our Projects</Link>
           <Link to="about-us" className="font-logirent font-normal text-lg leading-none hover:text-green-600">About Us</Link>
-          <Link to="" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Insights</Link>
+          <Link to="insights" className="font-logirent font-normal text-lg leading-none  hover:text-green-600">Insights</Link>
 
 
-          <button className="ml-6 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none">
+          <Link to="contact-us" className="ml-6 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none">
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}

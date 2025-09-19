@@ -19,7 +19,7 @@ const Insights = () => {
 
                 {/* Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[64px] mb-[60px]">
-                    {[...Array(3)].map((_, i) => (
+                    {[...Array(6)].map((_, i) => (
                         <div key={i} className="flex flex-col">
                             <img src={insight} alt="Insight" className="w-full max-w-[418px] object-cover" />
 
