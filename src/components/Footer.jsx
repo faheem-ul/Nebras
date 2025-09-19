@@ -72,7 +72,7 @@ const Footer = () => {
         <div>
           <h3 className="font-kosans text-[20px] mb-6">Subscribe Newslatter</h3>
 
-          <div className="relative w-[330px] mb-6">
+          <div className="relative md:w-[330px] w-full mb-6">
             <input
               type="email"
               placeholder="ENTER YOUR EMAIL"
