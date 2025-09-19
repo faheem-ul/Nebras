@@ -14,10 +14,10 @@ const HeroSection = () => {
             />
 
             {/* Main Content */}
-            <div className="relative flex flex-col  min-h-[827px] max-w-[1312px] mx-auto pt-[377px]">
+            <div className="relative flex flex-col  min-h-[827px] max-w-[1312px] mx-auto pt-[377px] px-5">
                 <Text as="h1" className="text-white mb-[20px] ">Contact <span className="text-outline-white">Us</span></Text>
                 <div className="w-[145px] h-px bg-white" />
-                <Text className="max-w-[648px] md:text-[18px] md:leading-[32px] text-white mt-[61px]">Reach out to Us for inquiries, partnerships, or more information
+                <Text className="max-w-[648px] text-[16px] md:text-[18px] md:leading-[32px] text-white mt-[61px]">Reach out to Us for inquiries, partnerships, or more information
                     about our services. We're here to assist you
                     with any questions and look forward to connecting with
                     you.</Text>

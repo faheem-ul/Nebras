@@ -4,10 +4,10 @@ import MissionVission from './sections/MissionVission'
 
 const AboutUs = () => {
     return (
-        <main>
+        <>
             <HeroSection />
             <MissionVission />
-        </main>
+        </>
     )
 }
 
