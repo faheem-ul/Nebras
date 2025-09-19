@@ -10,7 +10,7 @@ const HeroSection = () => {
             <div className="relative flex flex-col md:flex-row items-start justify-between max-w-[1440px] mx-auto min-h-[400px] md:min-h-[611px]">
 
                 {/* Left Section (Text) */}
-                <div className="px-5 md:pl-[68px]">
+                <div className="px-5 md:pl-[88px]">
                     <Text className="text-sm md:text-[18px] text-white mt-6 md:mt-[61px]">
                         HOME / WHO WE ARE
                     </Text>
@@ -33,7 +33,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Bottom Description */}
-                <div className="bg-[#016938] text-white py-6 md:py-[36.75px] px-5 md:pl-[67.6px] md:pr-[102px] max-w-full md:max-w-[982px] relative md:absolute md:bottom-0 left-0">
+                <div className="bg-[#016938] text-white py-6 md:py-[36.75px] px-5 md:pl-[88px] md:pr-[102px] max-w-full md:max-w-[982px] relative md:absolute md:bottom-0 left-0">
                     <Text className="text-sm leading-6 md:text-[18px] md:leading-[27px]">
                         Consolidated Consultants Group (CCG) is a pioneering architectural and
                         engineering consultancy firm that provides a comprehensive range of
