@@ -8,7 +8,7 @@ import youtube from "../assets/footer/youtube.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#393C3D] text-white">
-      <div className="max-w-[1240px] mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-[1312px] mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
           <img src={logo} alt="Logo" className="h-12 w-auto mb-6" />
           <ul className="space-y-3 font-kosans text-[16px] leading-[24px]">
@@ -52,10 +52,16 @@ const Footer = () => {
           <h3 className="font-kosans text-[20px] mb-6">UTILITY PAGES</h3>
           <ul className="space-y-3 font-kosans font-normal text-[18px]">
             <li>
-              <a href="#">CCg & Hudson <br />Meridian</a>
+              <a href="#">
+                CCg & Hudson <br />
+                Meridian
+              </a>
             </li>
             <li>
-              <a href="#">Invitation to a <br />Meeting</a>
+              <a href="#">
+                Invitation to a <br />
+                Meeting
+              </a>
             </li>
             <li>
               <a href="#">Terms of Use</a>
@@ -78,7 +84,7 @@ const Footer = () => {
               placeholder="ENTER YOUR EMAIL"
               className="w-full pl-4 pr-[120px] py-3 rounded-full text-black bg-white outline-none placeholder-[#DDDDDD]-400 font-kosans text-[16px]"
             />
-            <button className="absolute top-1 right-1 bottom-1 px-6 bg-green text-white rounded-full font-kosans text-[14px]">
+            <button className="absolute top-1 right-1 bottom-1 px-6 bg-green text-white rounded-full font-kosans text-[14px] cursor-pointer">
               SUBSCRIBE
             </button>
           </div>
@@ -96,7 +102,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
 
       <div className="border-t border-white-600">
         <p className="text-center py-6 text-sm font-kosans text-[16px]">
