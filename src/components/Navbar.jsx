@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent  pt-[97px] pb-[37px]">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[70px] md:pt-[97px] pb-[37px]">
       <div className="max-w-[1312px] mx-auto px-5  flex items-center justify-between">
 
         {/* Left - Logo */}
-        <img src={logo} alt="Logo" className="h-auto w-[166px] cursor-pointer" />
+        <img src={logo} alt="Logo" className="h-auto w-[120px] md:w-[166px] cursor-pointer" />
 
         {/* Right - Nav Links (Desktop) */}
         <div className="hidden md:flex items-center justify-end gap-8 flex-wrap">
