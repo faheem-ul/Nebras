@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 // Import all logo variations
 import greenLogo from "../assets/navbar/lobo-green.png";
@@ -15,7 +16,9 @@ const Navbar = () => {
   useEffect(() => {
     if (
       location.pathname === "/about-us" ||
-      location.pathname === "/contact-us"
+      location.pathname === "/contact-us" ||
+      location.pathname.startsWith("/our-projects/")
+
     ) {
       setLogo(whiteLogo);
     } else if (location.pathname === "/insights") {
@@ -43,57 +46,76 @@ const Navbar = () => {
         />
 
         {/* Right - Nav Links (Desktop) */}
-        <div className="hidden md:flex items-center justify-end gap-[43px] flex-wrap">
-          <Link
+        <div
+          className={`hidden md:flex items-center justify-end gap-[43px] flex-wrap ${location.pathname === "/our-projects" ||
+            location.pathname === "/insights"
+            ? "text-black"
+            : "text-white"
+            }`}>
+
+          <NavLink
             to=""
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className="font-logirent font-normal text-lg leading-none hover:text-[#016938] "
           >
             العربية
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/our-projects"
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Our Projects
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="about-us"
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             About Us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="insights"
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Insights
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="contact-us"
             className="ml-3 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
           >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Hamburger */}
-        <button
-          className={`md:hidden text-3xl z-50 ${location.pathname === "/about-us" ||
-            location.pathname === "/contact-us"
-            ? "text-white"
-            : "text-black"
-            }`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? "✕" : "☰"}
-        </button>
+        {!isOpen && (
+          <button
+            className={`md:hidden text-3xl z-50 ${location.pathname === "/about-us" ||
+              location.pathname === "/contact-us" ||
+              location.pathname.startsWith("/our-projects/")
+              ? "text-white"
+              : "text-black"
+              }`}
+            onClick={() => setIsOpen(true)}
+          >
+            <FiMenu />
+          </button>
+        )}
+
+        {/* Mobile Close */}
+        {isOpen && (
+          <button
+            className="md:hidden text-3xl z-50 text-black"
+            onClick={() => setIsOpen(false)}
+          >
+            <FiX />
+          </button>
+        )}
       </div>
 
       {/* Fullscreen Mobile Menu */}
