@@ -36,7 +36,10 @@ function ProjectsArchive() {
         }
     };
     return (
-        <section className="w-full bg-white pt-[238px] md:pt-[338px] pb-[64px]">
+        <section className="w-full bg-whites pt-[165px] md:pt-[214px] pb-[64px]">
+
+            <hr className="border-t border-[#000000]/20 pt-[123px]" />
+
             <div className="max-w-[1312px] w-full mx-auto px-4">
 
                 {/* Hero Section */}
