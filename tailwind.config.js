@@ -2,10 +2,10 @@
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  
+
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,vue,svelte}", 
+    "./src/**/*.{js,ts,jsx,tsx,vue,svelte}",
   ],
   theme: {
     extend: {
@@ -24,6 +24,6 @@ export default {
     }
   },
   plugins: [
-    require('tailwind-scrollbar')
+    // require('tailwind-scrollbar')
   ],
 };
