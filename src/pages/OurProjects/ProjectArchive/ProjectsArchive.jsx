@@ -4,6 +4,7 @@ import Text from "@/components/ui/Text"
 import filterIcon from "@/assets/our-projects/filter-icon.svg"
 import leftIcon from "@/assets/our-projects/pag-left-icon.svg"
 import rightIcon from "@/assets/our-projects/pag-right-icon.svg"
+import closeIcon from "@/assets/our-projects/close-icon.svg"
 
 import projectsData from "../../../data/projects.json";
 import ProjectCard from "../../../components/ProjectCard";
@@ -12,6 +13,10 @@ function ProjectsArchive() {
     // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
     const projectsPerPage = 9;
+
+    // filter state
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [selectedFilter, setSelectedFilter] = useState("all");
 
     // Calculate page data
     const totalProjects = projectsData.projects.length;
@@ -43,10 +48,81 @@ function ProjectsArchive() {
                     >
                         <span className="text-outline-black">Our</span> projects
                     </Text>
-                    {/* Filter Button */}
-                    <div className="flex gap-[11px]">
-                        <img src={filterIcon} />
-                        <Text className="text-[16px] md:text-[16px]">Filter</Text>
+
+                    <div className="relative w-full md:w-auto inline-flex justify-center">
+                        {/* Filter Button */}
+                        <button
+                            className="flex items-center gap-[11px] cursor-pointer"
+                            onClick={() => setIsFilterOpen((prev) => !prev)}
+                        >
+                            <img src={filterIcon} />
+                            <Text className="text-[16px] md:text-[16px]">Filter</Text>
+                        </button>
+                        {/* Filter Box */}
+                        {isFilterOpen && (
+                            <div className="absolute right-0 top-full mt-3 z-40 w-full max-w-[100vw] sm:w-[390px] bg-[#9EE7B8] overflow-hidden">
+
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => setIsFilterOpen(false)}
+                                    className="cursor-pointer ml-auto block mr-[28px] mt-[24px]"
+                                >
+                                    <img src={closeIcon} className="w-4 h-4" />
+                                </button>
+
+                                <div className="flex items-center justify-between pt-[16px] pb-[19px] pl-[24px]">
+                                    <button
+                                        onClick={() => setSelectedFilter("all")}
+                                        className="flex items-center gap-4 text-[16px] font-kosans cursor-pointer"
+                                    >
+                                        <span
+                                            className={`w-2 h-2 rounded-full ${selectedFilter === "all"
+                                                ? "bg-black"
+                                                : "bg-transparent"
+                                                }`}
+                                        />
+                                        <span>All Projects</span>
+                                    </button>
+                                </div>
+
+                                <hr class="border-t-[0.5px] border-black" />
+
+                                {/* Sector */}
+                                <div className="flex items-center justify-between py-[19px] pl-[24px]">
+                                    <button
+                                        onClick={() => setSelectedFilter("sector")}
+                                        className="flex items-center gap-4 text-[16px] font-kosans cursor-pointer"
+                                    >
+                                        <span
+                                            className={`w-2 h-2 rounded-full ${selectedFilter === "sector"
+                                                ? "bg-black"
+                                                : "bg-transparent"
+                                                }`}
+                                        />
+                                        <span>Sector</span>
+                                    </button>
+                                </div>
+
+                                <hr class="border-t-[0.5px] border-black" />
+
+                                {/* Locations */}
+                                <div className="flex items-center justify-between pt-[19px] pb-[25px] pl-[24px]">
+                                    <button
+                                        onClick={() => setSelectedFilter("location")}
+                                        className="flex items-center gap-4 text-[16px] font-kosans cursor-pointer"
+                                    >
+                                        <span
+                                            className={`w-2 h-2 rounded-full ${selectedFilter === "location"
+                                                ? "bg-black"
+                                                : "bg-transparent"
+                                                }`}
+                                        />
+                                        <span>Locations</span>
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
                     </div>
                 </div>
 
