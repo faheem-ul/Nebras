@@ -31,15 +31,14 @@ const HeroSection = () => {
                         className="w-full h-auto md:h-full object-cover"
                     />
                 </div>
-
-                {/* Bottom Description */}
-                <div className="bg-[#016938] text-white py-6 md:py-[36.75px] px-5 md:pl-[88px] md:pr-[102px] max-w-full md:max-w-[982px] relative md:absolute md:bottom-0 left-0">
-                    <Text className="text-sm leading-6 md:text-[18px] md:leading-[27px]">
-                        Consolidated Consultants Group (CCG) is a pioneering architectural and
-                        engineering consultancy firm that provides a comprehensive range of
-                        services in the fields of design, management and specialized studies.
-                    </Text>
-                </div>
+            </div>
+            {/* Bottom Description */}
+            <div className="bg-[#016938] text-white py-6 md:py-[36.75px] px-5 md:pl-[88px] md:pr-[102px] max-w-full md:max-w-[982px] relative md:absolute md:bottom-0 left-0">
+                <Text className="text-sm leading-6 md:text-[18px] md:leading-[27px]">
+                    Consolidated Consultants Group (CCG) is a pioneering architectural and
+                    engineering consultancy firm that provides a comprehensive range of
+                    services in the fields of design, management and specialized studies.
+                </Text>
             </div>
         </div>
     );
