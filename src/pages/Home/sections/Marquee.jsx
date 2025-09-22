@@ -12,7 +12,7 @@ const ImageMarquee = () => {
     const repeatedImages = Array(10).fill(images).flat();
 
     return (
-        <section className="w-full bg-white py-20">
+        <section className="w-full bg-white pb-[99px]">
             <Marquee
                 speed={50}
                 gradient={false}

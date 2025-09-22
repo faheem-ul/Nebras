@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 
 // Import all logo variations
 import greenLogo from "../assets/navbar/lobo-green.png";
@@ -15,7 +16,9 @@ const Navbar = () => {
   useEffect(() => {
     if (
       location.pathname === "/about-us" ||
-      location.pathname === "/contact-us"
+      location.pathname === "/contact-us" ||
+      location.pathname.startsWith("/our-projects/")
+
     ) {
       setLogo(whiteLogo);
     } else if (location.pathname === "/insights") {
@@ -36,72 +39,92 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[70px] md:pt-[97px] pb-[37px]">
       <div className="max-w-[1312px] mx-auto px-5 flex items-center justify-between">
         {/* Left - Dynamic Logo */}
-        <img
-          src={logo}
-          alt="Logo"
-          className="h-auto w-[120px] md:w-[166px] cursor-pointer"
-        />
+        <Link to='/'>
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-auto w-[120px] md:w-[166px] cursor-pointer"
+          />
+        </Link>
+
 
         {/* Right - Nav Links (Desktop) */}
-        <div className="hidden md:flex items-center justify-end gap-8 flex-wrap">
-          <Link
+        <div
+          className={`hidden md:flex items-center justify-end gap-[43px] flex-wrap ${location.pathname === "/our-projects" ||
+            location.pathname === "/insights"
+            ? "text-black"
+            : "text-white"
+            }`}>
+
+          <NavLink
             to=""
-            className="font-logirent font-normal text-lg leading-none hover:text-green-600"
+            className="font-logirent font-normal text-lg leading-none hover:text-[#016938] "
           >
             العربية
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/"
-            className="font-logirent font-normal text-lg leading-none hover:text-green-600"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/our-projects"
-            className="font-logirent font-normal text-lg leading-none hover:text-green-600"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Our Projects
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="about-us"
-            className="font-logirent font-normal text-lg leading-none hover:text-green-600"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             About Us
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="insights"
-            className="font-logirent font-normal text-lg leading-none hover:text-green-600"
+            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
           >
             Insights
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="contact-us"
-            className="ml-6 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
+            className="ml-3 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
           >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Hamburger */}
-        <button
-          className={`md:hidden text-3xl z-50 ${
-            location.pathname === "/about-us" ||
-            location.pathname === "/contact-us"
+        {!isOpen && (
+          <button
+            className={`md:hidden text-3xl z-50 ${location.pathname === "/about-us" ||
+              location.pathname === "/contact-us" ||
+              location.pathname.startsWith("/our-projects/")
               ? "text-white"
               : "text-black"
-          }`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? "✕" : "☰"}
-        </button>
+              }`}
+            onClick={() => setIsOpen(true)}
+          >
+            <FiMenu />
+          </button>
+        )}
+
+        {/* Mobile Close */}
+        {isOpen && (
+          <button
+            className="md:hidden text-3xl z-50 text-black"
+            onClick={() => setIsOpen(false)}
+          >
+            <FiX />
+          </button>
+        )}
       </div>
 
       {/* Fullscreen Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {/* Force green logo inside menu */}
         <img src={greenLogo} alt="Logo" className="h-auto w-[140px] mb-8" />
@@ -109,35 +132,35 @@ const Navbar = () => {
         <Link
           onClick={handleClose}
           to=""
-          className="font-logirent text-2xl leading-none hover:text-green-600"
+          className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
           العربية
         </Link>
         <Link
           onClick={handleClose}
           to="/"
-          className="font-logirent text-2xl leading-none hover:text-green-600"
+          className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
           Home
         </Link>
         <Link
           onClick={handleClose}
           to="/our-projects"
-          className="font-logirent text-2xl leading-none hover:text-green-600"
+          className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
           Our Projects
         </Link>
         <Link
           onClick={handleClose}
           to="about-us"
-          className="font-logirent text-2xl leading-none hover:text-green-600"
+          className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
           About Us
         </Link>
         <Link
           onClick={handleClose}
           to="insights"
-          className="font-logirent text-2xl leading-none hover:text-green-600"
+          className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
           Insights
         </Link>
