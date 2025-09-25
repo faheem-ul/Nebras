@@ -2,14 +2,13 @@ import { useNavigate } from "react-router-dom";
 
 import Text from "../../../components/ui/Text";
 
-import projectsData from "@/data/projects.json"
+import projectsData from "@/data/projects.json";
 import ProjectCard from "@/components/ProjectCard";
 
 const OurProjects = () => {
   const navigate = useNavigate();
 
   const currentProjects = projectsData.projects.slice(0, 6);
-
 
   return (
     <section className="w-full bg-[#393C3D] pt-[105px] pb-[95px]">
@@ -21,22 +20,30 @@ const OurProjects = () => {
               <span className="text-outline-white">Our</span> Projects
             </Text>
           </div>
-          <div data-aos="fade-left" data-aos-delay="400" className="w-full md:w-[169px]">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="400"
+            className="w-full md:w-[169px]"
+          >
             <button
               onClick={() => navigate("/our-projects")}
-              className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer w-full md:w-[169px]">
+              className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer w-full md:w-[169px]"
+            >
               See All
             </button>
           </div>
         </div>
 
         {/* Project cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px] text-white" data-aos="fade" data-aos-delay="400">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px] text-white"
+          data-aos="fade"
+          data-aos-delay="400"
+        >
           {currentProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-
       </div>
     </section>
   );
