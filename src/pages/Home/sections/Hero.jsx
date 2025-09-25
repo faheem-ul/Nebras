@@ -19,9 +19,9 @@ const Hero = () => {
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/30 "></div>
 
-        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex pt-[353px]">
+        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex pt-[353px]" data-aos="fade-up" data-aos-delay="400">
           {/* Welcome Message */}
-          <Text as="h1" className="text-white ">
+          <Text as="h1" className="text-white "  >
             Welcome <br /> Message
           </Text>
         </div>

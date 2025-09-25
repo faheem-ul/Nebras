@@ -8,12 +8,14 @@ const ContactForm = () => {
         <div className="bg-white pt-[100px] pb-[42px] flex justify-center items-center">
             <div className="w-full max-w-[1312px] px-5">
                 {/* Heading */}
-                <Text className="text-center md:text-[40px] md:leading-[32px]">
-                    We Are There, Wherever You Need Us.
-                </Text>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <Text className="text-center md:text-[40px] md:leading-[32px]">
+                        We Are There, Wherever You Need Us.
+                    </Text>
+                </div>
 
                 {/* Form Container */}
-                <div className="bg-[#52555A]/10 py-[44px] px-[36px] mt-[45px]">
+                <div className="bg-[#52555A]/10 py-[44px] px-[36px] mt-[45px]" data-aos="fade" data-aos-delay="500">
                     <Text className="mb-[55px]">
                         Have any questions? We're happy to answer.
                     </Text>

@@ -45,22 +45,26 @@ function ProjectsArchive() {
                 {/* Hero Section */}
                 <div className="flex flex-col gap-6 sm:flex-row sm:justify-between items-center mb-[85px]">
                     {/* Title*/}
-                    <Text
-                        as="h1"
-                        className="text-center"
-                    >
-                        <span className="text-outline-black">Our</span> projects
-                    </Text>
+                    <div data-aos="fade-right" data-aos-delay="400">
+                        <Text
+                            as="h1"
+                            className="text-center"
+                        >
+                            <span className="text-outline-black">Our</span> projects
+                        </Text>
+                    </div>
 
                     <div className="relative w-full md:w-auto inline-flex justify-center">
                         {/* Filter Button */}
-                        <button
-                            className="flex items-center gap-[11px] cursor-pointer"
-                            onClick={() => setIsFilterOpen((prev) => !prev)}
-                        >
-                            <img src={filterIcon} />
-                            <Text className="text-[16px] md:text-[16px]">Filter</Text>
-                        </button>
+                        <div data-aos="fade-left" data-aos-delay="400">
+                            <button
+                                className="flex items-center gap-[11px] cursor-pointer"
+                                onClick={() => setIsFilterOpen((prev) => !prev)}
+                            >
+                                <img src={filterIcon} />
+                                <Text className="text-[16px] md:text-[16px]">Filter</Text>
+                            </button>
+                        </div>
                         {/* Filter Box */}
                         {isFilterOpen && (
                             <div className="absolute right-0 top-full mt-3 z-40 w-full max-w-[100vw] sm:w-[390px] bg-[#9EE7B8] overflow-hidden">
@@ -130,7 +134,7 @@ function ProjectsArchive() {
                 </div>
 
                 {/* Our Projects Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px]" data-aos="fade-up" data-aos-delay="400">
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}

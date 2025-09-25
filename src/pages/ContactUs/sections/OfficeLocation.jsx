@@ -24,12 +24,14 @@ const OfficeLocation = () => {
     return (
         <section className="bg-white pt-[53px] pb-[70px] max-w-[1312px] w-full mx-auto px-5">
             {/* Section Title */}
-            <Text as="h1" className="text-center mb-[41px]">
-                Office Location
-            </Text>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <Text as="h1" className="text-center mb-[41px]">
+                    Office Location
+                </Text>
+            </div>
 
             {/* Cards Grid */}
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-[25px]">
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-[25px]" data-aos="fade" data-aos-delay="500">
                 {locations.map((loc, idx) => (
                     <div
                         key={idx}

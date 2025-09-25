@@ -8,12 +8,14 @@ export default function WhatWeDo() {
       <div className="relative max-w-[1312px] px-5 w-full mx-auto">
 
         {/* Title */}
-        <Text
-          as="h2"
-          className="text-[36px] md:text-[65px] font-logirent leading-tight mb-[30px] md:mb-0"
-        >
-          <span className="text-outline-black">What</span> We Do
-        </Text>
+        <div data-aos="fade-right" data-aos-delay="400">
+          <Text
+            as="h2"
+            className="text-[36px] md:text-[65px] font-logirent leading-tight mb-[30px] md:mb-0"
+          >
+            <span className="text-outline-black">What</span> We Do
+          </Text>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-[70px]">
           {/* Image */}
@@ -26,7 +28,7 @@ export default function WhatWeDo() {
           </div>
 
           {/* Text content */}
-          <div className="pb-[85px] w-full md:max-w-[786px]">
+          <div className="pb-[85px] w-full md:max-w-[786px]" data-aos="fade-up" data-aos-delay="400">
             <Text className="mb-[35px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
