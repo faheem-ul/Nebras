@@ -10,7 +10,7 @@ const MissionVission = () => {
         <section className="w-full bg-white py-10 md:py-[70px]">
 
             {/* Info */}
-            <div className="max-w-[821px] mx-auto px-5">
+            <div className="max-w-[821px] mx-auto px-5" data-aos="fade-up" data-aos-delay="400">
                 <Text className="text-base leading-6 md:text-[24px] md:leading-[42px] text-center md:text-left">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's standard dummy
@@ -22,16 +22,18 @@ const MissionVission = () => {
             {/* Our Mission */}
             <div className="flex flex-col md:flex-row items-center justify-between max-w-[1312px] w-full mx-auto mt-10 md:mt-[107px] gap-8 px-5">
                 {/* Image Column */}
-                <div className="w-full md:max-w-[600px] flex-shrink-0">
+                <div className="w-full md:max-w-[600px] flex-shrink-0 overflow-hidden"
+                    data-aos="fade-right" data-aos-delay="400"
+                >
                     <img
                         src={mission}
                         alt="Mission"
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
                     />
                 </div>
 
                 {/* Text Column */}
-                <div className="flex-1">
+                <div className="flex-1" data-aos="fade-up" data-aos-delay="400">
                     <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
                         Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text
@@ -44,16 +46,16 @@ const MissionVission = () => {
             {/* Our Vision */}
             <div className="flex flex-col md:flex-row-reverse items-center justify-between max-w-[1312px] w-full mx-auto mt-10 md:mt-[70px] gap-8 px-5">
                 {/* Image Column */}
-                <div className="w-full md:max-w-[600px] flex-shrink-0">
+                <div className="w-full md:max-w-[600px] flex-shrink-0 overflow-hidden" data-aos="fade-left" data-aos-delay="400">
                     <img
                         src={vission}
                         alt="Vision"
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
                     />
                 </div>
 
                 {/* Text Column */}
-                <div className="flex-1">
+                <div className="flex-1" data-aos="fade-up" data-aos-delay="400">
                     <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
                         Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text

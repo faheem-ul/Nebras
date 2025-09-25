@@ -27,7 +27,7 @@ const Listicles = () => {
 
     return (
         <section className="max-w-[1312px] w-full mx-auto px-5 pb-[60px]">
-            <div className='max-w-[821px] mx-auto'>
+            <div className='max-w-[821px] mx-auto' data-aos="fade" data-aos-delay="400">
                 {/* Heading */}
                 <Text className="text-center text-[24px] md:text-[40px] leading-snug font-logirent">
                     Listicles or how-to content
@@ -35,7 +35,7 @@ const Listicles = () => {
             </div>
 
             {/* Responsive Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-[45px] mt-[25px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-[45px] mt-[25px]" data-aos="fade-up" data-aos-delay="400">
                 {articles.map((article, index) => (
                     <ArticleCard
                         key={index}
