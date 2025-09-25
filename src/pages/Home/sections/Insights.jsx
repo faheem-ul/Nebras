@@ -11,26 +11,32 @@ const Insights = () => {
       <div className="max-w-[1312px] w-full mx-auto px-5">
         {/* Section header */}
         <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[52px]">
-          <Text as="h1" className="font-logirent text-[32px] sm:text-[50px] lg:text-[65px]  text-outline-black">
-            Insights
-          </Text>
-          <button
-            onClick={() => navigate("/insights")}
-            className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer">
-            See All
-          </button>
+          <div data-aos="fade-right" data-aos-delay="400">
+            <Text as="h1" className="font-logirent text-[32px] sm:text-[50px] lg:text-[65px]  text-outline-black">
+              Insights
+            </Text>
+          </div>
+          <div data-aos="fade-left" data-aos-delay="400" className="w-full md:w-[169px]">
+            <button
+              onClick={() => navigate("/insights")}
+              className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer w-full md:w-[169px]">
+              See All
+            </button>
+          </div>
         </div>
 
         {/* Horizontal scroll cards */}
         <div className="overflow-x-auto mt-6 scrollbar-thick scrollbar-thumb-[#016938] scrollbar-track-gray-300">
-          <div className="flex gap-[27px] w-max pb-[67px]">
+          <div className="flex gap-[27px] w-max pb-[67px]" data-aos="fade" data-aos-delay="400">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="flex-shrink-0 w-[418px]">
-                <img
-                  src={insight}
-                  alt={`Insight ${i + 1}`}
-                  className="w-full h-auto object-cover"
-                />
+                <div className="overflow-hidden w-full h-auto">
+                  <img
+                    src={insight}
+                    alt={`Insight ${i + 1}`}
+                    className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
+                  />
+                </div>
                 <Text className="text-black font-kosans md:text-[16px] sm:text-[16px]  mt-[39px]">
                   05/08/2025 9:56:09 AM
                 </Text>

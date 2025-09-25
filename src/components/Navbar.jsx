@@ -39,7 +39,7 @@ const Navbar = () => {
     <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[70px] md:pt-[97px] pb-[37px]">
       <div className="max-w-[1312px] mx-auto px-5 flex items-center justify-between">
         {/* Left - Dynamic Logo */}
-        <Link to='/'>
+        <Link to='/' data-aos="fade-right" data-aos-delay="100">
           <img
             src={logo}
             alt="Logo"
@@ -59,30 +59,35 @@ const Navbar = () => {
           <NavLink
             to=""
             className="font-logirent font-normal text-lg leading-none hover:text-[#016938] "
+            data-aos="fade-right" data-aos-delay="200"
           >
             العربية
           </NavLink>
           <NavLink
             to="/"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            data-aos="fade-right" data-aos-delay="300"
           >
             Home
           </NavLink>
           <NavLink
             to="/our-projects"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            data-aos="fade-right" data-aos-delay="400"
           >
             Our Projects
           </NavLink>
           <NavLink
             to="about-us"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            data-aos="fade-right" data-aos-delay="500"
           >
             About Us
           </NavLink>
           <NavLink
             to="insights"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            data-aos="fade-right" data-aos-delay="600"
           >
             Insights
           </NavLink>
@@ -90,6 +95,7 @@ const Navbar = () => {
           <NavLink
             to="contact-us"
             className="ml-3 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
+            data-aos="fade-right" data-aos-delay="700"
           >
             Contact Us
           </NavLink>

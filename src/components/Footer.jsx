@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import logo from "../assets/footer/footerLogo.png";
 
 import facebook from "../assets/footer/facebook.png";
@@ -5,134 +6,213 @@ import instagram from "../assets/footer/instagram.png";
 import twitter from "../assets/footer/twitter.png";
 import youtube from "../assets/footer/youtube.png";
 
+/* ---------- Variants ---------- */
+// Outer footer container: staggers columns
+const footerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18, // columns animate one-after-another
+    },
+  },
+};
+
+// Each column: staggers its children (heading + list items)
+const columnVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08, // items inside a column
+    },
+  },
+};
+
+// Individual item (heading / li / icon)
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.48, ease: "easeOut" }, // smooth & relaxed
+  },
+};
+
 const Footer = () => {
+  const quickLinks = [
+    "What we do",
+    "Our projects",
+    "Who we are",
+    "Jafar Tukan Atelier",
+    "Involvement",
+    "News",
+    "Join us",
+  ];
+
+  const utilityLinks = [
+    "CCg & Hudson Meridian",
+    "Invitation to a Meeting",
+    "Terms of Use",
+    "Privacy Policy",
+    "Contact Us",
+  ];
+
+  const contactItems = [
+    {
+      key: "email",
+      node: (
+        <a href="mailto:hello@gmail.com" className="hover:underline">
+          hello@gmail.com
+        </a>
+      ),
+    },
+    {
+      key: "phone",
+      node: (
+        <a href="tel:+1123456789" className="hover:underline">
+          (+1) 123456789
+        </a>
+      ),
+    },
+    {
+      key: "address",
+      node: (
+        <span>
+          Pavilion, 2 Marina Boulevard, <br />
+          San Francisco, United States
+        </span>
+      ),
+    },
+  ];
+
   return (
-    <footer className="w-full bg-[#393C3D] text-white">
-      <div
-        className="
-      max-w-[1312px] mx-auto px-5 
-      pt-10 pb-10 
-      md:pt-[76px] md:pb-[50px] 
-      flex flex-col md:flex-row justify-between 
-      gap-10 md:gap-[30px] flex-wrap
-    "
+    <motion.footer
+      className="w-full bg-[#393C3D] text-white overflow-hidden"
+      // We still want the footer to fade in a little as a whole (optional)
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.12 }} // "amount" controls how much visible to trigger
+    >
+      {/* Main content wrapper - columns are children of this and will be staggered */}
+      <motion.div
+        className="max-w-[1312px] mx-auto px-5 pt-10 pb-10 md:pt-[76px] md:pb-[50px] flex flex-col md:flex-row justify-between gap-10 md:gap-[30px] flex-wrap"
+        variants={footerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.12 }}
       >
-        {/* Left Section */}
-        <div className="w-full max-w-[258px]">
-          <img
+        {/* Left Column (contact & address) */}
+        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
+          <motion.img
             src={logo}
             alt="Logo"
             className="w-[160px] md:w-[208px] h-auto mb-6 md:mb-[38px]"
+            variants={itemVariants}
           />
-          <ul className="font-kosans text-sm md:text-[16px] leading-[22px] md:leading-[24px]">
-            <li className="mb-4 md:mb-[21px]">
-              <a href="mailto:hello@gmail.com" className="hover:underline">
-                hello@gmail.com
-              </a>
-            </li>
-            <li className="mb-5 md:mb-[24px] text-base md:text-[18px]">
-              <a href="tel:+1123456789" className="hover:underline">
-                (+1) 123456789
-              </a>
-            </li>
-            <li className="text-sm md:text-[16px]">
-              Pavilion, 2 Marina Boulevard, <br />
-              San Francisco, United States
-            </li>
-          </ul>
-        </div>
 
-        {/* Quick Links */}
-        <div className="w-full max-w-[258px]">
-          <h3 className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]">
+          <motion.ul
+            className="font-kosans text-sm md:text-[16px] leading-[22px] md:leading-[24px] space-y-4"
+            variants={columnVariants}
+          >
+            {contactItems.map((c, i) => (
+              <motion.li key={c.key} variants={itemVariants}>
+                {c.node}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+
+        {/* Quick Links Column */}
+        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
+          <motion.h3
+            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            variants={itemVariants}
+          >
             QUICK LINKS
-          </h3>
-          <ul className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]">
-            <li><a href="#">What we do</a></li>
-            <li><a href="#">Our projects</a></li>
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">Jafar Tukan Atelier</a></li>
-            <li><a href="#">Involvement</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Join us</a></li>
-          </ul>
-        </div>
+          </motion.h3>
 
-        {/* Utility Pages */}
-        <div className="w-full max-w-[258px]">
-          <h3 className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]">
+          <motion.ul
+            className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]"
+            variants={columnVariants}
+          >
+            {quickLinks.map((label, i) => (
+              <motion.li key={label} variants={itemVariants}>
+                <a href="#">{label}</a>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+
+        {/* Utility Pages Column */}
+        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
+          <motion.h3
+            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            variants={itemVariants}
+          >
             UTILITY PAGES
-          </h3>
-          <ul className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]">
-            <li>
-              <a href="#">
-                CCg & Hudson <br />
-                Meridian
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Invitation to a <br />
-                Meeting
-              </a>
-            </li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+          </motion.h3>
 
-        {/* Newsletter */}
-        <div className="w-full max-w-[388px]">
-          <h3 className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]">
+          <motion.ul
+            className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]"
+            variants={columnVariants}
+          >
+            {utilityLinks.map((label, i) => (
+              <motion.li key={label} variants={itemVariants}>
+                <a href="#">{label}</a>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+
+        {/* Newsletter Column */}
+        <motion.div className="w-full max-w-[388px]" variants={columnVariants}>
+          <motion.h3
+            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            variants={itemVariants}
+          >
             Subscribe Newsletter
-          </h3>
+          </motion.h3>
 
-          <div className="relative mb-6 md:mb-[37px]">
-            <input
+          <motion.div
+            className="relative mb-6 md:mb-[37px]"
+            variants={columnVariants}
+          >
+            <motion.input
               type="email"
               placeholder="ENTER YOUR EMAIL"
-              className="
-            w-full pl-4 pr-4 py-3 
-            md:pl-[28px] md:pr-[140px] md:py-[23px] 
-            rounded-full text-black bg-white outline-none 
-            placeholder:text-sm md:placeholder:text-[15px] 
-            placeholder-[#DDDDDD] font-kosans text-sm md:text-[15px] leading-[22px] md:leading-[24px]
-          "
+              className="w-full pl-4 pr-4 py-3 md:pl-[28px] md:pr-[140px] md:py-[23px] rounded-full text-black bg-white outline-none placeholder:text-sm md:placeholder:text-[15px] placeholder-[#DDDDDD] font-kosans text-sm md:text-[15px] leading-[22px] md:leading-[24px]"
+              variants={itemVariants}
             />
-            <button
-              className="
-            mt-2 relative 
-            md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-[19.8px] 
-            px-5 py-3 md:px-[20px] md:py-[17.5px] 
-            bg-green text-white rounded-full 
-            font-kosans text-sm md:text-[14px] leading-none cursor-pointer
-          "
+            <motion.button
+              className="mt-2 relative md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-[19.8px] px-5 py-3 md:px-[20px] md:py-[17.5px] bg-green text-white rounded-full font-kosans text-sm md:text-[14px] leading-none cursor-pointer"
+              variants={itemVariants}
             >
               Subscribe
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
-          <div className="flex gap-4">
-            {[facebook, instagram, youtube, twitter]
-              .map((icon, idx) => (
-                <a href="#" key={idx}
-                  className="bg-white rounded-full p-2 flex items-center justify-center w-[40px] h-[40px]" >
-                  <img src={icon} alt="social" className="h-20px w-20px" />
-                </a>
-              ))}
-          </div>
-        </div>
-      </div>
+          {/* Social icons - small stagger inside column */}
+          <motion.div className="flex gap-4" variants={columnVariants}>
+            {[facebook, instagram, youtube, twitter].map((icon, idx) => (
+              <motion.a
+                key={idx}
+                href="#"
+                className="bg-white rounded-full p-2 flex items-center justify-center w-[40px] h-[40px]"
+                variants={itemVariants}
+              >
+                <img src={icon} alt="social" className="h-20px w-20px" />
+              </motion.a>
+            ))}
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Bar - static (no animation) */}
       <div className="border-t border-white/50">
         <p className="text-center py-5 text-xs md:text-sm font-kosans md:text-[16px] md:leading-[18px]">
           © 2025 Nebras Consult, All rights reserved.
         </p>
       </div>
-    </footer>
-
+    </motion.footer>
   );
 };
 
