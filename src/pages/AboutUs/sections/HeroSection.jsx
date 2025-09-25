@@ -24,11 +24,11 @@ const HeroSection = () => {
                 </div>
 
                 {/* Right Section (Image) */}
-                <div className="w-full md:w-auto mt-8 md:mt-0">
+                <div className="w-full md:w-auto mt-8 md:mt-0 overflow-hidden">
                     <img
                         src={heroBg}
                         alt="Team Collaboration"
-                        className="w-full h-auto md:h-full object-cover"
+                        className="w-full h-auto md:h-full object-cover transform transition duration-300 ease-in-out hover:scale-105"
                     />
                 </div>
             </div>

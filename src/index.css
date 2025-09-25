@@ -52,7 +52,6 @@
   text-stroke: 1px #000;
 }
 
-
 /* global.css */
 .text-outline-black {
   -webkit-text-stroke: 1px black;
@@ -61,5 +60,17 @@
   /* Fill color */
 }
 
+@keyframes slowZoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 
-
+.bg-slow-zoom {
+  animation: slowZoom 20s ease-in-out infinite;
+  will-change: transform;
+}

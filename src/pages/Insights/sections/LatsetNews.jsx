@@ -18,11 +18,11 @@ export const LatsetNews = () => {
             <div className="flex flex-col md:flex-row items-center justify-between max-w-[1312px] w-full mx-auto gap-8 md:gap-[38px] px-5 mt-6 md:mt-[23px]">
 
                 {/* Image Column */}
-                <div className="w-full md:max-w-[522px] flex-shrink-0">
+                <div className="w-full md:max-w-[522px] flex-shrink-0 overflow-hidden">
                     <img
                         src={latestNews}
                         alt="Latest News"
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
                     />
                 </div>
 

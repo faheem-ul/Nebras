@@ -4,13 +4,13 @@ import heroBg from '../../../assets/contact/hero-bg.jpg'
 import Text from "../../../components/ui/Text";
 const HeroSection = () => {
     return (
-        <div className="relative w-full min-h-[827px] bg-[#393C3D] ">
+        <div className="relative w-full min-h-[827px] bg-[#393C3D] overflow-hidden ">
 
             {/* BG Image */}
             <img
                 src={heroBg}
                 alt="bg_image"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover bg-slow-zoom"
             />
 
             {/* Main Content */}

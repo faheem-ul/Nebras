@@ -26,11 +26,13 @@ const Insights = () => {
           <div className="flex gap-[27px] w-max pb-[67px]">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="flex-shrink-0 w-[418px]">
-                <img
-                  src={insight}
-                  alt={`Insight ${i + 1}`}
-                  className="w-full h-auto object-cover"
-                />
+                <div className="overflow-hidden w-full h-auto">
+                  <img
+                    src={insight}
+                    alt={`Insight ${i + 1}`}
+                    className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
+                  />
+                </div>
                 <Text className="text-black font-kosans md:text-[16px] sm:text-[16px]  mt-[39px]">
                   05/08/2025 9:56:09 AM
                 </Text>

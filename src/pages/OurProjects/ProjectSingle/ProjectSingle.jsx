@@ -14,12 +14,12 @@ function ProjectSingle() {
 
     return (
         <>
-            <section className="relative w-full min-h-[500px]  md:min-h-[759px] bg-white ">
+            <section className="relative w-full min-h-[500px]  md:min-h-[759px] bg-white overflow-hidden">
                 {/* Hero Image */}
                 <img
                     src={project.heroImage}
                     alt={project.title}
-                    className="absolute inset-0  w-full h-full object-cover"
+                    className="absolute inset-0  w-full h-full object-cover bg-slow-zoom"
                 />
                 {/*Project Title */}
                 <div className="relative flex flex-col  min-h-[500px] md:min-h-[827px] max-w-[1312px] mx-auto pt-[250px] md:pt-[368px] px-5">

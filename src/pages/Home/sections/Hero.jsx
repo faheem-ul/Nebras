@@ -6,13 +6,16 @@ import Text from "../../../components/ui/Text";
 
 const Hero = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white overflow-hidden">
 
       {/* Big Hero Background */}
-      <div
-        className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      <div className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] overflow-hidden">
+        {/* Zooming Background Layer */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        ></div>
+
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/30 "></div>
 
@@ -31,7 +34,7 @@ const Hero = () => {
           <img
             src={img1}
             alt="Engineering"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -40,8 +43,8 @@ const Hero = () => {
             <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
               Engineering
             </Text>
-            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Discover
+            <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+              Engineering
             </button>
           </div>
         </div>
@@ -51,7 +54,7 @@ const Hero = () => {
           <img
             src={img2}
             alt="Planning"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -61,7 +64,7 @@ const Hero = () => {
               Planning
             </Text>
             <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Discover
+              Planning
             </button>
           </div>
         </div>
@@ -71,7 +74,7 @@ const Hero = () => {
           <img
             src={img3}
             alt="Consulting"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -81,7 +84,7 @@ const Hero = () => {
               Consulting
             </Text>
             <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Discover
+              Consulting
             </button>
           </div>
         </div>

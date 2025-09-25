@@ -63,7 +63,7 @@ const ProjectSlider = ({ images = [] }) => {
                             <img
                                 src={img}
                                 alt={`Slide ${idx + 1}`}
-                                className="max-w-[636px] w-full h-auto object-cover"
+                                className="max-w-[636px] w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
                             />
                         </div>
                     </SwiperSlide>
