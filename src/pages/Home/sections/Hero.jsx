@@ -1,36 +1,82 @@
-import heroBg from "../../../assets/home/hero-bg.jpg";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+
+// import { useLanguage } from "@/context/LanguageContext";
+
+import heroBg1 from "../../../assets/home/hero-slider/hero-slider-1.jpeg";
+import heroBg2 from "../../../assets/home/hero-slider/hero-slider-2.jpeg";
+import heroBg3 from "../../../assets/home/hero-slider/hero-slider-3.jpeg";
+import heroBg4 from "../../../assets/home/hero-slider/hero-slider-4.jpeg";
+import heroBg5 from "../../../assets/home/hero-slider/hero-slider-5.jpeg";
+import heroBg6 from "../../../assets/home/hero-slider/hero-slider-6.jpeg";
 import img1 from "../../../assets/home/engineering.png";
 import img2 from "../../../assets/home/planning.png";
 import img3 from "../../../assets/home/consulting.png";
 import Text from "../../../components/ui/Text";
 
 const Hero = () => {
+  // const { lang } = useLanguage();
+
+  const heroImages = [heroBg1, heroBg2, heroBg3, heroBg4, heroBg5, heroBg6];
+  // Slider Current Image State
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // Change image every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <section className="w-full bg-white overflow-hidden">
 
-      {/* Big Hero Background */}
       <div className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] overflow-hidden">
+
         {/* Zooming Background Layer */}
-        <div
+        {/* <div
           className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        ></div>
+          style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
+        ></div> */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={heroImages[currentImage]}
+            className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
+            style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
+        </AnimatePresence>
 
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/30 "></div>
 
-        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex pt-[353px]" data-aos="fade-up" data-aos-delay="400">
+        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[250px] md:pt-[353px]">
           {/* Welcome Message */}
-          <Text as="h1" className="text-white "  >
-            Welcome <br /> Message
-          </Text>
+          <div className="max-w-[900px]">
+            <div data-aos="fade-up" data-aos-delay="400">
+              <Text as="h1" className="text-white mb-[20px]">
+                Nebras Consult – Engineering solutions
+              </Text>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="500">
+              <Text className="text-white">
+                Consulting expertise. Transforming challenges into opportunities with precision and innovation.
+              </Text>
+            </div>
+          </div>
         </div>
+
       </div>
 
       {/* 3 Images Row */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
         {/* Engineering */}
-        <div className="relative group overflow-hidden">
+        <div className="relative group overflow-hidden " data-aos="fade" data-aos-delay="400">
           <img
             src={img1}
             alt="Engineering"
@@ -50,7 +96,7 @@ const Hero = () => {
         </div>
 
         {/* Planning */}
-        <div className="relative group overflow-hidden">
+        <div className="relative group overflow-hidden" data-aos="fade" data-aos-delay="500">
           <img
             src={img2}
             alt="Planning"
@@ -70,7 +116,7 @@ const Hero = () => {
         </div>
 
         {/* Consulting */}
-        <div className="relative group overflow-hidden">
+        <div className="relative group overflow-hidden" data-aos="fade" data-aos-delay="600">
           <img
             src={img3}
             alt="Consulting"
@@ -89,7 +135,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

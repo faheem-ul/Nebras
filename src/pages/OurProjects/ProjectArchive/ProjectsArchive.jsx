@@ -2,39 +2,22 @@ import { useState } from "react";
 
 import Text from "@/components/ui/Text"
 import filterIcon from "@/assets/our-projects/filter-icon.svg"
-import leftIcon from "@/assets/our-projects/pag-left-icon.svg"
-import rightIcon from "@/assets/our-projects/pag-right-icon.svg"
 import closeIcon from "@/assets/our-projects/close-icon.svg"
 
 import projectsData from "../../../data/projects.json";
 import ProjectCard from "../../../components/ProjectCard";
 
 function ProjectsArchive() {
-    // Pagination state
-    const [currentPage, setCurrentPage] = useState(1);
-    const projectsPerPage = 9;
-
     // filter state
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState("all");
 
-    // Calculate page data
-    const totalProjects = projectsData.projects.length;
-    const totalPages = Math.ceil(totalProjects / projectsPerPage);
+    // Visible Projects State
+    const projectsPerPage = 8;
+    const [visibleCount, setVisibleCount] = useState(projectsPerPage);
 
-    const startIdx = (currentPage - 1) * projectsPerPage;
-    const currentProjects = projectsData.projects.slice(
-        startIdx,
-        startIdx + projectsPerPage
-    );
+    const currentProjects = projectsData.projects.slice(0, visibleCount);
 
-    // Handle page change
-    const goToPage = (page) => {
-        if (page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    };
     return (
         <section className="w-full bg-whites pt-[165px] md:pt-[214px] pb-[64px]">
 
@@ -134,44 +117,22 @@ function ProjectsArchive() {
                 </div>
 
                 {/* Our Projects Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px]" data-aos="fade-up" data-aos-delay="400">
+                <div className="flex flex-col md:flex-row flex-wrap gap-x-[27px] gap-y-[27px]" data-aos="fade-up" data-aos-delay="400">
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
 
-                {/* Pagination Controls */}
-                <div className="flex justify-center gap-4 md:gap-[48px] mt-8 md:mt-[64px] flex-wrap">
-                    {/* Prev Button */}
-                    <button
-                        onClick={() => goToPage(currentPage - 1)}
-                        disabled={currentPage === 1}
-                        className="w-[32px] h-[32px] md:w-auto md:h-auto disabled:opacity-50 cursor-pointer flex items-center justify-center"
-                    >
-                        <img src={leftIcon} className="w-3 md:w-full" alt="Prev" />
-                    </button>
-
-                    {/* Page Numbers */}
-                    {Array.from({ length: totalPages }, (_, i) => (
+                {visibleCount < projectsData.projects.length && (
+                    <div className="flex justify-center mt-[77px]">
                         <button
-                            key={i + 1}
-                            onClick={() => goToPage(i + 1)}
-                            className={`text-[14px] md:text-[18px] font-kosans w-[28px] h-[28px] md:w-[36px] md:h-[36px] flex items-center justify-center  cursor-pointer ${currentPage === i + 1 ? "bg-black text-white" : ""
-                                }`}
+                            onClick={() => setVisibleCount((prev) => prev + projectsPerPage)}
+                            className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer "
                         >
-                            {i + 1}
+                            View More
                         </button>
-                    ))}
-
-                    {/* Next Button */}
-                    <button
-                        onClick={() => goToPage(currentPage + 1)}
-                        disabled={currentPage === totalPages}
-                        className="w-[32px] h-[32px] md:w-auto md:h-auto disabled:opacity-50 cursor-pointer flex items-center justify-center"
-                    >
-                        <img src={rightIcon} className="w-3 md:w-full" alt="Next" />
-                    </button>
-                </div>
+                    </div>
+                )}
 
             </div>
         </section>
