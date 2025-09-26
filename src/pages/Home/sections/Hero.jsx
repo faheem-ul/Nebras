@@ -42,10 +42,10 @@ const Hero = () => {
           className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
           style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
         ></div> */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.div
             key={heroImages[currentImage]}
-            className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
