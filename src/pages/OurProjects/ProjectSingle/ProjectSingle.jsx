@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import projectsData from "../../../data/projects.json";
 import Text from '@/components/ui/Text'
@@ -12,19 +14,49 @@ function ProjectSingle() {
         return <h2 className="text-center text-white text-2xl">Project not found</h2>;
     }
 
+    // Slider Current Image State
+    const [currentImage, setCurrentImage] = useState(0);
+
+    // Change image every 5 seconds
+    useEffect(() => {
+        if (!project.heroImages || project.heroImages.length === 0) return;
+
+        const interval = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % project.heroImages.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [project.heroImages.length]);
+
     return (
         <>
             <section className="relative w-full min-h-[500px]  md:min-h-[759px] bg-white overflow-hidden">
                 {/* Hero Image */}
-                <img
-                    src={project.heroImage}
+                {/* <img
+                    src={project.heroImages[currentImage]}
                     alt={project.title}
                     className="absolute inset-0  w-full h-full object-cover bg-slow-zoom"
-                />
+                /> */}
+                <AnimatePresence>
+                    <motion.img
+                        key={project.heroImages[currentImage]}
+                        src={project.heroImages[currentImage]}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                    />
+                </AnimatePresence>
+
+                {/* Black Overlay */}
+                <div className="absolute inset-0 bg-black/30 "></div>
+
                 {/*Project Title */}
-                <div className="relative flex flex-col  min-h-[500px] md:min-h-[827px] max-w-[1312px] mx-auto pt-[250px] md:pt-[368px] px-5"
+                <div className="relative flex flex-col  min-h-[500px] md:min-h-[827px] max-w-[1312px] mx-auto pb-[30px] pt-[250px] md:pt-[368px] px-5"
                     data-aos="fade-up" data-aos-delay="400">
-                    <Text as="h1" className="text-white max-w-[333px] w-full">{project.title}</Text>
+                    <Text as="h1" className="text-white max-w-[900px] w-full">{project.title}</Text>
                 </div>
             </section >
 

@@ -2,7 +2,7 @@ import Hero from "./sections/Hero";
 
 import WhatWeDo from "./sections/WhatWeDo";
 import OurProjects from "./sections/OurProjects";
-import Insights from "./sections/Insights";
+// import Insights from "./sections/Insights";
 import ImageMarquee from "./sections/Marquee";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <OurProjects />
-      <Insights />
+      {/* <Insights /> */}
       <ImageMarquee />
     </>
   );

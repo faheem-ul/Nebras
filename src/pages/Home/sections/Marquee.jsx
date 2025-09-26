@@ -1,18 +1,39 @@
-
 import Marquee from "react-fast-marquee";
 
-import img1 from "../../../assets/marquee/marquee1.png";
-import img2 from "../../../assets/marquee/marquee2.png";
-import img3 from "../../../assets/marquee/marquee3.png";
+import clientLogo1 from "@/assets/home/clients-logo/1.png";
+import clientLogo2 from "@/assets/home/clients-logo/2.png";
+import clientLogo3 from "@/assets/home/clients-logo/3.png";
+import clientLogo4 from "@/assets/home/clients-logo/4.png";
+import clientLogo5 from "@/assets/home/clients-logo/5.png";
+import clientLogo6 from "@/assets/home/clients-logo/6.png";
+import clientLogo7 from "@/assets/home/clients-logo/7.png";
+import clientLogo8 from "@/assets/home/clients-logo/8.png";
+import clientLogo9 from "@/assets/home/clients-logo/9.png";
+import clientLogo10 from "@/assets/home/clients-logo/10.png";
+import clientLogo11 from "@/assets/home/clients-logo/11.png";
+import clientLogo12 from "@/assets/home/clients-logo/12.png";
+import clientLogo13 from "@/assets/home/clients-logo/13.png";
+import clientLogo14 from "@/assets/home/clients-logo/14.png";
+import clientLogo15 from "@/assets/home/clients-logo/15.png";
+import clientLogo16 from "@/assets/home/clients-logo/16.png";
+import clientLogo17 from "@/assets/home/clients-logo/17.png";
+import clientLogo18 from "@/assets/home/clients-logo/18.png";
+import clientLogo19 from "@/assets/home/clients-logo/19.png";
+import clientLogo20 from "@/assets/home/clients-logo/20.png";
+import clientLogo21 from "@/assets/home/clients-logo/21.png";
+import clientLogo22 from "@/assets/home/clients-logo/21.png";
 
 
 const ImageMarquee = () => {
-    const images = [img1, img2, img3];
+    const images = [clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5, clientLogo6, clientLogo7, clientLogo8, clientLogo9,
+        clientLogo10, clientLogo11, clientLogo12, clientLogo13, clientLogo14, clientLogo15, clientLogo16, clientLogo17, clientLogo18,
+        clientLogo19, clientLogo20, clientLogo21, clientLogo22
+    ];
 
     const repeatedImages = Array(10).fill(images).flat();
 
     return (
-        <section className="w-full bg-white pb-[99px]">
+        <section className="w-full bg-white py-[50px] md:pt-[75px] md:pb-[99px]">
             <Marquee
                 speed={50}
                 gradient={false}
@@ -24,7 +45,7 @@ const ImageMarquee = () => {
                         <img
                             src={img}
                             alt={`marquee-${i}`}
-                            className="w-[200px] sm:w-[250px] h-auto object-contain"
+                            className="w-full max-w-[120px] md:max-w-[250px] h-auto object-contain"
                         />
                     </div>
                 ))}
