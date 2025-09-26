@@ -36,288 +36,400 @@
     },
     {
       "id": 2,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Calibration And Validation Of Model GAM Transport Model",
+      "slug": "calibration-validation-gam-transport-model",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-2/image-1.png",
+        "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-2/image-1.png",
+        "/our-projects/project-2/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-2/image-1.png",
+        "/our-projects/project-2/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "Reduce reliance on the car and encourage alternative modes of transport to enhance accessibility for citizens to goods and services, in particular through the provision of a comprehensive and affordable public transport system.",
+        "Nebras Consult has been commissioned to collect the transportation data to be used for calibration and validation of the GAM Transport model.",
+        "Scope of work:",
+        "1- Boarders/Alighters surveys at main stops (in terminal passenger count).",
+        "2- On Board Passenger survey on main BRT competing Bus lines including Public Transport Travel Time Studies (using GPS).",
+        "3- Public transportation Frequency and Occupancy (from road side).",
+        "4- Automatic Traffic counts (ATC).",
+        "5- Vehicle Classification Counts using video recording."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "",
+        "clients": ["Greater Amman Municipality", "STEER"],
+        "periodsOfServices": "2019"
       }
     },
     {
       "id": 3,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Amman Bus Rapid Transit Phase II",
+      "slug": "amman-brt-phase-ii",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-3/image-1.jpg",
+        "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-3/image-1.jpg",
+        "/our-projects/project-3/image-2.png"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-3/image-1.jpg",
+        "/our-projects/project-3/image-2.png"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "Carry out a preliminary study of Amman BRT Phase II and assess the potential for / extent of private sector participation through various PPP options.",
+        "Study Tasks:",
+        "1- Review of Existing Studies and Data, and Inception Report.",
+        "2- Gap Analysis of the Regulatory, Institutional and PPP Framework.",
+        "3- Data Collection.",
+        "4- Demand Forecasts and Assessment of Operational Plan and Conceptual Design Scenarios.",
+        "5- Economic Analysis of the Various Scenarios.",
+        "6- Business Models and Financing Options.",
+        "7- PPP Risk Assessment.",
+        "The data collection includes performing two main types of field surveys:",
+        "1- Traffic Counts: both automatic traffic counts (ATC) and manual turning movement counts (MTMC).",
+        "2- Public Transport Passenger Counts."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "",
+        "clients": ["Greater Amman Municipality", "WSP"],
+        "periodsOfServices": "2021"
       }
     },
     {
       "id": 4,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Jordan Bus Reform Project – Feasibility and Implementation Plan",
+      "slug": "jordan-bus-reform-project-feasibility-implementation-plan",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-4/image-1.jpg",
+        "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-4/image-1.jpg",
+        "/our-projects/project-4/image-2.png"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-4/image-1.jpg",
+        "/our-projects/project-4/image-2.png"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "Reform of the public transport sector to improve public transport services and targeting of subsidies for selected transport users. The Project comprises the setting up of new bus route operations in the cities of Irbid, Zarqa, Salt and Madaba.",
+        "Project objectives:",
+        "1- The provision of good frequency, safe, reliable and timetabled bus services in the cities of Jordan.",
+        "2- Services to be operated by new buses with superior quality in terms of appearance, accessibility, capacity and attractiveness to passengers.",
+        "3- Restructuring of the bus industry to create larger bus companies which are better financed, successful and able to compete for bus service tenders.",
+        "4- Providing greatly improved mobility to work, education, health and leisure facilities for Jordanian citizens.",
+        "5- Enabling the LTRC and the Municipalities to have more control over transport planning.",
+        "6- Creating employment opportunities in the bus industry and assisting in general economic development."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "",
+        "clients": ["Ministry of Transport", "LTRC", "WSP", "EBRD"],
+        "periodsOfServices": "2018-2019"
       }
     },
     {
       "id": 5,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Traffic Impact Study for the Tourist Buses and Cars Parking Project Near Rabad Castle/Ajloun",
+      "slug": "traffic-impact-study-tourist-buses-cars-parking-project-rabad-castle-ajloun",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-5/image-1.jpg",
+        "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-5/image-1.jpg",
+        "/our-projects/project-5/image-2.jpg",
+        "/our-projects/project-5/image-3.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-5/image-1.jpg",
+        "/our-projects/project-5/image-2.jpg",
+        "/our-projects/project-5/image-3.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "The car park and tourist bus project is located in Ajloun near the Historical Castle, with a total area of approximately 3700 square meters.",
+        "The project includes 35 car parking spaces and 13 parking spaces for tourist buses, in addition to 18 kiosks to provide services for tourists and visitors to the castle, including food and beverage services.",
+        "Services Provided:",
+        "1- Prepare a Traffic Impact Study (TIS) report.",
+        "2- Traffic assessment inside the development area.",
+        "3- Traffic Safety Auditing.",
+        "4- Develop Planning Alternatives.",
+        "5- Supply and demand study for parking lots.",
+        "6- Conducting Traffic Counts Survey."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "",
+        "clients": ["Madi Partners Consulting Engineering"],
+        "periodsOfServices": "2021"
       }
     },
     {
       "id": 6,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Traffic Study & Detailed Geometric Design for the Hot Spots / Wadi Mousa",
+      "slug": "traffic-study-detailed-geometric-design-hot-spots-wadi-mousa",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-6/image-1.jpg",
+        "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-6/image-1.jpg",
+        "/our-projects/project-6/image-2.jpg",
+        "/our-projects/project-6/image-3.jpg",
+        "/our-projects/project-6/image-4.png"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-6/image-1.jpg",
+        "/our-projects/project-6/image-2.jpg",
+        "/our-projects/project-6/image-3.jpg",
+        "/our-projects/project-6/image-4.png"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "A comprehensive Traffic Impact Study (TIS) for Wadi Mousa downtown, covering the Petra Visitors Center, one of the Seven Wonders of the World and among Jordan’s most iconic landmarks, which welcomed over 1 million visitors in 2019.",
+        "The study aims to assess current and future traffic conditions, improve accessibility, and enhance mobility for both residents and tourists.",
+        "Project Tasks and Stages:",
+        "1- Review previous traffic and urban planning studies.",
+        "2- Tourist Data Analysis:",
+        "• Historical data on tourist numbers, seasonal variations, and peak hours.",
+        "3- Field Surveys:",
+        "• Turning Movement Counts.",
+        "• Topographic Surveys.",
+        "4- Traffic Modeling:",
+        "• Simulation using Synchro, PTV/VISSIM, HCS.",
+        "• Mitigation Measures.",
+        "5- Safety Audit using iRAP protocols:",
+        "• Conducting star rating assessments for vehicles, pedestrians, cyclists, and motorcyclists.",
+        "• Identifying high-risk locations to recommend evidence-based countermeasures.",
+        "6- Temporary Traffic Management Plan during Ramadan:",
+        "• A specific plan to accommodate increased traffic volumes.",
+        "7- Detailed Designs:",
+        "• Engineering drawings, BOQ, geometric design, landscape, signage plans, and road marking."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "",
+        "clients": ["Petra Development & Tourism Region Authority"],
+        "periodsOfServices": "2021"
       }
     },
     {
       "id": 7,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One)",
+      "slug": "improve-traffic-safety-levels-schools-mosques-riyadh-stage-one",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-7/image-1.jpg",
+        "location": "Riyadh, Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-7/image-1.jpg",
+        "/our-projects/project-7/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-7/image-1.jpg",
+        "/our-projects/project-7/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "Improve traffic safety levels at 300 schools and mosques.",
+        "Develop a comprehensive traffic safety plan for schools in Riyadh City.",
+        "Implement the traffic safety plan and monitor its effectiveness.",
+        "1,500 traffic count locations.",
+        "Project Tasks and Stages:",
+        "• Study the best international experiences and engineering practices (Case Study).",
+        "• Coordinate with stakeholders.",
+        "• Identify and classify the detailed scope of work.",
+        "• Conduct traffic and Topo Surveys (ATC, TMC, Speed, Pedestrian counts and users' questioners).",
+        "• Traffic analysis and traffic safety audit.",
+        "• Prepare a manual for improving traffic safety at schools.",
+        "• Developing a Training Program for Riyadh Municipality Staff to Build Capacities and Transfer Knowledge.",
+        "• Developing a Training Program for Riyadh Municipality Staff to Enhance Capacity, Build Competencies, and Facilitate Knowledge Transfer."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Riyadh, Saudi Arabia",
+        "clients": ["Riyadh Municipality", "Consolidated Consultants Group"],
+        "periodsOfServices": "2024-2025"
       }
     },
     {
       "id": 8,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One) / Traffic Safety in the School Zones Manual",
+      "slug": "traffic-safety-school-zones-manual-riyadh",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-8/image-1.jpg",
+        "location": "Riyadh, Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-8/image-1.jpg",
+        "/our-projects/project-8/image-2.jpg",
+        "/our-projects/project-8/image-3.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-8/image-1.jpg",
+        "/our-projects/project-8/image-2.jpg",
+        "/our-projects/project-8/image-3.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "The Traffic Safety in the School Zones Manual serves as a comprehensive guide aimed at enhancing the safety of students, staff, and visitors in and around school environments.",
+        "Recognizing that school zones are high-risk areas due to the concentration of young pedestrians and vehicular traffic, this manual provides clear guidelines, best practices, and practical strategies to minimize accidents and improve overall traffic management.",
+        "The manual is organized into eight comprehensive chapters:",
+        "Chapter 1 - Introduction.",
+        "Chapter 2 - Engineering and Infrastructure.",
+        "Chapter 3 - Traffic Control.",
+        "Chapter 4 - Traffic Awareness.",
+        "Chapter 5 - School Transportation.",
+        "Chapter 6 - Evaluation.",
+        "Chapter 7 - Case Studies.",
+        "Chapter 8 - Governance and Compliance."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Riyadh, Saudi Arabia",
+        "clients": ["Riyadh Municipality", "Consolidated Consultants Group"],
+        "periodsOfServices": "2024-2025"
       }
     },
     {
       "id": 9,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Improvement of the Urban Environment of Souq Al Zal and the Surrounding Area",
+      "slug": "urban-environment-improvement-souq-al-zal",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-9/image-1.jpg",
+        "location": "Riyadh, Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-9/image-1.jpg",
+        "/our-projects/project-9/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-9/image-1.jpg",
+        "/our-projects/project-9/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "- Social Study including visitors' questionnaires.",
+        "- Historical Study for the urban heritage fabric.",
+        "- Traffic Impact Assessment Study",
+        "• Analyze base case data and identify traffic issues.",
+        "• Conduct an automatic traffic counts and manual counts.",
+        "• Study traffic flow volumes and analyze level of service in the base case scenario.",
+        "• Predict the future impact of the project on the surrounding road network using the results of the traffic model.",
+        "• Determine the number of trips generated and attracted by the project according to the approved guidelines.",
+        "• Estimate parking demand according to the specified requirements.",
+        "• Study the accessibility of the project site and ensure smooth traffic flow.",
+        "• Study the entrances and exits, traffic flow at gates, and internal traffic circulation.",
+        "• Ensure that the geometric design of the project's roads and intersections is consistent with the surrounding road network.",
+        "• Study traffic safety measures, pedestrian facilities, and traffic control devices.",
+        "• Study the relationship of the study site to the King Abdulaziz Public Transport Project and the level of accessibility and connectivity between them.",
+        "• Provide recommendations to mitigate the impact of the project and propose the necessary traffic measures and improvements to be used in preparing the proposed design ideas and alternatives for the Zul Market and the surrounding area."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Riyadh, Saudi Arabia",
+        "clients": ["Dar Al Omran", "Riyadh Municipality"],
+        "periodsOfServices": "2023"
       }
     },
     {
       "id": 10,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Identification and Documentation of Urban Heritage Assets in the Kingdom of Saudi Arabia – 5,450 Urban Heritage Assets",
+      "slug": "identification-and-documentation-of-urban-heritage-assets-in-the-kingdom-of-saudi-arabia-5450-urban-heritage-assets",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-10/image-1.jpg",
+        "location": "Riyadh, Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-10/image-1.jpg",
+        "/our-projects/project-10/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-10/image-1.jpg",
+        "/our-projects/project-10/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "This project involved the comprehensive collection and analysis of data on urban heritage buildings in central Riyadh. Working closely with stakeholders, the team reconciled newly collected information with existing records to ensure accurate coverage of the targeted buildings.",
+        "Each heritage building was subsequently recorded, classified, and documented in the Urban Heritage Register, creating a detailed and reliable database of 5,450 heritage assets for the city’s historic core.",
+        "The project comprised three main stages:",
+        "1. Development of procedures for the exploration and documentation of urban heritage assets.",
+        "2. Development of a new system environment for the Urban Heritage Register.",
+        "3. Identification and documentation of 5,450 urban heritage assets."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Riyadh, Saudi Arabia",
+        "clients": ["Ministry of Culture", "Heritage Commision"],
+        "periodsOfServices": "2023-2024"
       }
     },
     {
       "id": 11,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Comprehensive Survey of Urban Heritage Assets in the Regions of the Kingdom of Saudi Arabia – 25,000 Urban Heritage Assets",
+      "slug": "comprehensive-survey-of-urban-heritage-assets-in-the-regions-of-the-kingdom-of-saudi-arabia-25000-urban-heritage-assets",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-11/image-1.jpg",
+        "location": "Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-11/image-1.jpg",
+        "/our-projects/project-11/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-11/image-1.jpg",
+        "/our-projects/project-11/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "The project serves as a comprehensive portfolio of urban heritage assets, implemented according to best practices through a Heritage Value Chain Management model.",
+        "It aims to identify and document urban heritage assets in the Kingdom of Saudi Arabia in compliance with relevant laws and regulations, utilizing the latest technologies for heritage preservation.",
+        "The project provides an effective tool for protecting, managing, and maintaining the urban heritage portfolio, ensuring the safeguarding of the Kingdom’s cultural legacy.",
+        "The project comprised three main stages:",
+        "1. Development of procedures for the exploration and documentation of urban heritage assets.",
+        "2. Development of a new system environment for the Urban Heritage Register.",
+        "3. Identification and documentation of 25,000 urban heritage assets."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Saudi Arabia",
+        "clients": ["CCG", "Heritage Commission / Ministry of Culture"],
+        "periodsOfServices": "2025"
       }
     },
     {
       "id": 12,
-      "title": "Amaar Group Tower",
-      "slug": "amaar-group-tower",
+      "title": "Development of Municipal Buildings and Facilities in the Historic and Heritage Districts of Central Riyadh",
+      "slug": "development-of-municipal-buildings-and-facilities-in-the-historic-and-heritage-districts-of-central-riyadh",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
-        "location": "UAE - Abu Dhabi"
+        "thumbnail": "/our-projects/project-12/image-3.jpg",
+        "location": "Riyadh, Saudi Arabia"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-12/image-3.jpg",
+        "/our-projects/project-12/image-1.jpg",
+        "/our-projects/project-12/image-2.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-12/image-3.jpg",
+        "/our-projects/project-12/image-1.jpg",
+        "/our-projects/project-12/image-2.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, used as placeholder content.",
-        "This is where you can place a longer description for the Amaar Group Tower project."
+        "• Conducting an urban survey of 120 buildings in the historic districts of central Riyadh.",
+        "• Studying the urban structure of 120 heritage buildings in the historic districts of central Riyadh.",
+        "• Assessing 120 heritage buildings in the historic districts of central Riyadh.",
+        "• Preparing architectural and structural studies, including causes of deterioration, for 120 buildings in the historic districts of central Riyadh.",
+        "• Developing a geographic database for heritage assets."
       ],
       "details": {
-        "sector": ["Residential", "Architecture & Design"],
-        "location": "UAE - Abu Dhabi",
-        "clients": ["Amaar Group"],
-        "periodsOfServices": "2010-2014"
+        "sector": [],
+        "location": "Riyadh, Saudi Arabia",
+        "clients": ["Al-Madar AlOula", "Riyadh Municipality"],
+        "periodsOfServices": "2019"
       }
     }
   ]
