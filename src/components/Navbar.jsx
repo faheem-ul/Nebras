@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 // Import all logo variations
 import greenLogo from "../assets/navbar/lobo-green.png";
 import whiteLogo from "../assets/navbar/lobo-white.png";
@@ -11,6 +13,8 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [logo, setLogo] = useState(greenLogo);
+
+  const { lang, toggleLanguage } = useLanguage();
 
   // Handle logo depending on route
   useEffect(() => {
@@ -56,13 +60,20 @@ const Navbar = () => {
             : "text-white"
             }`}>
 
-          <NavLink
+          {/* <NavLink
             to=""
             className="font-logirent font-normal text-lg leading-none hover:text-[#016938] "
             data-aos="fade-right" data-aos-delay="200"
           >
             العربية
-          </NavLink>
+          </NavLink> */}
+          <button
+            onClick={() => toggleLanguage(lang === "en" ? "ar" : "en")}
+            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+          >
+            {lang === "en" ? "العربية" : "English"}
+          </button>
+
           <NavLink
             to="/"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}

@@ -8,7 +8,7 @@ import ProjectCard from "@/components/ProjectCard";
 const OurProjects = () => {
   const navigate = useNavigate();
 
-  const currentProjects = projectsData.projects.slice(0, 6);
+  const currentProjects = projectsData.projects.slice(0, 8);
 
   return (
     <section className="w-full bg-[#393C3D] pt-[105px] pb-[95px]">
@@ -36,7 +36,7 @@ const OurProjects = () => {
 
         {/* Project cards */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[27px] gap-y-[50px] text-white"
+          className="flex flex-col md:flex-row flex-wrap  gap-x-[27px] gap-y-[27px] text-white"
           data-aos="fade"
           data-aos-delay="400"
         >

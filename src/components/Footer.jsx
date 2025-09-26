@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../assets/footer/footerLogo.png";
 
@@ -39,22 +40,20 @@ const itemVariants = {
 
 const Footer = () => {
   const quickLinks = [
-    "What we do",
-    "Our projects",
-    "Who we are",
-    "Jafar Tukan Atelier",
-    "Involvement",
-    "News",
-    "Join us",
+    { label: "Home", path: "/" },
+    { label: "Our projects", path: "/our-projects" },
+    { label: "About Us", path: "/about-us" },
+    { label: "Insights", path: "/insights" },
+    { label: "Contact Us", path: "/contact-us" },
   ];
 
-  const utilityLinks = [
-    "CCg & Hudson Meridian",
-    "Invitation to a Meeting",
-    "Terms of Use",
-    "Privacy Policy",
-    "Contact Us",
-  ];
+  // const utilityLinks = [
+  //   "CCg & Hudson Meridian",
+  //   "Invitation to a Meeting",
+  //   "Terms of Use",
+  //   "Privacy Policy",
+  //   "Contact Us",
+  // ];
 
   const contactItems = [
     {
@@ -94,20 +93,22 @@ const Footer = () => {
     >
       {/* Main content wrapper - columns are children of this and will be staggered */}
       <motion.div
-        className="max-w-[1312px] mx-auto px-5 pt-10 pb-10 md:pt-[76px] md:pb-[50px] flex flex-col md:flex-row justify-between gap-10 md:gap-[30px] flex-wrap"
+        className="max-w-[1312px] mx-auto px-5 pt-10 pb-10 md:pt-[76px] md:pb-[50px] flex flex-col md:flex-row justify-between gap-y-10 md:gap-y-0 md:gap-x-[30px] flex-wrap"
         variants={footerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.12 }}
       >
         {/* Left Column (contact & address) */}
-        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
-          <motion.img
-            src={logo}
-            alt="Logo"
-            className="w-[160px] md:w-[208px] h-auto mb-6 md:mb-[38px]"
-            variants={itemVariants}
-          />
+        <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
+          <Link to="/">
+            <motion.img
+              src={logo}
+              alt="Logo"
+              className="w-[160px] md:w-[208px] h-auto mb-6 md:mb-[38px]"
+              variants={itemVariants}
+            />
+          </Link>
 
           <motion.ul
             className="font-kosans text-sm md:text-[16px] leading-[22px] md:leading-[24px] space-y-4"
@@ -122,7 +123,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Quick Links Column */}
-        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
+        <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
             className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
             variants={itemVariants}
@@ -134,37 +135,17 @@ const Footer = () => {
             className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]"
             variants={columnVariants}
           >
-            {quickLinks.map((label, i) => (
-              <motion.li key={label} variants={itemVariants}>
-                <a href="#">{label}</a>
+            {quickLinks.map((item, i) => (
+              <motion.li key={item.label} variants={itemVariants}>
+                <Link to={item.path} className="hover:underline">{item.label}</Link>
               </motion.li>
             ))}
-          </motion.ul>
-        </motion.div>
 
-        {/* Utility Pages Column */}
-        <motion.div className="w-full max-w-[258px]" variants={columnVariants}>
-          <motion.h3
-            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
-            variants={itemVariants}
-          >
-            UTILITY PAGES
-          </motion.h3>
-
-          <motion.ul
-            className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]"
-            variants={columnVariants}
-          >
-            {utilityLinks.map((label, i) => (
-              <motion.li key={label} variants={itemVariants}>
-                <a href="#">{label}</a>
-              </motion.li>
-            ))}
           </motion.ul>
         </motion.div>
 
         {/* Newsletter Column */}
-        <motion.div className="w-full max-w-[388px]" variants={columnVariants}>
+        <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
             className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
             variants={itemVariants}

@@ -2,34 +2,36 @@
   "projects": [
     {
       "id": 1,
-      "title": "Dead Sea Parkway",
-      "slug": "dead-sea-parkway",
+      "title": "Consulting services to prepare Service and Business Plan for Amman BRT Feeder Buses Operations",
+      "slug": "consulting-services-service-business-plan-amman-brt-feeder-buses",
       "card": {
-        "thumbnail": "/our-projects/thumbnail/project.png",
+        "thumbnail": "/our-projects/project-1/image-1.jpg",
         "location": "Jordan"
       },
-      "heroImage": "/our-projects/hero-img/project-hero-img.jpg",
+      "heroImages": [
+        "/our-projects/project-1/image-1.jpg",
+        "/our-projects/project-1/image-2.jpg",
+        "/our-projects/project-1/image-3.jpg"
+      ],
       "sliderImages": [
-        "/our-projects/slider/slider-1.jpg",
-        "/our-projects/slider/slider-2.jpg",
-        "/our-projects/slider/slider-3.jpg",
-        "/our-projects/slider/slider-4.jpg"
+        "/our-projects/project-1/image-1.jpg",
+        "/our-projects/project-1/image-2.jpg",
+        "/our-projects/project-1/image-3.jpg"
       ],
       "description": [
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        "Conduct comprehensive traffic surveys in Amman to inform the development of a sustainable public transportation system.",
+        "Main target of this survey campaign is to provide Excel sheet data containing five types of surveys that will be conducted inside Amman city boundaries:",
+        "• Boarding/Alighting at Main Stops/In Terminal Passenger Survey.",
+        "• Board Passenger Survey / In Vehicle Passenger Count.",
+        "• OD Questionnaire Survey.",
+        "• Manual Classified Counts / Using Video Camera.",
+        "• White Taxi Ridership Survey."
       ],
       "details": {
-        "sector": ["Transportation", "Planning & Design"],
-        "location": "Jordan",
-        "clients": [
-          "Ministry of Public Works and Housing (MPWH)",
-          "Japan International Cooperation Agency (JICA)",
-          "PACIFIC Consultants International (currently Oriental Consultants)",
-          "Yamashita Sekkei Inc., both of Japan"
-        ],
-        "periodsOfServices": "2003-2007"
+        "sector": [],
+        "location": "",
+        "clients": ["Greater Amman Municipality", "Arabtech Jardaneh", "IDOM"],
+        "periodsOfServices": "2021-2022"
       }
     },
     {
