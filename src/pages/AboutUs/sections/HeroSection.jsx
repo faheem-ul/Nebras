@@ -41,9 +41,7 @@ const HeroSection = () => {
                 data-aos="fade" data-aos-delay="100"
             >
                 <Text className="text-sm leading-6 md:text-[18px] md:leading-[27px]">
-                    Consolidated Consultants Group (CCG) is a pioneering architectural and
-                    engineering consultancy firm that provides a comprehensive range of
-                    services in the fields of design, management and specialized studies.
+                    Established in the heart of Amman, Jordan, Nebras Tihamah Engineering and Technical Consultancy has carved a niche for itself as a leading provider of engineering consultancy and urban planning services.
                 </Text>
             </div>
         </div>

@@ -10,7 +10,7 @@ const Text = forwardRef(function Text(props, ref) {
             <h1
                 ref={ref}
                 className={cn(
-                    "font-logirent text-[32px] leading-[40px] md:text-[65px] md:leading-[100%]",
+                    "font-logirent text-[30px] leading-[40px] md:text-[65px] md:leading-[100%]",
                     className
                 )}
                 onClick={onClick}
@@ -39,7 +39,7 @@ const Text = forwardRef(function Text(props, ref) {
         <p
             ref={ref}
             className={cn(
-                "font-kosans text-[18px] leading-[24px] md:text-[24px] font-normal md:leading-[38px]",
+                "font-kosans text-[18px]  leading-[38px] md:text-[24px] font-normal md:leading-[38px]",
                 className
             )}
             onClick={onClick}

@@ -2,11 +2,17 @@
   "projects": [
     {
       "id": 1,
-      "title": "Consulting services to prepare Service and Business Plan for Amman BRT Feeder Buses Operations",
+      "title": {
+        "en": "Consulting services to prepare Service and Business Plan for Amman BRT Feeder Buses Operations",
+        "ar": "خدمات استشارية لإعداد خطة تشغيلية لخطوط الحافلات المغذية لمسارات الباص سريع التردد (BRT) في مدينة عمّان."
+      },
       "slug": "consulting-services-service-business-plan-amman-brt-feeder-buses",
       "card": {
         "thumbnail": "/our-projects/project-1/image-1.jpg",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-1/image-1.jpg",
@@ -18,29 +24,59 @@
         "/our-projects/project-1/image-2.jpg",
         "/our-projects/project-1/image-3.jpg"
       ],
-      "description": [
-        "Conduct comprehensive traffic surveys in Amman to inform the development of a sustainable public transportation system.",
-        "Main target of this survey campaign is to provide Excel sheet data containing five types of surveys that will be conducted inside Amman city boundaries:",
-        "• Boarding/Alighting at Main Stops/In Terminal Passenger Survey.",
-        "• Board Passenger Survey / In Vehicle Passenger Count.",
-        "• OD Questionnaire Survey.",
-        "• Manual Classified Counts / Using Video Camera.",
-        "• White Taxi Ridership Survey."
-      ],
+      "description": {
+        "en": [
+          "Conduct comprehensive traffic surveys in Amman to inform the development of a sustainable public transportation system.",
+          "Main target of this survey campaign is to provide Excel sheet data containing five types of surveys that will be conducted inside Amman city boundaries:",
+          "• Boarding/Alighting at Main Stops/In Terminal Passenger Survey.",
+          "• Board Passenger Survey / In Vehicle Passenger Count.",
+          "• OD Questionnaire Survey.",
+          "• Manual Classified Counts / Using Video Camera.",
+          "• White Taxi Ridership Survey."
+        ],
+        "ar": [
+          "إجراء مسوحات مرورية شاملة في مدينة عمّان بهدف توفير بيانات منظمة يسهل استخدامها لتلبية متطلبات المشروع في دعم تطوير نظام نقل عام مستدام .",
+          "يتضمن نطاق العمل خمسة أنواع من المسوحات المرورية أجريت ضمن حدود مدينة عمّان، وهي:",
+          "• المسح الخاص بالتحميل والتنزيل من حافلات النقل العام عند المحطات ضمن المسار وداخل مراكز الوصول والانطلاق (Boarding/Alighting).",
+          "• مسح عدد ركاب حافلات النقل العام (In Vehicle Passenger Count).",
+          "• مسح المنشأ والمقصد (OD Questionnaire Survey)",
+          "• التعداد المروري اليدوي التصنيفي  (TMC)",
+          "• مسح عدد ركاب سيارات الأجرة البيضاء (White Taxi Ridership Survey)"
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Greater Amman Municipality", "Arabtech Jardaneh", "IDOM"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Greater Amman Municipality", "Arabtech Jardaneh"],
+          "ar": [
+            "أمانة عمان الكبرى",
+            "شركة أرابتك جردانة للاستشارات الهندسية",
+            "IDOM"
+          ]
+        },
         "periodsOfServices": "2021-2022"
       }
     },
     {
       "id": 2,
-      "title": "Calibration And Validation Of Model GAM Transport Model",
+      "title": {
+        "en": "Calibration And Validation Of Model GAM Transport Model",
+        "ar": "معايرة نموذج النقل والتحقق من موثوقيته - أمانة عمان الكبرى"
+      },
       "slug": "calibration-validation-gam-transport-model",
       "card": {
         "thumbnail": "/our-projects/project-2/image-1.png",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-2/image-1.png",
@@ -50,30 +86,57 @@
         "/our-projects/project-2/image-1.png",
         "/our-projects/project-2/image-2.jpg"
       ],
-      "description": [
-        "Reduce reliance on the car and encourage alternative modes of transport to enhance accessibility for citizens to goods and services, in particular through the provision of a comprehensive and affordable public transport system.",
-        "Nebras Consult has been commissioned to collect the transportation data to be used for calibration and validation of the GAM Transport model.",
-        "Scope of work:",
-        "1- Boarders/Alighters surveys at main stops (in terminal passenger count).",
-        "2- On Board Passenger survey on main BRT competing Bus lines including Public Transport Travel Time Studies (using GPS).",
-        "3- Public transportation Frequency and Occupancy (from road side).",
-        "4- Automatic Traffic counts (ATC).",
-        "5- Vehicle Classification Counts using video recording."
-      ],
+      "description": {
+        "en": [
+          "Reduce reliance on the car and encourage alternative modes of transport to enhance accessibility for citizens to goods and services, in particular through the provision of a comprehensive and affordable public transport system.",
+          "Nebras Consult has been commissioned to collect the transportation data to be used for calibration and validation of the GAM Transport model.",
+          "Scope of work:",
+          "1- Boarders/Alighters surveys at main stops (in terminal passenger count).",
+          "2- On Board Passenger survey on main BRT competing Bus lines including Public Transport Travel Time Studies (using GPS).",
+          "3- Public transportation Frequency and Occupancy (from road side).",
+          "4- Automatic Traffic counts (ATC).",
+          "5- Vehicle Classification Counts using video recording."
+        ],
+        "ar": [
+          "يتمثل هدف المشروع في معايرة والتحقق من صحة نموذج النقل لدى أمانة عمان الكبرى، وذلك لضمان دقة تمثيله للواقع المروري في مدينة عمّان وموثوقيته في التنبؤ بالأنماط المستقبلية لحركة النقل. ويسعى المشروع إلى تطوير أداة تخطيطية معتمدة تدعم صانعي القرار في تقييم السياسات المرورية، ودراسة مشاريع البنية التحتية، وتحسين كفاءة منظومة النقل الحضري بما يسهم في رفع مستوى الخدمة وتسهيل الحركة داخل المدينة.",
+          "تم تكليف شركة نبراس للاستشارات بجمع بيانات النقل التي استخدمت لاحقاً في معايرة والتحقق من صحة نموذج النقل لدى أمانة عمان الكبرى.",
+          "نطاق العمل:",
+          "1- المسح الخاص بالتحميل والتنزيل من حافلات النقل العام عند المحطات ضمن المسار وداخل مراكز الوصول والانطلاق (Boarding/Alighting).",
+          "2- مسح عدد ركاب حافلات النقل العام (In Vehicle Passenger Count) وزمن الرحلة (Journey Time) ضمن خطوط النقل العام.",
+          "3- دراسة التردد ونسب الإشغال لوسائل النقل العام (المسح من جانب الطريق).",
+          "4- التعداد المروري الآلي (ATC)",
+          "5- التعداد المروري اليدوي التصنيفي  (TMC)"
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Greater Amman Municipality", "STEER"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Greater Amman Municipality", "STEER"],
+          "ar": ["أمانة عمان الكبرى", "STEER"]
+        },
         "periodsOfServices": "2019"
       }
     },
     {
       "id": 3,
-      "title": "Amman Bus Rapid Transit Phase II",
+      "title": {
+        "en": "Amman Bus Rapid Transit Phase II",
+        "ar": "مشروع الباص سريع التردد في عمّان - المرحلة الثانية"
+      },
       "slug": "amman-brt-phase-ii",
       "card": {
         "thumbnail": "/our-projects/project-3/image-1.jpg",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-3/image-1.jpg",
@@ -83,34 +146,65 @@
         "/our-projects/project-3/image-1.jpg",
         "/our-projects/project-3/image-2.png"
       ],
-      "description": [
-        "Carry out a preliminary study of Amman BRT Phase II and assess the potential for / extent of private sector participation through various PPP options.",
-        "Study Tasks:",
-        "1- Review of Existing Studies and Data, and Inception Report.",
-        "2- Gap Analysis of the Regulatory, Institutional and PPP Framework.",
-        "3- Data Collection.",
-        "4- Demand Forecasts and Assessment of Operational Plan and Conceptual Design Scenarios.",
-        "5- Economic Analysis of the Various Scenarios.",
-        "6- Business Models and Financing Options.",
-        "7- PPP Risk Assessment.",
-        "The data collection includes performing two main types of field surveys:",
-        "1- Traffic Counts: both automatic traffic counts (ATC) and manual turning movement counts (MTMC).",
-        "2- Public Transport Passenger Counts."
-      ],
+      "description": {
+        "en": [
+          "Carry out a preliminary study of Amman BRT Phase II and assess the potential for / extent of private sector participation through various PPP options.",
+          "Study Tasks:",
+          "1- Review of Existing Studies and Data, and Inception Report.",
+          "2- Gap Analysis of the Regulatory, Institutional and PPP Framework.",
+          "3- Data Collection.",
+          "4- Demand Forecasts and Assessment of Operational Plan and Conceptual Design Scenarios.",
+          "5- Economic Analysis of the Various Scenarios.",
+          "6- Business Models and Financing Options.",
+          "7- PPP Risk Assessment.",
+          "The data collection includes performing two main types of field surveys:",
+          "1- Traffic Counts: both automatic traffic counts (ATC) and manual turning movement counts (MTMC).",
+          "2- Public Transport Passenger Counts."
+        ],
+        "ar": [
+          "إجراء دراسة أولية للمرحلة الثانية من مشروع الباص سريع التردد (BRT) في عمّان، وتقييم مدى امكانية اشراك القطاع الخاص من خلال خيارات الشراكة بين القطاعين العام والخاص المختلفة (PPP) .",
+          "نطاق العمل:",
+          "1- مراجعة الدراسات والبيانات المتوفرة، وإعداد التقرير الابتدائي (Inception Report)",
+          "2- تحليل الفجوات في الأطر التنظيمية والمؤسسية وخيارات الشراكة بين القطاعين العام والخاص.",
+          "3- جمع البيانات الميدانية.",
+          "4- التنبؤ بالطلب، وتقييم الخطط التشغيلية والسيناريوهات التصميمية الأولية.",
+          "5- التحليل الاقتصادي للسيناريوهات المختلفة.",
+          "6- نماذج الأعمال (Business Model) وخيارات التمويل.",
+          "7- تقييم المخاطر المتعلقة بالشراكة بين القطاعين العام والخاص (PPP Risk Assessment)",
+          "يشمل جمع البيانات إجراء نوعين رئيسيين من المسوحات الميدانية:",
+          "1- التعداد والحصر المروري: ويشمل كل من التعداد المروري الآلي(ATC) والتعداد المروري اليدوي التصنيفي (TMC).",
+          "2- تعداد مستخدمي وسائل النقل العام."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Greater Amman Municipality", "WSP"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Greater Amman Municipality", "WSP"],
+          "ar": ["أمانة عمان الكبرى", "WSP"]
+        },
         "periodsOfServices": "2021"
       }
     },
     {
       "id": 4,
-      "title": "Jordan Bus Reform Project – Feasibility and Implementation Plan",
+      "title": {
+        "en": "Jordan Bus Reform Project – Feasibility and Implementation Plan",
+        "ar": "مشروع إعادة هيكلة خطوط النقل العام في الأردن (محافظات الزرقاء والسلط ومأدبا وإربد) – دراسات الجدوى وخطة التشغيل."
+      },
       "slug": "jordan-bus-reform-project-feasibility-implementation-plan",
       "card": {
         "thumbnail": "/our-projects/project-4/image-1.jpg",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-4/image-1.jpg",
@@ -120,30 +214,62 @@
         "/our-projects/project-4/image-1.jpg",
         "/our-projects/project-4/image-2.png"
       ],
-      "description": [
-        "Reform of the public transport sector to improve public transport services and targeting of subsidies for selected transport users. The Project comprises the setting up of new bus route operations in the cities of Irbid, Zarqa, Salt and Madaba.",
-        "Project objectives:",
-        "1- The provision of good frequency, safe, reliable and timetabled bus services in the cities of Jordan.",
-        "2- Services to be operated by new buses with superior quality in terms of appearance, accessibility, capacity and attractiveness to passengers.",
-        "3- Restructuring of the bus industry to create larger bus companies which are better financed, successful and able to compete for bus service tenders.",
-        "4- Providing greatly improved mobility to work, education, health and leisure facilities for Jordanian citizens.",
-        "5- Enabling the LTRC and the Municipalities to have more control over transport planning.",
-        "6- Creating employment opportunities in the bus industry and assisting in general economic development."
-      ],
+      "description": {
+        "en": [
+          "Reform of the public transport sector to improve public transport services and targeting of subsidies for selected transport users. The Project comprises the setting up of new bus route operations in the cities of Irbid, Zarqa, Salt and Madaba.",
+          "Project objectives:",
+          "1- The provision of good frequency, safe, reliable and timetabled bus services in the cities of Jordan.",
+          "2- Services to be operated by new buses with superior quality in terms of appearance, accessibility, capacity and attractiveness to passengers.",
+          "3- Restructuring of the bus industry to create larger bus companies which are better financed, successful and able to compete for bus service tenders.",
+          "4- Providing greatly improved mobility to work, education, health and leisure facilities for Jordanian citizens.",
+          "5- Enabling the LTRC and the Municipalities to have more control over transport planning.",
+          "6- Creating employment opportunities in the bus industry and assisting in general economic development."
+        ],
+        "ar": [
+          "يهدف المشروع إلى تطوير قطاع النقل العام في الأردن من خلال تحسين مستوى الخدمات، وتوجيه الدعم المالي بشكل مباشر لمستخدميه. ويتضمن ذلك إنشاء مسارات جديدة وإعادة هيكلة المسارات القائمة لحافلات النقل العام في مدن: إربد، الزرقاء، السلط، ومأدبا.",
+          "أهداف المشروع:",
+          "1- توفير خدمات النقل العام بوسيلة آمنة، موثوقة وذات جدول زمني محدد في مدن الأردن.",
+          "2- تشغيل الخدمات باستخدام حافلات جديدة ذات جودة عالية وجيدة المظهر ومناسبة السعة، وتحقيق وصولية عالية لزيادة جاذبية الاستخدام.",
+          "3- إعادة هيكلة خطوط النقل العام في المملكة لإنشاء شركات حافلات كبيرة وقادرة على المنافسة على عقود تقديم خدمات الحافلات.",
+          "4- توفير قدرة تنقل عالية للوصول إلى العمل، والمنشآت التعليمية، والخدمات الصحية، والمرافق الترفيهية للمواطنين الأردنيين.",
+          "5- تمكين هيئة تنظيم النقل البري والبلديات من التحكم بشكل فعال في مجال التخطيط للنقل.",
+          "6- خلق فرص عمل في صيانة وتشغيل الحافلات والمساهمة في التنمية الاقتصادية العامة."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Ministry of Transport", "LTRC", "WSP", "EBRD"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Ministry of Transport", "LTRC", "WSP", "EBRD"],
+          "ar": [
+            "وزارة النقل",
+            "هيئة تنظيم النقل البري",
+            "WSP",
+            "البنك الأوروبي لإعادة الإعمار والتنمية"
+          ]
+        },
         "periodsOfServices": "2018-2019"
       }
     },
     {
       "id": 5,
-      "title": "Traffic Impact Study for the Tourist Buses and Cars Parking Project Near Rabad Castle/Ajloun",
+      "title": {
+        "en": "Traffic Impact Study for the Tourist Buses and Cars Parking Project Near Rabad Castle/Ajloun",
+        "ar": "دراسة الأثر المروري لمشروع مواقف الحافلات السياحية والسيارات بالقرب من قلعة الربض/عجلون"
+      },
       "slug": "traffic-impact-study-tourist-buses-cars-parking-project-rabad-castle-ajloun",
       "card": {
         "thumbnail": "/our-projects/project-5/image-1.jpg",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-5/image-1.jpg",
@@ -155,31 +281,59 @@
         "/our-projects/project-5/image-2.jpg",
         "/our-projects/project-5/image-3.jpg"
       ],
-      "description": [
-        "The car park and tourist bus project is located in Ajloun near the Historical Castle, with a total area of approximately 3700 square meters.",
-        "The project includes 35 car parking spaces and 13 parking spaces for tourist buses, in addition to 18 kiosks to provide services for tourists and visitors to the castle, including food and beverage services.",
-        "Services Provided:",
-        "1- Prepare a Traffic Impact Study (TIS) report.",
-        "2- Traffic assessment inside the development area.",
-        "3- Traffic Safety Auditing.",
-        "4- Develop Planning Alternatives.",
-        "5- Supply and demand study for parking lots.",
-        "6- Conducting Traffic Counts Survey."
-      ],
+      "description": {
+        "en": [
+          "The car park and tourist bus project is located in Ajloun near the Historical Castle, with a total area of approximately 3700 square meters.",
+          "The project includes 35 car parking spaces and 13 parking spaces for tourist buses, in addition to 18 kiosks to provide services for tourists and visitors to the castle, including food and beverage services.",
+          "Services Provided:",
+          "1- Prepare a Traffic Impact Study (TIS) report.",
+          "2- Traffic assessment inside the development area.",
+          "3- Traffic Safety Auditing.",
+          "4- Develop Planning Alternatives.",
+          "5- Supply and demand study for parking lots.",
+          "6- Conducting Traffic Counts Survey."
+        ],
+        "ar": [
+          "يقع مشروع مواقف السيارات والحافلات السياحية في عجلون بالقرب من القلعة التاريخية، بمساحة إجمالية تقارب ثلاثة آلاف وسبعمائة متر مربع (3700 م²).",
+          "يشمل المشروع 35 موقفاً للسيارات و13 موقفاً للحافلات السياحية، بالإضافة إلى 18 كشكاً لتقديم الخدمات للسياح والزوار، بما في ذلك خدمات الطعام والشراب.",
+          "نطاق العمل:",
+          "1- إعداد تقرير دراسة الأثر المروري (TIS)",
+          "2- تقييم الحركة المرورية داخل منطقة المشروع.",
+          "3- تدقيق السلامة المرورية (RSA – Road Safety Audit)",
+          "4- تطوير البدائل التخطيطية.",
+          "5- دراسة العرض والطلب على مواقف المركبات.",
+          "6- إجراء المسوحات المرورية."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Madi Partners Consulting Engineering"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Madi Partners Consulting Engineering"],
+          "ar": ["شركة ماضي و شركاه للاستشارات الهندسية."]
+        },
         "periodsOfServices": "2021"
       }
     },
     {
       "id": 6,
-      "title": "Traffic Study & Detailed Geometric Design for the Hot Spots / Wadi Mousa",
+      "title": {
+        "en": "Traffic Study & Detailed Geometric Design for the Hot Spots / Wadi Mousa",
+        "ar": "دراسة الأثر المروري والتصميم الهندسي الجيومتري التفصيلي للنقاط الحرجة (Hot spots) / وادي موسى"
+      },
       "slug": "traffic-study-detailed-geometric-design-hot-spots-wadi-mousa",
       "card": {
         "thumbnail": "/our-projects/project-6/image-1.jpg",
-        "location": "Jordan"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-6/image-1.jpg",
@@ -193,41 +347,78 @@
         "/our-projects/project-6/image-3.jpg",
         "/our-projects/project-6/image-4.png"
       ],
-      "description": [
-        "A comprehensive Traffic Impact Study (TIS) for Wadi Mousa downtown, covering the Petra Visitors Center, one of the Seven Wonders of the World and among Jordan’s most iconic landmarks, which welcomed over 1 million visitors in 2019.",
-        "The study aims to assess current and future traffic conditions, improve accessibility, and enhance mobility for both residents and tourists.",
-        "Project Tasks and Stages:",
-        "1- Review previous traffic and urban planning studies.",
-        "2- Tourist Data Analysis:",
-        "• Historical data on tourist numbers, seasonal variations, and peak hours.",
-        "3- Field Surveys:",
-        "• Turning Movement Counts.",
-        "• Topographic Surveys.",
-        "4- Traffic Modeling:",
-        "• Simulation using Synchro, PTV/VISSIM, HCS.",
-        "• Mitigation Measures.",
-        "5- Safety Audit using iRAP protocols:",
-        "• Conducting star rating assessments for vehicles, pedestrians, cyclists, and motorcyclists.",
-        "• Identifying high-risk locations to recommend evidence-based countermeasures.",
-        "6- Temporary Traffic Management Plan during Ramadan:",
-        "• A specific plan to accommodate increased traffic volumes.",
-        "7- Detailed Designs:",
-        "• Engineering drawings, BOQ, geometric design, landscape, signage plans, and road marking."
-      ],
+      "description": {
+        "en": [
+          "A comprehensive Traffic Impact Study (TIS) for Wadi Mousa downtown, covering the Petra Visitors Center, one of the Seven Wonders of the World and among Jordan’s most iconic landmarks, which welcomed over 1 million visitors in 2019.",
+          "The study aims to assess current and future traffic conditions, improve accessibility, and enhance mobility for both residents and tourists.",
+          "Project Tasks and Stages:",
+          "1- Review previous traffic and urban planning studies.",
+          "2- Tourist Data Analysis:",
+          "• Historical data on tourist numbers, seasonal variations, and peak hours.",
+          "3- Field Surveys:",
+          "• Turning Movement Counts.",
+          "• Topographic Surveys.",
+          "4- Traffic Modeling:",
+          "• Simulation using Synchro, PTV/VISSIM, HCS.",
+          "• Mitigation Measures.",
+          "5- Safety Audit using iRAP protocols:",
+          "• Conducting star rating assessments for vehicles, pedestrians, cyclists, and motorcyclists.",
+          "• Identifying high-risk locations to recommend evidence-based countermeasures.",
+          "6- Temporary Traffic Management Plan during Ramadan:",
+          "• A specific plan to accommodate increased traffic volumes.",
+          "7- Detailed Designs:",
+          "• Engineering drawings, BOQ, geometric design, landscape, signage plans, and road marking."
+        ],
+        "ar": [
+          "يتمثل المشروع في إجراء دراسة للأثر المروري (TIS) في وسط مدينة وادي موسى، وتشمل منطقة مركز زوار البتراء، أحد عجائب الدنيا السبع وأشهر الوجهات السياحية في الأردن، والذي استقطب أكثر من مليون زائر عام 2019.",
+          "تهدف هذه الدراسة إلى تقييم الوضع المروري الراهن والمستقبلي في المنطقة، والعمل على تحسين مستوى الوصولية وتعزيز انسيابية الحركة المرورية بما يلبي احتياجات السكان والزوار على حد سواء، ويدعم المكانة السياحية والاقتصادية للبتراء.",
+          "نطاق العمل:",
+          "1- مراجعة الدراسات السابقة في مجال النقل والمرور والتخطيط الحضري.",
+          "2- تحليل البيانات المتعلقة بالنشاط السياحي: بيانات تاريخية حول أعداد السياح، والتغيرات الموسمية، وساعات الذروة.",
+          "3- المسوحات الميدانية:",
+          "   • التعداد المروري اليدوي التصنيفي (TMC) لحركات الالتفاف على التقاطعات.",
+          "   • المسوحات الطبوغرافية.",
+          "4- التحليل والنمذجة المرورية:",
+          "   • استخدام برامج النمذجة والمحاكاة المرورية (Synchro، PTV/VISSIM، HCS).",
+          "   • إعداد خطة التحسينات المرورية (Mitigation Measures).",
+          "5- تدقيق عناصر السلامة المرورية (RSA – Road Safety Audit):",
+          "   • إجراء تدقيق السلامة المرورية باستخدام بروتوكولات البرنامج الدولي لتقييم الطرق (iRAP)، وتقييم النجوم لمستخدمي الطريق (السائقين، المشاة، راكبي الدراجات، والدراجات النارية).",
+          "   • تحديد المواقع عالية الخطورة لتقديم توصيات مبنية على الأدلة.",
+          "6- خطة إدارة الحركة المرورية المؤقتة خلال شهر رمضان المبارك:",
+          "   • تطوير خطة لاستيعاب الزيادة في الأحجام المرورية خلال شهر رمضان.",
+          "7- التصميم الهندسي الجيومتري التفصيلي:",
+          "   • إعداد المخططات التصميمية التفصيلية التي تتضمن التصميم الجيومتري، أعمال تنسيق الموقع (Landscape)، جداول الكميات (BOQ)، وخطط العلامات الأرضية واللوحات المرورية."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "",
-        "clients": ["Petra Development & Tourism Region Authority"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Petra Development & Tourism Region Authority"],
+          "ar": ["سلطة إقليم البترا التنموي السياحي"]
+        },
         "periodsOfServices": "2021"
       }
     },
     {
       "id": 7,
-      "title": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One)",
+      "title": {
+        "en": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One)",
+        "ar": "تحسين مستوى السلامة المرورية عند مناطق المدارس والمساجد في مدينة الرياض – المرحلة الأولى"
+      },
       "slug": "improve-traffic-safety-levels-schools-mosques-riyadh-stage-one",
       "card": {
         "thumbnail": "/our-projects/project-7/image-1.jpg",
-        "location": "Riyadh, Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-7/image-1.jpg",
@@ -237,35 +428,66 @@
         "/our-projects/project-7/image-1.jpg",
         "/our-projects/project-7/image-2.jpg"
       ],
-      "description": [
-        "Improve traffic safety levels at 300 schools and mosques.",
-        "Develop a comprehensive traffic safety plan for schools in Riyadh City.",
-        "Implement the traffic safety plan and monitor its effectiveness.",
-        "1,500 traffic count locations.",
-        "Project Tasks and Stages:",
-        "• Study the best international experiences and engineering practices (Case Study).",
-        "• Coordinate with stakeholders.",
-        "• Identify and classify the detailed scope of work.",
-        "• Conduct traffic and Topo Surveys (ATC, TMC, Speed, Pedestrian counts and users' questioners).",
-        "• Traffic analysis and traffic safety audit.",
-        "• Prepare a manual for improving traffic safety at schools.",
-        "• Developing a Training Program for Riyadh Municipality Staff to Build Capacities and Transfer Knowledge.",
-        "• Developing a Training Program for Riyadh Municipality Staff to Enhance Capacity, Build Competencies, and Facilitate Knowledge Transfer."
-      ],
+      "description": {
+        "en": [
+          "Improve traffic safety levels at 300 schools and mosques.",
+          "Develop a comprehensive traffic safety plan for schools in Riyadh City.",
+          "Implement the traffic safety plan and monitor its effectiveness.",
+          "1,500 traffic count locations.",
+          "Project Tasks and Stages:",
+          "• Study the best international experiences and engineering practices (Case Study).",
+          "• Coordinate with stakeholders.",
+          "• Identify and classify the detailed scope of work.",
+          "• Conduct traffic and Topo Surveys (ATC, TMC, Speed, Pedestrian counts and users' questioners).",
+          "• Traffic analysis and traffic safety audit.",
+          "• Prepare a manual for improving traffic safety at schools.",
+          "• Developing a Training Program for Riyadh Municipality Staff to Build Capacities and Transfer Knowledge.",
+          "• Developing a Training Program for Riyadh Municipality Staff to Enhance Capacity, Build Competencies, and Facilitate Knowledge Transfer."
+        ],
+        "ar": [
+          "تحسين مستويات السلامة المرورية ضمن 300 منطقة مدرسية.",
+          "تطوير خطة شاملة للسلامة المرورية ضمن المناطق المدرسية في مدينة الرياض.",
+          "تنفيذ خطط السلامة المرورية ومتابعة مدى فعاليتها.",
+          "إجراء المسوحات المرورية ضمن 1,500 موقع تعداد مروري.",
+          "نطاق العمل:",
+          "• دراسة أفضل التجارب الدولية والممارسات الهندسية (دراسة حالة).",
+          "• التنسيق مع أصحاب المصلحة.",
+          "• تحديد وتصنيف نطاق العمل التفصيلي.",
+          "• إجراء المسوحات المرورية والطبوغرافية (التعداد المروري الآلي ATC، التعداد المروري اليدوي التصنيفي TMC، تعداد السرعة، تعداد المشاة، ومقابلات المدراء وقادة المدارس).",
+          "• التحليل المروري وتدقيق السلامة المرورية.",
+          "• إعداد دليل إرشادي لتحسين مستوى السلامة المرورية في المناطق المدرسية.",
+          "• تطوير برنامج تدريبي لموظفي أمانة الرياض لتعزيز القدرات، وبناء الكفاءات، وتسهيل نقل المعرفة."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Riyadh, Saudi Arabia",
-        "clients": ["Riyadh Municipality", "Consolidated Consultants Group"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Riyadh Municipality", "Consolidated Consultants Group"],
+          "ar": ["أمانة منطقة الرياض", "مجموعة اتحاد المستشارين"]
+        },
         "periodsOfServices": "2024-2025"
       }
     },
     {
       "id": 8,
-      "title": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One) / Traffic Safety in the School Zones Manual",
+      "title": {
+        "en": "Improve Traffic Safety Levels at Schools and Mosques in Riyadh City (Stage One) / Traffic Safety in the School Zones Manual",
+        "ar": "تحسين مستوى السلامة المرورية عند مناطق المدارس والمساجد في مدينة الرياض – المرحلة الأولى، اعداد الدليل الإرشادي لتحسين السلامة المرورية عند المدارس في مدينة الرياض"
+      },
       "slug": "traffic-safety-school-zones-manual-riyadh",
       "card": {
         "thumbnail": "/our-projects/project-8/image-1.jpg",
-        "location": "Riyadh, Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-8/image-1.jpg",
@@ -277,33 +499,64 @@
         "/our-projects/project-8/image-2.jpg",
         "/our-projects/project-8/image-3.jpg"
       ],
-      "description": [
-        "The Traffic Safety in the School Zones Manual serves as a comprehensive guide aimed at enhancing the safety of students, staff, and visitors in and around school environments.",
-        "Recognizing that school zones are high-risk areas due to the concentration of young pedestrians and vehicular traffic, this manual provides clear guidelines, best practices, and practical strategies to minimize accidents and improve overall traffic management.",
-        "The manual is organized into eight comprehensive chapters:",
-        "Chapter 1 - Introduction.",
-        "Chapter 2 - Engineering and Infrastructure.",
-        "Chapter 3 - Traffic Control.",
-        "Chapter 4 - Traffic Awareness.",
-        "Chapter 5 - School Transportation.",
-        "Chapter 6 - Evaluation.",
-        "Chapter 7 - Case Studies.",
-        "Chapter 8 - Governance and Compliance."
-      ],
+      "description": {
+        "en": [
+          "The Traffic Safety in the School Zones Manual serves as a comprehensive guide aimed at enhancing the safety of students, staff, and visitors in and around school environments.",
+          "Recognizing that school zones are high-risk areas due to the concentration of young pedestrians and vehicular traffic, this manual provides clear guidelines, best practices, and practical strategies to minimize accidents and improve overall traffic management.",
+          "The manual is organized into eight comprehensive chapters:",
+          "Chapter 1 - Introduction.",
+          "Chapter 2 - Engineering and Infrastructure.",
+          "Chapter 3 - Traffic Control.",
+          "Chapter 4 - Traffic Awareness.",
+          "Chapter 5 - School Transportation.",
+          "Chapter 6 - Evaluation.",
+          "Chapter 7 - Case Studies.",
+          "Chapter 8 - Governance and Compliance."
+        ],
+        "ar": [
+          "يعد هذا الدليل مرجعاً متكاملاً يهدف إلى تعزيز مستوى السلامة المرورية للطلاب والموظفين والزوار عند مواقع المدارس، نظراً إلى أن مناطق المدارس تصنف كمناطق عالية الخطورة نتيجة لتركز حركة المشاة وخاصة للفئات العمرية الصغيرة (الأكثر عرضة للخطر) بالإضافة إلى كثافة حركة المركبات.",
+          "يقدم الدليل إرشادات منهجية واضحة استناداً لأفضل الممارسات العالمية، بالإضافة إلى استراتيجيات تنفيذية عملية للحد من الحوادث المرورية وتحسين إدارة المرور بشكل شامل ومستدام.",
+          "هيكلية الدليل:",
+          "يتضمن الدليل ثمانية فصول تغطي جميع جوانب السلامة المرورية في مناطق المدارس:",
+          "الفصل الأول: المقدمة.",
+          "الفصل الثاني: الهندسة والبنية التحتية.",
+          "الفصل الثالث: وسائل التحكم المروري.",
+          "الفصل الرابع: التوعية المرورية.",
+          "الفصل الخامس: النقل المدرسي.",
+          "الفصل السادس: التقييم.",
+          "الفصل السابع: دراسات الحالة.",
+          "الفصل الثامن: الحوكمة والامتثال."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Riyadh, Saudi Arabia",
-        "clients": ["Riyadh Municipality", "Consolidated Consultants Group"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Riyadh Municipality", "Consolidated Consultants Group"],
+          "ar": ["أمانة منطقة الرياض", "مجموعة اتحاد المستشارين "]
+        },
         "periodsOfServices": "2024-2025"
       }
     },
     {
       "id": 9,
-      "title": "Improvement of the Urban Environment of Souq Al Zal and the Surrounding Area",
+      "title": {
+        "en": "Improvement of the Urban Environment of Souq Al Zal and the Surrounding Area",
+        "ar": "تحسين البيئة الحضرية في سوق الزل والمناطق المحيطة به"
+      },
       "slug": "urban-environment-improvement-souq-al-zal",
       "card": {
         "thumbnail": "/our-projects/project-9/image-1.jpg",
-        "location": "Riyadh, Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-9/image-1.jpg",
@@ -313,37 +566,72 @@
         "/our-projects/project-9/image-1.jpg",
         "/our-projects/project-9/image-2.jpg"
       ],
-      "description": [
-        "- Social Study including visitors' questionnaires.",
-        "- Historical Study for the urban heritage fabric.",
-        "- Traffic Impact Assessment Study",
-        "• Analyze base case data and identify traffic issues.",
-        "• Conduct an automatic traffic counts and manual counts.",
-        "• Study traffic flow volumes and analyze level of service in the base case scenario.",
-        "• Predict the future impact of the project on the surrounding road network using the results of the traffic model.",
-        "• Determine the number of trips generated and attracted by the project according to the approved guidelines.",
-        "• Estimate parking demand according to the specified requirements.",
-        "• Study the accessibility of the project site and ensure smooth traffic flow.",
-        "• Study the entrances and exits, traffic flow at gates, and internal traffic circulation.",
-        "• Ensure that the geometric design of the project's roads and intersections is consistent with the surrounding road network.",
-        "• Study traffic safety measures, pedestrian facilities, and traffic control devices.",
-        "• Study the relationship of the study site to the King Abdulaziz Public Transport Project and the level of accessibility and connectivity between them.",
-        "• Provide recommendations to mitigate the impact of the project and propose the necessary traffic measures and improvements to be used in preparing the proposed design ideas and alternatives for the Zul Market and the surrounding area."
-      ],
+      "description": {
+        "en": [
+          "- Social Study including visitors' questionnaires.",
+          "- Historical Study for the urban heritage fabric.",
+          "- Traffic Impact Assessment Study",
+          "• Analyze base case data and identify traffic issues.",
+          "• Conduct an automatic traffic counts and manual counts.",
+          "• Study traffic flow volumes and analyze level of service in the base case scenario.",
+          "• Predict the future impact of the project on the surrounding road network using the results of the traffic model.",
+          "• Determine the number of trips generated and attracted by the project according to the approved guidelines.",
+          "• Estimate parking demand according to the specified requirements.",
+          "• Study the accessibility of the project site and ensure smooth traffic flow.",
+          "• Study the entrances and exits, traffic flow at gates, and internal traffic circulation.",
+          "• Ensure that the geometric design of the project's roads and intersections is consistent with the surrounding road network.",
+          "• Study traffic safety measures, pedestrian facilities, and traffic control devices.",
+          "• Study the relationship of the study site to the King Abdulaziz Public Transport Project and the level of accessibility and connectivity between them.",
+          "• Provide recommendations to mitigate the impact of the project and propose the necessary traffic measures and improvements to be used in preparing the proposed design ideas and alternatives for the Zul Market and the surrounding area."
+        ],
+        "ar": [
+          "نطاق العمل:",
+          "- الدراسة الاجتماعية: تشمل استبيانات الزوار.",
+          "- الدراسة التاريخية: متعلقة بالنسيج العمراني التراثي.",
+          "- دراسة الأثر المروري (TIS - Traffic Impact Study)",
+          "• تحليل الوضع المروري الراهن ورصد التحديات المرورية.",
+          "• إجراء خطة للمسح المروري (التعداد المروري الآلي ATC والتعداد المروري اليدوي التصنيفي TMC).",
+          "• دراسة الأحجام المرورية وتحليل مستويات الخدمة LOS في سيناريو سنة الأساس.",
+          "• التنبؤ بالأثر المستقبلي للمشروع على شبكة الطرق المحيطة باستخدام برمجيات المحاكاة والنمذجة المرورية (PTV/VISSIM).",
+          "• حساب تولد الرحلات Trip Generation للمشروع وفقاً للأدلة المعتمدة.",
+          "• دراسة العرض والطلب على مواقف السيارات وفقاً للاشتراطات المعتمدة.",
+          "• دراسة الوصولية Accessibility إلى موقع المشروع وضمان انسيابية الحركة المرورية.",
+          "• دراسة المداخل والمخارج وحركة المركبات عند البوابات.",
+          "• التأكد من أن التصميم الهندسي الجيومتري للطرق والتقاطعات داخل منطقة الدراسة متناسق مع شبكة الطرق المحيطة.",
+          "• تدقيق عناصر السلامة المرورية، ومرافق المشاة، ووسائل التحكم المروري.",
+          "• دراسة علاقة موقع منطقة الدراسة بمشروع الملك عبد العزيز للنقل العام ومستوى سهولة الوصول والربط بينهما.",
+          "• إعداد التوصيات وخطة التحسينات المرورية."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Riyadh, Saudi Arabia",
-        "clients": ["Dar Al Omran", "Riyadh Municipality"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Dar Al Omran", "Riyadh Municipality"],
+          "ar": ["أمانة منطقة الرياض", "شركة دار العمران للاستشارات الهندسية"]
+        },
         "periodsOfServices": "2023"
       }
     },
     {
       "id": 10,
-      "title": "Identification and Documentation of Urban Heritage Assets in the Kingdom of Saudi Arabia – 5,450 Urban Heritage Assets",
+      "title": {
+        "en": "Identification and Documentation of Urban Heritage Assets in the Kingdom of Saudi Arabia – 5,450 Urban Heritage Assets",
+        "ar": "مشروع اكتشاف وتسجيل أصول التراث العمراني في المملكة العربية السعودية – 5,450 أصل تراث عمراني"
+      },
       "slug": "identification-and-documentation-of-urban-heritage-assets-in-the-kingdom-of-saudi-arabia-5450-urban-heritage-assets",
       "card": {
         "thumbnail": "/our-projects/project-10/image-1.jpg",
-        "location": "Riyadh, Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-10/image-1.jpg",
@@ -353,28 +641,53 @@
         "/our-projects/project-10/image-1.jpg",
         "/our-projects/project-10/image-2.jpg"
       ],
-      "description": [
-        "This project involved the comprehensive collection and analysis of data on urban heritage buildings in central Riyadh. Working closely with stakeholders, the team reconciled newly collected information with existing records to ensure accurate coverage of the targeted buildings.",
-        "Each heritage building was subsequently recorded, classified, and documented in the Urban Heritage Register, creating a detailed and reliable database of 5,450 heritage assets for the city’s historic core.",
-        "The project comprised three main stages:",
-        "1. Development of procedures for the exploration and documentation of urban heritage assets.",
-        "2. Development of a new system environment for the Urban Heritage Register.",
-        "3. Identification and documentation of 5,450 urban heritage assets."
-      ],
+      "description": {
+        "en": [
+          "This project involved the comprehensive collection and analysis of data on urban heritage buildings in central Riyadh. Working closely with stakeholders, the team reconciled newly collected information with existing records to ensure accurate coverage of the targeted buildings.",
+          "Each heritage building was subsequently recorded, classified, and documented in the Urban Heritage Register, creating a detailed and reliable database of 5,450 heritage assets for the city’s historic core.",
+          "The project comprised three main stages:",
+          "1. Development of procedures for the exploration and documentation of urban heritage assets.",
+          "2. Development of a new system environment for the Urban Heritage Register.",
+          "3. Identification and documentation of 5,450 urban heritage assets."
+        ],
+        "ar": [
+          "ضمن المشروع جمع البيانات المتعلقة بمباني التراث العمراني وتحليلها بالتعاون مع أصحاب المصلحة، إضافةً إلى مواءمة هذه البيانات بين ما هو متوفر مسبقاً وما تم جمعه خلال عملية الحصر الميداني. وقد شمل ذلك تسجيل وتصنيف المباني التراثية ضمن سجل التراث العمراني وفق معايير معتمدة.",
+          "وأسفرت هذه الجهود عن توثيق وتسجيل 5,450 أصلاً تراثياً في قلب المملكة التاريخي، ما أتاح إنشاء قاعدة بيانات شاملة وموثوقة تُعد مرجعاً أساسياً لدعم جهود الحفاظ على التراث العمراني وتنميته.",
+          "تم انجاز المشروع ضمن ثلاث مراحل رئيسية:",
+          "1. تطوير هيكلة إجراءات استكشاف وتسجيل أصول التراث العمراني.",
+          "2. تطوير بيئة نظام جديدة لسجل التراث العمراني.",
+          "3. اكتشاف وتسجيل 5,450 أصل تراث عمراني."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Riyadh, Saudi Arabia",
-        "clients": ["Ministry of Culture", "Heritage Commision"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Ministry of Culture", "Heritage Commision"],
+          "ar": ["مجموعة اتحاد المستشارين", "هية التراث / وزارة الثقافة"]
+        },
         "periodsOfServices": "2023-2024"
       }
     },
     {
       "id": 11,
-      "title": "Comprehensive Survey of Urban Heritage Assets in the Regions of the Kingdom of Saudi Arabia – 25,000 Urban Heritage Assets",
+      "title": {
+        "en": "Comprehensive Survey of Urban Heritage Assets in the Regions of the Kingdom of Saudi Arabia – 25,000 Urban Heritage Assets",
+        "ar": "المسح الشامل للأصول العمرانية التراثية في مناطق المملكة العربية السعودية – 25,000 أصل عمراني تراثي"
+      },
       "slug": "comprehensive-survey-of-urban-heritage-assets-in-the-regions-of-the-kingdom-of-saudi-arabia-25000-urban-heritage-assets",
       "card": {
         "thumbnail": "/our-projects/project-11/image-1.jpg",
-        "location": "Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-11/image-1.jpg",
@@ -384,29 +697,54 @@
         "/our-projects/project-11/image-1.jpg",
         "/our-projects/project-11/image-2.jpg"
       ],
-      "description": [
-        "The project serves as a comprehensive portfolio of urban heritage assets, implemented according to best practices through a Heritage Value Chain Management model.",
-        "It aims to identify and document urban heritage assets in the Kingdom of Saudi Arabia in compliance with relevant laws and regulations, utilizing the latest technologies for heritage preservation.",
-        "The project provides an effective tool for protecting, managing, and maintaining the urban heritage portfolio, ensuring the safeguarding of the Kingdom’s cultural legacy.",
-        "The project comprised three main stages:",
-        "1. Development of procedures for the exploration and documentation of urban heritage assets.",
-        "2. Development of a new system environment for the Urban Heritage Register.",
-        "3. Identification and documentation of 25,000 urban heritage assets."
-      ],
+      "description": {
+        "en": [
+          "The project serves as a comprehensive portfolio of urban heritage assets, implemented according to best practices through a Heritage Value Chain Management model.",
+          "It aims to identify and document urban heritage assets in the Kingdom of Saudi Arabia in compliance with relevant laws and regulations, utilizing the latest technologies for heritage preservation.",
+          "The project provides an effective tool for protecting, managing, and maintaining the urban heritage portfolio, ensuring the safeguarding of the Kingdom’s cultural legacy.",
+          "The project comprised three main stages:",
+          "1. Development of procedures for the exploration and documentation of urban heritage assets.",
+          "2. Development of a new system environment for the Urban Heritage Register.",
+          "3. Identification and documentation of 25,000 urban heritage assets."
+        ],
+        "ar": [
+          "يُعَد المشروع بمثابة محفظة شاملة لأصول التراث العمراني، تستند إلى أفضل الممارسات العالمية من خلال تطبيق نموذج إدارة سلسلة القيمة التراثية (Heritage Value Chain Management)، ويهدف المشروع إلى اكتشاف وحصر أصول التراث العمراني في المملكة العربية السعودية وفق الأنظمة واللوائح ذات الصلة، بالاعتماد على أحدث التقنيات في مجالات الحفظ والتوثيق وإدارة الأصول التراثية.",
+          "كما يُمثل المشروع أداة استراتيجية فعّالة لحماية وإدارة وصيانة التراث العمراني، بما يضمن صون الإرث الثقافي للمملكة والمحافظة عليه وتعزيزه للأجيال القادمة.",
+          "تم انجاز المشروع ضمن ثلاث مراحل رئيسية:",
+          "1. تطوير هيكلة إجراءات استكشاف وتسجيل أصول التراث العمراني.",
+          "2. تطوير بيئة نظام جديدة لسجل التراث العمراني.",
+          "3. اكتشاف وتسجيل 25,000 أصل تراث عمراني."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Saudi Arabia",
-        "clients": ["CCG", "Heritage Commission / Ministry of Culture"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["CCG", "Heritage Commission / Ministry of Culture"],
+          "ar": ["مجموعة اتحاد المستشارين", "هية التراث / وزارة الثقافة"]
+        },
         "periodsOfServices": "2025"
       }
     },
     {
       "id": 12,
-      "title": "Development of Municipal Buildings and Facilities in the Historic and Heritage Districts of Central Riyadh",
+      "title": {
+        "en": "Development of Municipal Buildings and Facilities in the Historic and Heritage Districts of Central Riyadh",
+        "ar": "تطوير المباني والمرافق البلدية بالأحياء التاريخية والتراثية بوسط مدينة الرياض"
+      },
       "slug": "development-of-municipal-buildings-and-facilities-in-the-historic-and-heritage-districts-of-central-riyadh",
       "card": {
         "thumbnail": "/our-projects/project-12/image-3.jpg",
-        "location": "Riyadh, Saudi Arabia"
+        "location": {
+          "en": "Jordan",
+          "ar": "الأردن"
+        }
       },
       "heroImages": [
         "/our-projects/project-12/image-3.jpg",
@@ -418,17 +756,35 @@
         "/our-projects/project-12/image-1.jpg",
         "/our-projects/project-12/image-2.jpg"
       ],
-      "description": [
-        "• Conducting an urban survey of 120 buildings in the historic districts of central Riyadh.",
-        "• Studying the urban structure of 120 heritage buildings in the historic districts of central Riyadh.",
-        "• Assessing 120 heritage buildings in the historic districts of central Riyadh.",
-        "• Preparing architectural and structural studies, including causes of deterioration, for 120 buildings in the historic districts of central Riyadh.",
-        "• Developing a geographic database for heritage assets."
-      ],
+      "description": {
+        "en": [
+          "• Conducting an urban survey of 120 buildings in the historic districts of central Riyadh.",
+          "• Studying the urban structure of 120 heritage buildings in the historic districts of central Riyadh.",
+          "• Assessing 120 heritage buildings in the historic districts of central Riyadh.",
+          "• Preparing architectural and structural studies, including causes of deterioration, for 120 buildings in the historic districts of central Riyadh.",
+          "• Developing a geographic database for heritage assets."
+        ],
+        "ar": [
+          "• إعداد المسح العمراني لعدد 120 مبنى بالأحياء التاريخية بوسط مدينة الرياض.",
+          "• دراسة الهيكل العمراني للمباني التراثية لعدد 120 بالأحياء التاريخية بوسط مدينة الرياض.",
+          "• تقييم المباني التراثية لعدد 120 مبنى بالأحياء التاريخية بوسط مدينة الرياض.",
+          "• إعداد الدراسات المعمارية والانشائية وأسباب التدهور لعدد 120 مبنى بالأحياء التاريخية بوسط مدينة الرياض.",
+          "• إعداد قاعدة البيانات الجغرافية للأصول التراثية."
+        ]
+      },
       "details": {
-        "sector": [],
-        "location": "Riyadh, Saudi Arabia",
-        "clients": ["Al-Madar AlOula", "Riyadh Municipality"],
+        "sector": {
+          "en": [],
+          "ar": []
+        },
+        "location": {
+          "en": "",
+          "ar": ""
+        },
+        "clients": {
+          "en": ["Al-Madar AlOula", "Riyadh Municipality"],
+          "ar": ["المدار الأولى للاستشارات الهندسة", "أمانة منطقة الرياض"]
+        },
         "periodsOfServices": "2019"
       }
     }

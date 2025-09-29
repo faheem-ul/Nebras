@@ -8,15 +8,15 @@ import locationIcon from '@/assets/contact/location-icon.svg'
 const locations = [
     {
         city: "Riyadh",
-        phone: "+123-456-7890",
+        phone: "+966506091166",
         address: "Mousa Bin Nusayr Street, Al Olaya, Riyadh 12241",
-        mapUrl: "https://www.google.com/maps",
+        mapUrl: "",
     },
     {
-        city: "Riyadh",
-        phone: "+123-456-7890",
+        city: "Jordan",
+        phone: "+962776055626",
         address: "Mousa Bin Nusayr Street, Al Olaya, Riyadh 12241",
-        mapUrl: "https://www.google.com/maps",
+        mapUrl: "",
     },
 ];
 

@@ -45,7 +45,7 @@ const ImageMarquee = () => {
                         <img
                             src={img}
                             alt={`marquee-${i}`}
-                            className="w-full max-w-[120px] md:max-w-[250px] h-auto object-contain"
+                            className="w-full max-h-[45px] md:max-w-[250px] md:max-h-full object-contain"
                         />
                     </div>
                 ))}
