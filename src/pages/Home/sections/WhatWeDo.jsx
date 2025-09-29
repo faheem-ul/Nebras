@@ -48,14 +48,14 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full bg-white pt-[58px] ">
+    <section className="w-full bg-white pt-[48px] md:pt-[58px] ">
       <div className="relative max-w-[1312px] px-5 w-full mx-auto">
 
         {/* Title */}
         <div data-aos="fade-right" data-aos-delay="400">
           <Text
             as="h2"
-            className="text-[36px] md:text-[65px] font-logirent leading-tight mb-[30px] md:mb-0"
+            className=" text-[28px] md:text-[65px] font-logirent leading-tight mb-[14px] md:mb-0"
           >
             <span className="text-outline-black">What</span> We Do
           </Text>
@@ -130,7 +130,7 @@ export default function WhatWeDo() {
             {/* Read More/Less Button */}
             <button
               onClick={() => setShowMore(!showMore)}
-              className="mt-6 px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer"
+              className="mt-6 text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer"
             >
               {showMore ? "Read Less" : "Read More"}
             </button>
