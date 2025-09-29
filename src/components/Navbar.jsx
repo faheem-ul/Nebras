@@ -9,6 +9,8 @@ import greenLogo from "../assets/navbar/lobo-green.png";
 import whiteLogo from "../assets/navbar/lobo-white.png";
 import blackLogo from "../assets/navbar/lobo-black.png";
 
+import HamburgerIcon from "../assets/navbar/hamburger-icon.svg";
+
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -40,14 +42,14 @@ const Navbar = () => {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[70px] md:pt-[97px] pb-[37px]">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[44px] md:pt-[97px] pb-[37px]">
       <div className="max-w-[1312px] mx-auto px-5 flex items-center justify-between">
         {/* Left - Dynamic Logo */}
         <Link to='/' data-aos="fade-right" data-aos-delay="100">
           <img
             src={logo}
             alt="Logo"
-            className="h-auto w-[120px] md:w-[166px] cursor-pointer"
+            className="h-auto w-[77px] md:w-[166px] cursor-pointer"
           />
         </Link>
 
@@ -123,7 +125,7 @@ const Navbar = () => {
               }`}
             onClick={() => setIsOpen(true)}
           >
-            <FiMenu />
+            <img src={HamburgerIcon} className="w-[13px] h-[7.5px]" />
           </button>
         )}
 

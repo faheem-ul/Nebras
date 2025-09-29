@@ -59,16 +59,24 @@ const Footer = () => {
     {
       key: "email",
       node: (
-        <a href="mailto:hello@gmail.com" className="hover:underline">
-          hello@gmail.com
+        <a href="mailto:info@nebrasconsult.com" className="hover:underline">
+          info@nebrasconsult.com
         </a>
       ),
     },
     {
-      key: "phone",
+      key: "phone-saudi",
       node: (
-        <a href="tel:+1123456789" className="hover:underline">
-          (+1) 123456789
+        <a href="tel:+966506091166" className="hover:underline">
+          Saudi Office Contact No.:<br />+966 50 609 1166
+        </a>
+      ),
+    },
+    {
+      key: "phone-jordan",
+      node: (
+        <a href="tel:+962776055626" className="hover:underline">
+          Jordan Office Contact No.:<br /> +962 7 7605 5626
         </a>
       ),
     },

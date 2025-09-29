@@ -7,15 +7,13 @@ import vission from '@/assets/about/vission.jpg'
 
 const MissionVission = () => {
     return (
-        <section className="w-full bg-white py-10 md:py-[70px]">
+        <section className="w-full bg-white pt-10 md:pt-[70px]">
 
             {/* Info */}
-            <div className="max-w-[821px] mx-auto px-5" data-aos="fade-up" data-aos-delay="400">
-                <Text className="text-base leading-6 md:text-[24px] md:leading-[42px] text-center md:text-left">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
+            <div className="max-w-[991px]  mx-auto px-5" data-aos="fade-up" data-aos-delay="400">
+                <Text className="text-base leading-6 md:text-[24px] md:leading-[42px] text-left md:text-center ">
+                    Our journey began with a focus on delivering innovative solutions in infrastructure and architectural heritage, rooted in a deep understanding of the region's cultural and natural heritage. Since then, we have expanded our services to encompass engineering consultancy, project management and technical consultancy.
+                    <br /> <br />With our accumulated expertise and a highly skilled team of engineers and consultants, we have achieved remarkable success in numerous vital projects across the Arab region, earning the trust of our clients and partners.
                 </Text>
             </div>
 
@@ -28,18 +26,26 @@ const MissionVission = () => {
                     <img
                         src={mission}
                         alt="Mission"
-                        className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
+                        className="w-full md:h-[580px] object-cover transform transition duration-300 ease-in-out hover:scale-108"
                     />
                 </div>
 
                 {/* Text Column */}
-                <div className="flex-1" data-aos="fade-up" data-aos-delay="400">
+                <div className="max-w-[676px] w-full" data-aos="fade-up" data-aos-delay="400">
                     <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
+                        Nebras Consult is guided by a clear vision and a noble mission: to contribute to the building of sustainable communities by providing integrated consultancy services that meet the needs of the modern era.
                     </Text>
+                    <br />
+                    <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
+                        Our company aspires to be a regional leader in engineering consulting, committed to delivering innovative and reliable solutions that contribute to environmental improvement and community development.
+                    </Text>
+
+                    <button
+                        className="mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] mt-[24px]
+                         bg-green text-white font-kosans  leading-none cursor-pointer "
+                    >
+                        Read More
+                    </button>
                 </div>
             </div>
 
@@ -50,18 +56,22 @@ const MissionVission = () => {
                     <img
                         src={vission}
                         alt="Vision"
-                        className="w-full h-auto object-cover transform transition duration-300 ease-in-out hover:scale-108"
+                        className="w-full md:h-[580px] object-cover transform transition duration-300 ease-in-out hover:scale-108"
                     />
                 </div>
 
                 {/* Text Column */}
-                <div className="flex-1" data-aos="fade-up" data-aos-delay="400">
+                <div className="max-w-[676px] w-full" data-aos="fade-up" data-aos-delay="400">
                     <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
+                        We strive to provide innovative and sustainable solutions that meet our clients' evolving needs. We believe that continuous innovation is the key to success, and therefore we develop unique solutions tailored to the specific requirements of each project. We also place great emphasis on sustainability, integrating sustainable practices into all aspects of our business.
                     </Text>
+
+                    <button
+                        className="mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] mt-[24px]
+                         bg-green text-white font-kosans  leading-none cursor-pointer "
+                    >
+                        Read More
+                    </button>
                 </div>
             </div>
 

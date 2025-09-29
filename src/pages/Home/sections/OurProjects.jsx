@@ -11,12 +11,12 @@ const OurProjects = () => {
   const currentProjects = projectsData.projects.slice(0, 8);
 
   return (
-    <section className="w-full bg-[#393C3D] pt-[105px] pb-[95px]">
+    <section className="w-full bg-[#393C3D] pt-[38px] pb-[42px] md:pt-[105px] md:pb-[95px]">
       <div className="max-w-[1312px] w-full mx-auto px-5">
         {/* Section header */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[110px]">
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[13px] md:mb-[110px]">
           <div data-aos="fade-right" data-aos-delay="400">
-            <Text as="h1" className="text-white">
+            <Text as="h1" className="text-white leading-[66px] ">
               <span className="text-outline-white">Our</span> Projects
             </Text>
           </div>
@@ -27,7 +27,7 @@ const OurProjects = () => {
           >
             <button
               onClick={() => navigate("/our-projects")}
-              className="px-6 py-3 text-[18px]  md:px-[36px] md:py-[33.5px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer w-full md:w-[169px]"
+              className="text-[18px] ml-auto md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer hidden md:block"
             >
               See All
             </button>
@@ -44,6 +44,13 @@ const OurProjects = () => {
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+
+        <button
+          onClick={() => navigate("/our-projects")}
+          className="mt-[30px] mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer block md:hidden"
+        >
+          See All
+        </button>
       </div>
     </section>
   );
