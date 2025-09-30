@@ -1,16 +1,20 @@
 import React from 'react'
 
+import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text'
 import latestNews from '@/assets/insights/latest-news.jpg'
 
 export const LatsetNews = () => {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
+
     return (
         <section className="w-full bg-white pt-[254px] pb-10 md:pb-[50px]">
 
             {/* Heading */}
             <div className="max-w-[821px] mx-auto px-5" data-aos="fade" data-aos-delay="100">
                 <Text className="text-center text-2xl md:text-[40px] md:leading-none font-logirent">
-                    latest news & guides
+                    {isArabic ? "آخر الأخبار والإرشادات" : "Latest News & Guides"}
                 </Text>
             </div>
 
@@ -27,21 +31,22 @@ export const LatsetNews = () => {
                 </div>
 
                 {/* Text Column */}
-                <div className="flex-1">
+                <div className="flex-1" dir={isArabic ? 'rtl' : 'ltr'}>
                     {/* Title */}
                     <div data-aos="fade-up" data-aos-delay="400">
                         <Text className="mb-3 md:mb-[16px] text-lg leading-6 md:text-[24px] md:leading-[28px] md:max-w-[628px] w-full">
-                            The Future of AI in Business: Trends and Predictions
+                            {isArabic ? "مستقبل الذكاء الاصطناعي في الأعمال: الاتجاهات والتوقعات" : "The Future of AI in Business: Trends and Predictions"}
+
                         </Text>
                     </div>
 
                     {/* Description */}
                     <div data-aos="fade-up" data-aos-delay="400">
                         <Text className="text-sm leading-6 md:text-[18px] md:leading-[28px] text-[#61758A] mb-3 md:max-w-[641px] w-full">
-                            Explore the transformative impact of artificial intelligence on various industries,
-                            including finance, healthcare, and retail. This article delves into the latest AI
-                            trends, offering insights into how businesses can leverage AI to enhance efficiency,
-                            improve customer experiences, and drive innovation.
+                            {isArabic
+                                ? "استكشف التأثير التحويلي للذكاء الاصطناعي على مختلف الصناعات، بما في ذلك التمويل والرعاية الصحية وتجارة التجزئة. يتعمق هذا المقال في أحدث اتجاهات الذكاء الاصطناعي، مقدّمًا رؤى حول كيفية تمكّن الشركات من الاستفادة من الذكاء الاصطناعي لتعزيز الكفاءة، وتحسين تجارب العملاء، ودفع عجلة الابتكار."
+                                : "Explore the transformative impact of artificial intelligence on various industries, including finance, healthcare, and retail. This article delves into the latest AI trends, offering insights into how businesses can leverage AI to enhance efficiency, improve customer experiences, and drive innovation."
+                            }
                         </Text>
 
                         {/* Meta */}

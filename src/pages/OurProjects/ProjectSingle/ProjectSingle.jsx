@@ -52,7 +52,7 @@ function ProjectSingle() {
                 </AnimatePresence>
 
                 {/* Black Overlay */}
-                <div className="absolute inset-0 bg-black/30 "></div>
+                <div className="absolute inset-0 bg-black/40 "></div>
 
                 {/*Project Title */}
                 <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className={`transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
