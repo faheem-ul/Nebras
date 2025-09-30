@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "../assets/footer/footerLogo.png";
+import { FaLinkedinIn } from 'react-icons/fa';
 
-import facebook from "../assets/footer/facebook.png";
-import instagram from "../assets/footer/instagram.png";
-import twitter from "../assets/footer/twitter.png";
-import youtube from "../assets/footer/youtube.png";
+import logo from "../assets/footer/footerLogo.png";
+import linkedin from "../assets/footer/facebook.png";
 
 /* ---------- Variants ---------- */
 // Outer footer container: staggers columns
@@ -47,14 +45,6 @@ const Footer = () => {
     { label: "Contact Us", path: "/contact-us" },
   ];
 
-  // const utilityLinks = [
-  //   "CCg & Hudson Meridian",
-  //   "Invitation to a Meeting",
-  //   "Terms of Use",
-  //   "Privacy Policy",
-  //   "Contact Us",
-  // ];
-
   const contactItems = [
     {
       key: "email",
@@ -90,6 +80,14 @@ const Footer = () => {
       ),
     },
   ];
+
+  const socialMediaItems = [
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedinIn size={20} color="#393C3D" />,
+      url: "https://www.linkedin.com/company/nebrasconsult/",
+    }
+  ]
 
   return (
     <motion.footer
@@ -179,19 +177,24 @@ const Footer = () => {
             </motion.button>
           </motion.div>
 
-          {/* Social icons - small stagger inside column */}
+          {/* Social icons */}
           <motion.div className="flex gap-4" variants={columnVariants}>
-            {[facebook, instagram, youtube, twitter].map((icon, idx) => (
+            {socialMediaItems.map((social, index) => (
               <motion.a
-                key={idx}
-                href="#"
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
                 className="bg-white rounded-full p-2 flex items-center justify-center w-[40px] h-[40px]"
                 variants={itemVariants}
               >
-                <img src={icon} alt="social" className="h-20px w-20px" />
+                {social.icon}
               </motion.a>
             ))}
           </motion.div>
+
+
         </motion.div>
       </motion.div>
 
