@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text'
 import ArticleCard from '@/components/ArticleCard'
 
@@ -8,21 +9,36 @@ import article2Img from "@/assets/insights/opnion/opinion-2.jpg"
 import article3Img from "@/assets/insights/opnion/opinion-3.jpg"
 
 const OpinionPieces = () => {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
+
     const articles = [
         {
             image: article1Img,
-            title: "5 Essential Tips for Effective Remote Team Management",
-            description: "Learn how to optimize remote team collaboration and productivity with these actionable strategies."
+            title: isArabic
+                ? "٥ نصائح أساسية لإدارة فعّالة للفرق عن بُعد"
+                : "5 Essential Tips for Effective Remote Team Management",
+            description: isArabic
+                ? "تعرّف على كيفية تحسين التعاون والإنتاجية في الفرق البعيدة باستخدام هذه الاستراتيجيات العملية."
+                : "Learn how to optimize remote team collaboration and productivity with these actionable strategies."
         },
         {
             image: article2Img,
-            title: "A Comprehensive Guide to Cybersecurity for Small Businesses",
-            description: "Protect your business from cyber threats with this detailed guide covering essential security measures."
+            title: isArabic
+                ? "دليل شامل للأمن السيبراني للشركات الصغيرة"
+                : "A Comprehensive Guide to Cybersecurity for Small Businesses",
+            description: isArabic
+                ? "احمِ عملك من التهديدات الإلكترونية من خلال هذا الدليل المفصل الذي يغطي التدابير الأمنية الأساسية."
+                : "Protect your business from cyber threats with this detailed guide covering essential security measures."
         },
         {
             image: article3Img,
-            title: "The Rise of Blockchain Technology: Applications Beyond Cryptocurrency",
-            description: "Discover the potential of blockchain technology in various sectors, from supply chain management to digital identity."
+            title: isArabic
+                ? "صعود تقنية البلوك تشين: تطبيقات تتجاوز العملات الرقمية"
+                : "The Rise of Blockchain Technology: Applications Beyond Cryptocurrency",
+            description: isArabic
+                ? "اكتشف إمكانات تقنية البلوك تشين في مختلف القطاعات، من إدارة سلاسل التوريد إلى الهوية الرقمية."
+                : "Discover the potential of blockchain technology in various sectors, from supply chain management to digital identity."
         }
     ];
 
@@ -31,7 +47,7 @@ const OpinionPieces = () => {
             {/* Heading */}
             <div className="max-w-[821px] mx-auto" data-aos="fade" data-aos-delay="400">
                 <Text className="text-center text-2xl md:text-[40px] md:leading-none font-logirent">
-                    opinion pieces
+                    {isArabic ? "مقالات الرأي" : "opinion pieces"}
                 </Text>
             </div>
 

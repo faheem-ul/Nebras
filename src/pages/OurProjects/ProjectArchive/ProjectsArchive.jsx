@@ -1,13 +1,16 @@
 import { useState } from "react";
 
+import { useLanguage } from "@/context/LanguageContext";
 import Text from "@/components/ui/Text"
-import filterIcon from "@/assets/our-projects/filter-icon.svg"
+import ProjectCard from "@/components/ProjectCard";
+import projectsData from "@/data/projects.json";
 import closeIcon from "@/assets/our-projects/close-icon.svg"
-
-import projectsData from "../../../data/projects.json";
-import ProjectCard from "../../../components/ProjectCard";
+import filterIcon from "@/assets/our-projects/filter-icon.svg"
 
 function ProjectsArchive() {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
+
     // filter state
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState("all");
@@ -29,11 +32,16 @@ function ProjectsArchive() {
                 <div className="flex gap-6 flex-row justify-between items-center mb-[26px]  md:mb-[85px]">
                     {/* Title*/}
                     <div data-aos="fade-right" data-aos-delay="400">
-                        <Text
-                            as="h1"
-
-                        >
-                            <span className="text-outline-black">Our</span> projects
+                        <Text as="h1">
+                            {isArabic ? (
+                                <>
+                                    مشاريعنا
+                                </>
+                            ) : (
+                                <>
+                                    <span className="text-outline-black">Our</span> Projects
+                                </>
+                            )}
                         </Text>
                     </div>
 
@@ -45,7 +53,9 @@ function ProjectsArchive() {
                                 onClick={() => setIsFilterOpen((prev) => !prev)}
                             >
                                 <img src={filterIcon} className="w-[22px] h-auto md-w-[34px]]" />
-                                <Text className="text-[16px] md:text-[16px] md:block hidden " >Filter</Text>
+                                <Text className="text-[16px] md:text-[16px] md:block hidden " >
+                                    {isArabic ? "تصفية" : "Filter"}
+                                </Text>
                             </button>
                         </div>
                         {/* Filter Box */}
@@ -129,7 +139,7 @@ function ProjectsArchive() {
                             onClick={() => setVisibleCount((prev) => prev + projectsPerPage)}
                             className="mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer "
                         >
-                            View More
+                            {isArabic ? "عرض المزيد" : "View More"}
                         </button>
                     </div>
                 )}
