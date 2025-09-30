@@ -1,27 +1,43 @@
 import React from 'react'
+
+import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text'
 import ArticleCard from '@/components/ArticleCard'
-
 import article1Img from "@/assets/insights/listicles/listicles-1.jpg"
 import article2Img from "@/assets/insights/listicles/listicles-2.jpg"
 import article3Img from "@/assets/insights/listicles/listicles-3.jpg"
 
 const Listicles = () => {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
+
     const articles = [
         {
             image: article1Img,
-            title: "Step-by-Step Guide to Setting Up a Home Office",
-            description: "Maximize your productivity with our guide to creating an efficient and comfortable home office setup."
+            title: isArabic
+                ? "دليل خطوة بخطوة لإعداد مكتب منزلي"
+                : "Step-by-Step Guide to Setting Up a Home Office",
+            description: isArabic
+                ? "عزّز إنتاجيتك مع دليلنا لإنشاء بيئة عمل منزلية مريحة وفعّالة."
+                : "Maximize your productivity with our guide to creating an efficient and comfortable home office setup."
         },
         {
             image: article2Img,
-            title: "How to Optimize Your Website for Mobile Devices",
-            description: "Ensure your website is mobile-friendly with these essential optimization techniques."
+            title: isArabic
+                ? "كيفية تحسين موقعك الإلكتروني للأجهزة المحمولة"
+                : "How to Optimize Your Website for Mobile Devices",
+            description: isArabic
+                ? "تأكّد من أن موقعك متوافق مع الهواتف المحمولة باستخدام تقنيات التحسين الأساسية هذه."
+                : "Ensure your website is mobile-friendly with these essential optimization techniques."
         },
         {
             image: article3Img,
-            title: "Creating Engaging Content: A Guide for Beginners",
-            description: "Learn the basics of content creation to attract and retain your audience."
+            title: isArabic
+                ? "إنشاء محتوى جذاب: دليل للمبتدئين"
+                : "Creating Engaging Content: A Guide for Beginners",
+            description: isArabic
+                ? "تعلّم أساسيات إنشاء المحتوى لجذب جمهورك والحفاظ عليه."
+                : "Learn the basics of content creation to attract and retain your audience."
         }
     ];
 
@@ -30,7 +46,7 @@ const Listicles = () => {
             <div className='max-w-[821px] mx-auto' data-aos="fade" data-aos-delay="400">
                 {/* Heading */}
                 <Text className="text-center text-[24px] md:text-[40px] leading-snug font-logirent">
-                    Listicles or how-to content
+                    {isArabic ? "قوائم إرشادية أو محتوى كيف-تفعل" : "Listicles or how-to content"}
                 </Text>
             </div>
 

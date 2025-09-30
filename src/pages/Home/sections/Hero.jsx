@@ -1,23 +1,21 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-
-// import { useLanguage } from "@/context/LanguageContext";
-
-import heroBg1 from "../../../assets/home/hero-slider/hero-slider-1.jpeg";
-import heroBg2 from "../../../assets/home/hero-slider/hero-slider-2.jpeg";
-import heroBg3 from "../../../assets/home/hero-slider/hero-slider-3.jpeg";
-import heroBg4 from "../../../assets/home/hero-slider/hero-slider-4.jpeg";
-import heroBg5 from "../../../assets/home/hero-slider/hero-slider-5.jpeg";
-import heroBg6 from "../../../assets/home/hero-slider/hero-slider-6.jpeg";
-import img1 from "../../../assets/home/engineering.png";
-import img2 from "../../../assets/home/planning.png";
-import img3 from "../../../assets/home/consulting.png";
-import Text from "../../../components/ui/Text";
+import { useLanguage } from "@/context/LanguageContext";
+import heroBg1 from "@/assets/home/hero-slider/hero-slider-1.jpeg";
+import heroBg2 from "@/assets/home/hero-slider/hero-slider-2.jpeg";
+import heroBg3 from "@/assets/home/hero-slider/hero-slider-3.jpeg";
+import heroBg4 from "@/assets/home/hero-slider/hero-slider-4.jpeg";
+import heroBg5 from "@/assets/home/hero-slider/hero-slider-5.jpeg";
+import heroBg6 from "@/assets/home/hero-slider/hero-slider-6.jpeg";
+import img1 from "@/assets/home/engineering.png";
+import img2 from "@/assets/home/planning.png";
+import img3 from "@/assets/home/consulting.png";
+import Text from "@/components/ui/Text";
 
 const Hero = () => {
-  // const { lang } = useLanguage();
+  const { lang } = useLanguage();
+  const isArabic = lang === "ar";
 
   const heroImages = [heroBg1, heroBg2, heroBg3, heroBg4, heroBg5, heroBg6];
   // Slider Current Image State
@@ -38,10 +36,6 @@ const Hero = () => {
       <div className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] overflow-hidden">
 
         {/* Zooming Background Layer */}
-        {/* <div
-          className="absolute inset-0 bg-cover bg-center bg-slow-zoom"
-          style={{ backgroundImage: `url(${heroImages[currentImage]})` }}
-        ></div> */}
         <AnimatePresence>
           <motion.div
             key={heroImages[currentImage]}
@@ -55,19 +49,23 @@ const Hero = () => {
         </AnimatePresence>
 
         {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black/30 "></div>
+        <div className="absolute inset-0 bg-black/40 "></div>
 
-        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[250px] md:pt-[353px]">
+        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[250px] md:pt-[353px]" dir={isArabic ? 'rtl' : 'ltr'}>
           {/* Welcome Message */}
           <div className="max-w-[900px]">
             <div data-aos="fade-up" data-aos-delay="400">
               <Text as="h1" className="text-white mb-[20px]">
-                Nebras Consult – Engineering solutions
+                {isArabic
+                  ? "نبراس كونسلت – حلول هندسية"
+                  : "Nebras Consult – Engineering solutions"}
               </Text>
             </div>
             <div data-aos="fade-up" data-aos-delay="500">
               <Text className="text-white">
-                Consulting expertise. Transforming challenges into opportunities with precision and innovation.
+                {isArabic
+                  ? "خبرة استشارية. نحول التحديات إلى فرص بدقة وابتكار."
+                  : "Consulting expertise. Transforming challenges into opportunities with precision and innovation."}
               </Text>
             </div>
           </div>
@@ -85,14 +83,14 @@ const Hero = () => {
             className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
             <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
-              Engineering
+              {isArabic ? "الهندسة" : "Engineering"}
             </Text>
             <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Engineering
+              {isArabic ? "الهندسة" : "Engineering"}
             </button>
           </div>
         </div>
@@ -105,14 +103,14 @@ const Hero = () => {
             className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
             <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
-              Planning
+              {isArabic ? "التخطيط" : "Planning"}
             </Text>
             <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Planning
+              {isArabic ? "التخطيط" : "Planning"}
             </button>
           </div>
         </div>
@@ -125,14 +123,14 @@ const Hero = () => {
             className="w-full h-full object-cover transform origin-center transition duration-300 ease-in-out group-hover:scale-108"
           />
           {/* Black Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
             <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
-              Consulting
+              {isArabic ? "الاستشارات" : "Consulting"}
             </Text>
             <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
-              Consulting
+              {isArabic ? "الاستشارات" : "Consulting"}
             </button>
           </div>
         </div>

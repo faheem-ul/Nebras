@@ -1,4 +1,6 @@
 import React from 'react'
+
+import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text';
 
 import ourCulture1 from '@/assets/about/our-culture-1.jpg';
@@ -7,34 +9,46 @@ import ourCulture3 from '@/assets/about/our-culture-3.jpg';
 import ourCulture4 from '@/assets/about/our-culture-4.jpg';
 
 const OurCulture = () => {
+    const { lang } = useLanguage(); // 'en' or 'ar'
+    const isArabic = lang === 'ar';
+
     const cultureData = [
         {
-            title: "EMPLOYEE EMPOWERMENT",
-            description: "We empower our employees to take ownership of their work, make decisions, and contribute to the company’s success.",
+            title: isArabic ? "تمكين الموظفين" : "EMPLOYEE EMPOWERMENT",
+            description: isArabic
+                ? "نسعى إلى تمكين موظفينا من امتلاك مسؤولية أعمالهم واتخاذ القرارات والمشاركة في نجاح الشركة."
+                : "We empower our employees to take ownership of their work, make decisions, and contribute to the company’s success.",
             image: ourCulture1
         },
         {
-            title: "CONTINUOUS LEARNING",
-            description: "We empower our employees to take ownership of their work, make decisions, and contribute to the company’s success.",
+            title: isArabic ? "التعلم المستمر" : "CONTINUOUS LEARNING",
+            description: isArabic
+                ? "نستثمر في التطوير المهني ونشجع ثقافة التعلم مدى الحياة."
+                : "We invest in professional development and encourage a lifelong learning culture.",
             image: ourCulture2
         },
         {
-            title: "WORK-LIFE BALANCE",
-            description: "We promote a healthy work-life balance and support employee well-being.",
+            title: isArabic ? "التوازن بين العمل والحياة" : "WORK-LIFE BALANCE",
+            description: isArabic
+                ? "نُشجع التوازن الصحي بين العمل والحياة وندعم رفاهية الموظفين."
+                : "We promote a healthy work-life balance and support employee well-being.",
             image: ourCulture3
         },
         {
-            title: "DIVERSITY AND INCLUSION",
-            description: "We celebrate diversity and create an inclusive environment where everyone feels valued and respected.",
+            title: isArabic ? "التنوع والشمول" : "DIVERSITY AND INCLUSION",
+            description: isArabic
+                ? "نحتفل بالتنوع ونخلق بيئة شاملة يشعر فيها الجميع بالتقدير والاحترام."
+                : "We celebrate diversity and create an inclusive environment where everyone feels valued and respected.",
             image: ourCulture4
         },
     ];
+
     return (
-        <section className="bg-white mb-[42px] md:mb-[64px] mt-[59px] md:mt-[91px] max-w-[1312px] w-full mx-auto px-5 md:px-0">
+        <section className="bg-white mb-[42px] md:mb-[64px] mt-[59px] md:mt-[91px] max-w-[1312px] w-full mx-auto px-5 md:px-0" dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Section Title */}
             <div data-aos="fade-up" data-aos-delay="400">
                 <Text as="h1" className="text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[43px] md:mb-[48px]">
-                    Our Culture
+                    {isArabic ? "ثقافتنا" : "Our Culture"}
                 </Text>
             </div>
 

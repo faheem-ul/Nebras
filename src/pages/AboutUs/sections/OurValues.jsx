@@ -1,6 +1,7 @@
 import React from 'react';
-import Text from '@/components/ui/Text';
 
+import { useLanguage } from "@/context/LanguageContext";
+import Text from '@/components/ui/Text';
 // Import images
 import quoteIcon from '@/assets/about/quote-icon.svg';
 import bg from '@/assets/about/value-card-bg.png';
@@ -11,31 +12,43 @@ import collaboration from '@/assets/about/collaboration.png';
 import sustainability from '@/assets/about/sustainability.png';
 
 const OurValues = () => {
+    const { lang } = useLanguage(); // 'en' or 'ar'
+    const isArabic = lang === 'ar';
+
     const values = [
         {
-            title: 'INNOVATION',
-            description: 'We value creativity and new technologies to promote sustainable growth.',
+            title: isArabic ? 'الابتكار' : 'INNOVATION',
+            description: isArabic
+                ? 'نحن نقدر الإبداع والتقنيات الجديدة لتعزيز النمو المستدام.'
+                : 'We value creativity and new technologies to promote sustainable growth.',
             hoverBg: inovation
         },
         {
-            title: 'INTEGRITY',
-            description: 'We uphold the highest standards of ethics, transparency, and accountability.',
+            title: isArabic ? 'النزاهة' : 'INTEGRITY',
+            description: isArabic
+                ? 'نتمسك بأعلى معايير الأخلاق والشفافية والمساءلة في جميع مشاريعنا.'
+                : 'We uphold the highest standards of ethics, transparency, and accountability.',
             hoverBg: integrity
         },
         {
-            title: 'EXCELLENCE',
-            description: 'We strive for excellence in everything we do, delivering high quality and service.',
+            title: isArabic ? 'التميز' : 'EXCELLENCE',
+            description: isArabic
+                ? 'نسعى للتميز في كل ما نقوم به، بتقديم جودة وخدمة استثنائيتين.'
+                : 'We strive for excellence in everything we do, delivering high quality and service.',
             hoverBg: excelence
-
         },
         {
-            title: 'SUSTAINABILITY',
-            description: 'We are committed to environmental and social responsibility.',
+            title: isArabic ? 'الاستدامة' : 'SUSTAINABILITY',
+            description: isArabic
+                ? 'نحن ملتزمون بالريادة البيئية والمسؤولية الاجتماعية في مشاريعنا وعملياتنا.'
+                : 'We are committed to environmental and social responsibility.',
             hoverBg: sustainability
         },
         {
-            title: 'COLLABORATION',
-            description: 'We foster a collaborative and inclusive environment that values all voices.',
+            title: isArabic ? 'التعاون' : 'COLLABORATION',
+            description: isArabic
+                ? 'نحن نعزز بيئة عمل تعاونية شاملة حيث يتم تقدير واحترام وجهات النظر المختلفة.'
+                : 'We foster a collaborative and inclusive environment that values all voices.',
             hoverBg: collaboration
         }
     ];
@@ -45,12 +58,12 @@ const OurValues = () => {
             {/* Section Title */}
             <div data-aos="fade-up" data-aos-delay="400">
                 <Text as="h1" className="text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[43px] md:mb-[48px]">
-                    our values
+                    {isArabic ? 'قِيَمُنَا' : 'Our Values'}
                 </Text>
             </div>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[19.6px] md:gap-[23.94px] place-items-center" data-aos="fade-up" data-aos-delay="500">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[19.6px] md:gap-[23.94px] place-items-center" data-aos="fade-up" data-aos-delay="500" dir={isArabic ? 'rtl' : 'ltr'}>
                 {values.map((item, index) => (
                     <div
                         key={index}
@@ -81,7 +94,7 @@ const OurValues = () => {
                         </div>
 
                         {/* Content */}
-                        <div className="relative z-20 pt-[75.7px] md:pt-[90px] pb-[27.44px] md:pb-[42px] pl-[27px] pr-[14.6px] md:px-[35px] flex flex-col justify-between h-full">
+                        <div className={`relative z-20 pt-[75.7px] md:pt-[90px] pb-[27.44px] md:pb-[42px] pl-[27px] pr-[14.6px] md:px-[35px] flex flex-col justify-between h-full ${isArabic ? 'text-right' : 'text-left'} `}>
                             <div>
                                 <img
                                     src={quoteIcon} className='w-[40px] h-[31.9px] mb-[15.6px]'
@@ -89,7 +102,7 @@ const OurValues = () => {
                                 <Text className="text-[18px] leading-[42px]">{item.title}</Text>
                             </div>
                             <div>
-                                <Text className="md:text-[18px] text-[16px] md:leading-[24px]">{item.description}</Text>
+                                {/* <Text className="md:text-[18px] text-[16px] md:leading-[24px]">{item.description}</Text> */}
                             </div>
                         </div>
                     </div>

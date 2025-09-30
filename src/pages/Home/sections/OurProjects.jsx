@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
-import Text from "../../../components/ui/Text";
-
+import { useLanguage } from "@/context/LanguageContext";
+import Text from "@/components/ui/Text";
 import projectsData from "@/data/projects.json";
 import ProjectCard from "@/components/ProjectCard";
 
 const OurProjects = () => {
+  const { lang } = useLanguage();
+  const isArabic = lang === "ar";
+
   const navigate = useNavigate();
 
   const currentProjects = projectsData.projects.slice(0, 8);
@@ -16,8 +19,16 @@ const OurProjects = () => {
         {/* Section header */}
         <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[13px] md:mb-[110px]">
           <div data-aos="fade-right" data-aos-delay="400">
-            <Text as="h1" className="text-white leading-[66px] ">
-              <span className="text-outline-white">Our</span> Projects
+            <Text as="h1" className={`text-white leading-[66px] md:text-left ${isArabic ? 'text-right' : ''}`} dir={isArabic ? 'rtl' : 'ltr'}>
+              {isArabic ? (
+                <>
+                  مشاريعنا
+                </>
+              ) : (
+                <>
+                  <span className="text-outline-white">Our</span> Projects
+                </>
+              )}
             </Text>
           </div>
           <div
@@ -29,7 +40,7 @@ const OurProjects = () => {
               onClick={() => navigate("/our-projects")}
               className="text-[18px] ml-auto md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer hidden md:block"
             >
-              See All
+              {isArabic ? 'عرض الكل' : 'See All'}
             </button>
           </div>
         </div>
@@ -49,7 +60,7 @@ const OurProjects = () => {
           onClick={() => navigate("/our-projects")}
           className="mt-[30px] mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer block md:hidden"
         >
-          See All
+          {isArabic ? 'عرض الكل' : 'See All'}
         </button>
       </div>
     </section>

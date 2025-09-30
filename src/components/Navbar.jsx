@@ -5,11 +5,11 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { useLanguage } from "@/context/LanguageContext";
 
 // Import all logo variations
-import greenLogo from "../assets/navbar/lobo-green.png";
-import whiteLogo from "../assets/navbar/lobo-white.png";
-import blackLogo from "../assets/navbar/lobo-black.png";
-
-import HamburgerIcon from "../assets/navbar/hamburger-icon.svg";
+import greenLogo from "@/assets/navbar/lobo-green.png";
+import whiteLogo from "@/assets/navbar/lobo-white.png";
+import blackLogo from "@/assets/navbar/lobo-black.png";
+// Mobile Menu Icon
+import HamburgerIcon from "@/assets/navbar/hamburger-icon.svg";
 
 const Navbar = () => {
   const location = useLocation();
@@ -17,6 +17,7 @@ const Navbar = () => {
   const [logo, setLogo] = useState(greenLogo);
 
   const { lang, toggleLanguage } = useLanguage();
+  const isArabic = lang === "ar";
 
   // Handle logo depending on route
   useEffect(() => {
@@ -53,25 +54,17 @@ const Navbar = () => {
           />
         </Link>
 
-
         {/* Right - Nav Links (Desktop) */}
         <div
-          className={`hidden md:flex items-center justify-end gap-[43px] flex-wrap ${location.pathname === "/our-projects" ||
-            location.pathname === "/insights"
+          className={`hidden md:flex items-center justify-end gap-[43px] flex-wrap ${location.pathname === "/our-projects" || location.pathname === "/insights"
             ? "text-black"
             : "text-white"
-            }`}>
+            }`}
+        >
 
-          {/* <NavLink
-            to=""
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938] "
-            data-aos="fade-right" data-aos-delay="200"
-          >
-            العربية
-          </NavLink> */}
           <button
             onClick={() => toggleLanguage(lang === "en" ? "ar" : "en")}
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938]"
+            className="font-logirent font-normal text-lg leading-none hover:text-[#016938] cursor-pointer"
           >
             {lang === "en" ? "العربية" : "English"}
           </button>
@@ -81,28 +74,28 @@ const Navbar = () => {
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="300"
           >
-            Home
+            {isArabic ? "الرئيسية" : "Home"}
           </NavLink>
           <NavLink
             to="/our-projects"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="400"
           >
-            Our Projects
+            {isArabic ? "مشاريعنا" : "Our Projects"}
           </NavLink>
           <NavLink
             to="about-us"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="500"
           >
-            About Us
+            {isArabic ? "من نحن" : "About Us"}
           </NavLink>
           <NavLink
             to="insights"
             className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="600"
           >
-            Insights
+            {isArabic ? "رؤى" : "Insights"}
           </NavLink>
 
           <NavLink
@@ -110,7 +103,7 @@ const Navbar = () => {
             className="ml-3 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
             data-aos="fade-right" data-aos-delay="700"
           >
-            Contact Us
+            {isArabic ? "اتصل بنا" : "Contact Us"}
           </NavLink>
         </div>
 
@@ -125,7 +118,8 @@ const Navbar = () => {
               }`}
             onClick={() => setIsOpen(true)}
           >
-            <img src={HamburgerIcon} className="w-[13px] h-[7.5px]" />
+            {/* <img src={HamburgerIcon} className="w-[13px] h-[7.5px]" /> */}
+            <FiMenu />
           </button>
         )}
 
@@ -148,40 +142,43 @@ const Navbar = () => {
         {/* Force green logo inside menu */}
         <img src={greenLogo} alt="Logo" className="h-auto w-[140px] mb-8" />
 
-        <Link
-          onClick={handleClose}
-          to=""
+        <button
+          onClick={() => {
+            toggleLanguage(lang === "en" ? "ar" : "en");
+            handleClose();
+          }}
           className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
-          العربية
-        </Link>
+          {isArabic ? "English" : "العربية"}
+        </button>
+
         <Link
           onClick={handleClose}
           to="/"
           className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
-          Home
+          {isArabic ? "الرئيسية" : "Home"}
         </Link>
         <Link
           onClick={handleClose}
           to="/our-projects"
           className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
-          Our Projects
+          {isArabic ? "مشاريعنا" : "Our Projects"}
         </Link>
         <Link
           onClick={handleClose}
           to="about-us"
           className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
-          About Us
+          {isArabic ? "من نحن" : "About Us"}
         </Link>
         <Link
           onClick={handleClose}
           to="insights"
           className="font-logirent text-2xl leading-none hover:text-[#016938]"
         >
-          Insights
+          {isArabic ? "رؤى" : "Insights"}
         </Link>
 
         <Link
@@ -189,8 +186,9 @@ const Navbar = () => {
           to="contact-us"
           className="mt-6 px-6 py-3 bg-green text-white rounded-md font-logirent text-xl leading-none"
         >
-          Contact Us
+          {isArabic ? "اتصل بنا" : "Contact Us"}
         </Link>
+
       </div>
     </nav>
   );

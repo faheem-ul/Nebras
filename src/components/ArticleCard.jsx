@@ -1,9 +1,15 @@
 import React from 'react'
+
+import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text'
 
 const ArticleCard = ({ image, title, description }) => {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
+
     return (
-        <div className="w-full max-w-[390px] bg-white overflow-hidden">
+        <div className="w-full max-w-[390px] bg-white overflow-hidden"
+            dir={isArabic ? 'rtl' : 'ltr'}>
             <div className='overflow-hidden'>
                 <img
                     className="w-full md:h-[218px] sm:h-[218px] h-[180px] object-cover transform transition duration-300 ease-in-out hover:scale-108"
