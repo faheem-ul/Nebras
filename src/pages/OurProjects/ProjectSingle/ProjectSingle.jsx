@@ -100,7 +100,7 @@ function ProjectSingle() {
                         <Text className="font-logirent text-[30px] leading-none md:text-[34px] mb-[27px] md:mb-[42px]">
                             {lang === 'ar' ? 'القطاع' : 'Sector'}
                         </Text>
-                        <ul className="text-[16px] leading-none md:text-[18px] font-kosans">
+                        <ul className="text-[16px]  md:text-[18px] font-kosans">
                             {project.details.sector[lang]?.map((sector, idx) => (
                                 <li key={idx} className="mb-[16px] md:mb-[27px]">
                                     {sector}
@@ -114,9 +114,13 @@ function ProjectSingle() {
                         <Text className="font-logirent text-[30px] leading-none  md:text-[34px] mb-[24px] md:mb-[42px]">
                             {lang === 'ar' ? 'الموقع' : 'Location'}
                         </Text>
-                        <Text className="text-[16px] md:text-[18px]">
-                            {project.details.location[lang]}
-                        </Text>
+                        <ul className="text-[16px] md:text-[18px] font-kosans">
+                            {project.details.locations[lang].map((location, idx) => (
+                                <li key={idx} className="mb-[16px] md:mb-[27px] max-w-[182px]">
+                                    {location}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
 
                     {/* Clients */}
