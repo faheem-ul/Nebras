@@ -18,11 +18,11 @@ const ArticleCard = ({ image, title, description }) => {
                 />
             </div>
 
-            <div className="pt-[19px]">
-                <Text className="text-[14px] md:text-[16px] leading-[21px] md:leading-[24px]">
+            <div className="pt-[17px] md:pt-[19px]">
+                <Text className="text-[16px]  md:text-[16px] leading-[24px] md:leading-[24px]">
                     {title}
                 </Text>
-                <Text className="text-[13px] md:text-[14px] leading-[20px] md:leading-[21px] text-[#61758A] mt-3">
+                <Text className="text-[13px] md:text-[14px] leading-[20px] md:leading-[21px] text-[#61758A] mt-[7px] md:mt-3">
                     {description}
                 </Text>
             </div>

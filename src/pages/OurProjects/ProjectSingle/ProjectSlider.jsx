@@ -15,9 +15,23 @@ const ProjectSlider = ({ images = [] }) => {
     if (!images.length) return null;
 
     return (
-        <section className="relative max-w-[1312px] w-full mx-auto px-5 pb-[80px] md:p-0 mb-[109px]">
+        <section className="relative max-w-[1312px] w-full mx-auto px-5  mb-[30px] md:mb-[109px]">
             {/* Desktop Navigation Buttons  */}
-            <div className="flex justify-center md:justify-end md:mb-[40px] gap-5 md:gap-3 
+            <div className="flex justify-end mb-[10.5px] md:mb-[40px] gap-[4.5px] md:gap-3 left-0">
+                <button
+                    ref={prevRef}
+                    className="bg-[#393C3D] rounded-full cursor-pointer w-[30px] h-[30px] md:w-[58px] md:h-[58px] flex items-center justify-center"
+                >
+                    <img src={leftIcon} className='w-[8px] md:w-[12px]' />
+                </button>
+                <button
+                    ref={nextRef}
+                    className="bg-[#393C3D] rounded-full cursor-pointer w-[30px] h-[30px] md:w-[58px] md:h-[58px] flex items-center justify-center"
+                >
+                    <img src={rightIcon} className='w-[8px] md:w-[12px] ' />
+                </button>
+            </div>
+            {/* <div className="flex justify-center md:justify-end md:mb-[40px] gap-5 md:gap-3 
                 absolute bottom-0 left-1/2 -translate-x-1/2 w-full 
                 md:relative md:left-0 md:translate-x-0">
                 <button
@@ -32,7 +46,7 @@ const ProjectSlider = ({ images = [] }) => {
                 >
                     <img src={rightIcon} className='w-[12px]' />
                 </button>
-            </div>
+            </div> */}
 
             {/* Swiper */}
             <Swiper
@@ -69,22 +83,6 @@ const ProjectSlider = ({ images = [] }) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
-            {/* Mobile Navigation Buttons  */}
-            {/* <div className="flex justify-center mt-[30px] gap-3 md:hidden">
-                <button
-                    ref={prevRef}
-                    className="bg-[#393C3D] rounded-full cursor-pointer w-[40px] h-[40px]  flex items-center justify-center"
-                >
-                    <img src={leftIcon} className='w-[12px]' />
-                </button>
-                <button
-                    ref={nextRef}
-                    className="bg-[#393C3D] rounded-full cursor-pointer w-[40px] h-[40px] md:w-[58px] md:h-[58px] flex items-center justify-center"
-                >
-                    <img src={rightIcon} className='w-[12px]' />
-                </button>
-            </div> */}
         </section>
     );
 };

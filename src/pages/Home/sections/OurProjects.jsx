@@ -47,7 +47,7 @@ const OurProjects = () => {
 
         {/* Project cards */}
         <div
-          className="flex flex-col md:flex-row flex-wrap  gap-x-[27px] gap-y-[27px] text-white"
+          className="flex flex-col md:flex-row flex-wrap  gap-x-[27px] gap-y-[30px] text-white"
           data-aos="fade"
           data-aos-delay="400"
         >
