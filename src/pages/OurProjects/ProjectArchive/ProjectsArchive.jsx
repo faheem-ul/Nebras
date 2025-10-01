@@ -60,17 +60,19 @@ function ProjectsArchive() {
                         </div>
                         {/* Filter Box */}
                         {isFilterOpen && (
-                            <div className="absolute right-[8px] md:right-0 top-full  mt-[4px] md:mt-3 z-40 w-[185px] max-w-[100vw] md:w-[390px] bg-[#9EE7B8] overflow-hidden">
+                            <div className=" absolute right-[8px] md:right-0 top-full  mt-[4px] md:mt-3 z-40 w-[185px] max-w-[100vw] md:w-[390px] bg-[#9EE7B8] overflow-hidden"
+                            >
 
                                 {/* Close Button */}
                                 <button
                                     onClick={() => setIsFilterOpen(false)}
-                                    className="cursor-pointer ml-auto block mr-[13px] md:mr-[28px] mt-[11px] md:mt-[24px]"
+                                    className={`cursor-pointer block mt-[11px] md:mt-[24px] ml-auto mr-[13px] 
+                                    `}
                                 >
                                     <img src={closeIcon} className="w-[8.5px] h-[7.9px]  md:w-4 md:h-4" />
                                 </button>
 
-                                <div className="flex items-center justify-between pt-[14px] pb-[9.7px] md:pt-[16px] md:pb-[19px] pl-[14.5px] md:pl-[24px]">
+                                <div className="flex items-center justify-between pt-[14px] pb-[9.7px] md:pt-[16px] md:pb-[19px] px-[14.5px] md:px-[24px]">
                                     <button
                                         onClick={() => setSelectedFilter("all")}
                                         className="flex items-center gap-4 text-[12px] md:text-[16px] font-kosans cursor-pointer"
@@ -81,14 +83,14 @@ function ProjectsArchive() {
                                                 : "bg-transparent"
                                                 }`}
                                         />
-                                        <span>All Projects</span>
+                                        <span>{isArabic ? "جميع المشاريع" : "All Projects"}</span>
                                     </button>
                                 </div>
 
                                 <hr class="border-t-[0.5px] border-black" />
 
                                 {/* Sector */}
-                                <div className="flex items-center justify-between py-[11.4px] md:py-[19px] pl-[14.5px] md:pl-[24px]">
+                                <div className="flex items-center justify-between py-[11.4px] md:py-[19px] px-[14.5px] md:px-[24px]">
                                     <button
                                         onClick={() => setSelectedFilter("sector")}
                                         className="flex items-center gap-4 text-[12px] md:text-[16px]  font-kosans cursor-pointer"
@@ -99,14 +101,14 @@ function ProjectsArchive() {
                                                 : "bg-transparent"
                                                 }`}
                                         />
-                                        <span>Sector</span>
+                                        <span>{isArabic ? "القطاع" : "Sector"}</span>
                                     </button>
                                 </div>
 
                                 <hr class="border-t-[0.5px] border-black" />
 
                                 {/* Locations */}
-                                <div className="flex items-center justify-between py-[11.4px] md:py-[19px] md:pb-[25px] pl-[14.5px] md:pl-[24px]">
+                                <div className="flex items-center justify-between py-[11.4px] md:py-[19px] md:pb-[25px] px-[14.5px] md:px-[24px]">
                                     <button
                                         onClick={() => setSelectedFilter("location")}
                                         className="flex items-center gap-4 text-[12px] md:text-[16px]  font-kosans cursor-pointer"
@@ -117,7 +119,7 @@ function ProjectsArchive() {
                                                 : "bg-transparent"
                                                 }`}
                                         />
-                                        <span>Locations</span>
+                                        <span>{isArabic ? "المواقع" : "Locations"}</span>
                                     </button>
                                 </div>
                             </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -43,7 +44,8 @@ const Navbar = () => {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[44px] md:pt-[97px] pb-[37px]">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[34.7px] md:pt-[97px] pb-[37px]">
+      {/* Desktop Menu */}
       <div className="max-w-[1312px] mx-auto px-5 flex items-center justify-between">
         {/* Left - Dynamic Logo */}
         <Link to='/' data-aos="fade-right" data-aos-delay="100">
@@ -64,7 +66,7 @@ const Navbar = () => {
 
           <button
             onClick={() => toggleLanguage(lang === "en" ? "ar" : "en")}
-            className="font-logirent font-normal text-lg leading-none hover:text-[#016938] cursor-pointer"
+            className=" font-normal text-lg leading-none hover:text-[#016938] cursor-pointer"
           >
             {lang === "en" ? "العربية" : "English"}
           </button>
@@ -100,7 +102,7 @@ const Navbar = () => {
 
           <NavLink
             to="contact-us"
-            className="ml-3 pl-[15px] pr-[15px] pt-[14px] pb-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none"
+            className="ml-3 px-[15px] py-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none min-w-[150px] text-center"
             data-aos="fade-right" data-aos-delay="700"
           >
             {isArabic ? "اتصل بنا" : "Contact Us"}
@@ -110,86 +112,85 @@ const Navbar = () => {
         {/* Mobile Hamburger */}
         {!isOpen && (
           <button
-            className={`md:hidden text-3xl z-50 ${location.pathname === "/about-us" ||
-              location.pathname === "/contact-us" ||
-              location.pathname.startsWith("/our-projects/")
-              ? "text-white"
-              : "text-black"
+            className={`md:hidden text-[26px] z-50 
+              ${location.pathname === "/" ||
+                location.pathname === "/about-us" ||
+                location.pathname === "/contact-us" ||
+                location.pathname.startsWith("/our-projects/")
+                ? "text-white"
+                : "text-black"
               }`}
             onClick={() => setIsOpen(true)}
           >
-            {/* <img src={HamburgerIcon} className="w-[13px] h-[7.5px]" /> */}
             <FiMenu />
           </button>
         )}
 
         {/* Mobile Close */}
-        {isOpen && (
+        {/* {isOpen && (
           <button
-            className="md:hidden text-3xl z-50 text-black"
+            className="md:hidden text-[26px] z-50 text-white"
             onClick={() => setIsOpen(false)}
           >
             <FiX />
           </button>
-        )}
+        )} */}
       </div>
 
-      {/* Fullscreen Mobile Menu */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`px-[22px] fixed top-0 left-0 w-full h-full bg-[#393C3D] text-white flex flex-col transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        {/* Force green logo inside menu */}
-        <img src={greenLogo} alt="Logo" className="h-auto w-[140px] mb-8" />
+        {/* Header: Logo + Close */}
+        <div className="flex items-center justify-between w-full pt-[36px] pb-[39px]">
+          <img src={whiteLogo} alt="Logo" className="h-auto w-[77px]" />
+          <button onClick={handleClose} className="text-[26px]">
+            <FiX />
+          </button>
+        </div>
 
-        <button
-          onClick={() => {
-            toggleLanguage(lang === "en" ? "ar" : "en");
-            handleClose();
-          }}
-          className="font-logirent text-2xl leading-none hover:text-[#016938]"
-        >
-          {isArabic ? "English" : "العربية"}
-        </button>
+        {/* Menu Content */}
+        <div className="flex flex-col items-center justify-center flex-1 w-full">
+          {/* Language Toggle */}
+          <button
+            onClick={() => {
+              toggleLanguage(lang === "en" ? "ar" : "en");
+              handleClose();
+            }}
+            className="font-logirent text-xl hover:text-[#016938] mb-[12px]"
+          >
+            {isArabic ? "English" : "العربية"}
+          </button>
 
-        <Link
-          onClick={handleClose}
-          to="/"
-          className="font-logirent text-2xl leading-none hover:text-[#016938]"
-        >
-          {isArabic ? "الرئيسية" : "Home"}
-        </Link>
-        <Link
-          onClick={handleClose}
-          to="/our-projects"
-          className="font-logirent text-2xl leading-none hover:text-[#016938]"
-        >
-          {isArabic ? "مشاريعنا" : "Our Projects"}
-        </Link>
-        <Link
-          onClick={handleClose}
-          to="about-us"
-          className="font-logirent text-2xl leading-none hover:text-[#016938]"
-        >
-          {isArabic ? "من نحن" : "About Us"}
-        </Link>
-        <Link
-          onClick={handleClose}
-          to="insights"
-          className="font-logirent text-2xl leading-none hover:text-[#016938]"
-        >
-          {isArabic ? "رؤى" : "Insights"}
-        </Link>
+          {/* Divider */}
+          <hr className="w-full border-t border-white/30" />
 
-        <Link
-          onClick={handleClose}
-          to="contact-us"
-          className="mt-6 px-6 py-3 bg-green text-white rounded-md font-logirent text-xl leading-none"
-        >
-          {isArabic ? "اتصل بنا" : "Contact Us"}
-        </Link>
-
+          {/* Menu Links */}
+          <nav className="flex flex-col items-center w-full">
+            {[
+              { to: "/", label: isArabic ? "الرئيسية" : "Home" },
+              { to: "/our-projects", label: isArabic ? "مشاريعنا" : "Our Projects" },
+              { to: "/about-us", label: isArabic ? "من نحن" : "About Us" },
+              { to: "/insights", label: isArabic ? "رؤى" : "Insights" },
+              { to: "/contact-us", label: isArabic ? "اتصل بنا" : "Contact Us" },
+            ].map((item, idx) => (
+              <React.Fragment key={item.to}>
+                <Link
+                  onClick={handleClose}
+                  to={item.to}
+                  className="block py-[17.6px] w-full text-center text-[16px] font-kosans leading-none hover:text-[#016938] "
+                >
+                  {item.label}
+                </Link>
+                {idx < 4 && <hr className="w-full border-t border-white/30" />}
+              </React.Fragment>
+            ))}
+          </nav>
+        </div>
       </div>
+
+
     </nav>
   );
 };

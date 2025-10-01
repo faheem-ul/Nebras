@@ -34,7 +34,7 @@ function ProjectSingle() {
 
     return (
         <>
-            <section className="relative w-full min-h-[500px]  md:min-h-[759px] bg-white overflow-hidden">
+            <section className="relative w-full min-h-[466px] sm:min-h-[500px]  md:min-h-[759px] bg-white overflow-hidden">
                 {/* Hero Image */}
 
                 <AnimatePresence>
@@ -56,7 +56,7 @@ function ProjectSingle() {
 
                 {/*Project Title */}
                 <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className={`transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
-                    <div className="relative flex flex-col  min-h-[500px] md:min-h-[827px] max-w-[1312px] mx-auto pb-[30px] pt-[250px] md:pt-[368px] px-5"
+                    <div className="relative flex flex-col  max-w-[1312px] mx-auto pb-[101px] md:pb-[30px] pt-[165px] sm:pt-[250px] md:pt-[368px] px-5"
                         data-aos="fade-up" data-aos-delay="400">
                         <Text as="h1" className="text-white max-w-[900px] w-full"> {project.title[lang]}
                         </Text>
@@ -66,9 +66,9 @@ function ProjectSingle() {
 
             {/* Project Description */}
             <section dir={lang === 'ar' ? 'rtl' : 'ltr'} className={`w-full bg-white transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
-                <div className="max-w-[1312px] w-full mx-auto px-5 md:pt-[95px] mt-[60px] mb-[70px] md:pb-[109px]">
+                <div className="max-w-[1312px] w-full mx-auto px-5 md:pt-[95px] mt-[60px] md:mb-[70px] md:pb-[109px]">
                     <div data-aos="fade-up" data-aos-delay="400">
-                        <Text as="h1" className=" mb-[40px]">
+                        <Text as="h1" className="mb-[13px]  md:mb-[40px]">
                             {lang === 'ar' ? (
                                 <>
                                     <span className="text-outline-black">وصف</span> المشروع
@@ -81,9 +81,9 @@ function ProjectSingle() {
                         </Text>
 
                     </div>
-                    <div className="mb-8" data-aos="fade" data-aos-delay="400">
+                    <div className="mb-[33px] md:mb-8" data-aos="fade" data-aos-delay="400">
                         {project.description[lang].map((para, idx) => (
-                            <Text key={idx} className="mb-7">{para}</Text>
+                            <Text key={idx} className="leading-[38px] mb-[11.8px] md:mb-7">{para}</Text>
                         ))}
                     </div>
                 </div>
@@ -92,16 +92,17 @@ function ProjectSingle() {
 
             {/* Project Details */}
             <section dir={lang === 'ar' ? 'rtl' : 'ltr'}
-                className={`max-w-[1312px] w-full mx-auto px-5 mb-[60px] md:mb-[98px] transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
-                <div className="flex flex-col md:flex-row justify-between flex-wrap gap-8 md:gap-12">
+                className={`max-w-[1312px] w-full mx-auto px-5  mb-[27.6px] md:mb-[98px] transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                {/* <div className="flex flex-col md:flex-row justify-between flex-wrap gap-8 md:gap-12"> */}
+                <div className="flex flex-wrap gap-y-[40px] gap-x-6  md:gap-12 justify-between ">
                     {/* Sector */}
-                    <div className="w-full md:max-w-[165px]" data-aos="fade-up" data-aos-delay="100">
-                        <Text className="font-logirent text-[22px] md:text-[34px] mb-[24px] md:mb-[42px]">
+                    <div className="w-[calc(50%-12px)] min-w-[182px] md:max-w-[165px]" data-aos="fade-up" data-aos-delay="100">
+                        <Text className="font-logirent text-[30px] leading-none md:text-[34px] mb-[27px] md:mb-[42px]">
                             {lang === 'ar' ? 'القطاع' : 'Sector'}
                         </Text>
-                        <ul className="text-[14px] md:text-[18px] font-kosans">
+                        <ul className="text-[16px] leading-none md:text-[18px] font-kosans">
                             {project.details.sector[lang]?.map((sector, idx) => (
-                                <li key={idx} className="mb-[18px] md:mb-[27px]">
+                                <li key={idx} className="mb-[16px] md:mb-[27px]">
                                     {sector}
                                 </li>
                             ))}
@@ -109,23 +110,23 @@ function ProjectSingle() {
                     </div>
 
                     {/* Location */}
-                    <div className="w-full md:max-w-[179px]" data-aos="fade-up" data-aos-delay="200">
-                        <Text className="font-logirent text-[22px] md:text-[34px] mb-[24px] md:mb-[42px]">
+                    <div className="w-[calc(50%-12px)] min-w-[182px] md:max-w-[179px]" data-aos="fade-up" data-aos-delay="200">
+                        <Text className="font-logirent text-[30px] leading-none  md:text-[34px] mb-[24px] md:mb-[42px]">
                             {lang === 'ar' ? 'الموقع' : 'Location'}
                         </Text>
-                        <Text className="text-[14px] md:text-[18px]">
+                        <Text className="text-[16px] md:text-[18px]">
                             {project.details.location[lang]}
                         </Text>
                     </div>
 
                     {/* Clients */}
-                    <div className="w-full md:max-w-[203px]" data-aos="fade-up" data-aos-delay="300">
-                        <Text className="font-logirent text-[22px] md:text-[34px] mb-[24px] md:mb-[42px]">
+                    <div className="w-[calc(50%-12px)] min-w-[182px] md:max-w-[203px]" data-aos="fade-up" data-aos-delay="300">
+                        <Text className="font-logirent text-[30px] leading-none  md:text-[34px] mb-[24px] md:mb-[42px]">
                             {lang === 'ar' ? 'الجهات المستفيدة' : 'Clients'}
                         </Text>
-                        <ul className="text-[14px] md:text-[18px] font-kosans">
+                        <ul className="text-[16px] md:text-[18px] font-kosans">
                             {project.details.clients[lang].map((client, idx) => (
-                                <li key={idx} className="mb-[18px] md:mb-[27px]">
+                                <li key={idx} className="mb-[16px] md:mb-[27px] max-w-[182px]">
                                     {client}
                                 </li>
                             ))}
@@ -133,11 +134,11 @@ function ProjectSingle() {
                     </div>
 
                     {/* Period Of Services */}
-                    <div className="w-full md:max-w-[382px]" data-aos="fade-up" data-aos-delay="400">
-                        <Text className="font-logirent text-[22px] md:text-[34px] mb-[24px] md:mb-[42px]">
+                    <div className="w-[calc(50%-12px)] min-w-[182px]  md:max-w-[382px]" data-aos="fade-up" data-aos-delay="400">
+                        <Text className="font-logirent text-[30px] leading-none  md:text-[34px] mb-[24px] md:mb-[42px]">
                             {lang === 'ar' ? 'مدة الخدمة' : 'Period of Services'}
                         </Text>
-                        <Text className="text-[14px] md:text-[18px]">
+                        <Text className="text-[16px] md:text-[18px] ">
                             {project.details.periodsOfServices}
                         </Text>
                     </div>

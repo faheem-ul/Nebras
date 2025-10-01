@@ -116,7 +116,7 @@ const Footer = () => {
       viewport={{ once: false, amount: 0.12 }}
     >
       <motion.div
-        className="max-w-[1312px] mx-auto px-5 pt-10 pb-10 md:pt-[76px] md:pb-[50px] flex flex-col md:flex-row justify-between gap-y-10 md:gap-y-0 md:gap-x-[30px] flex-wrap"
+        className="max-w-[1312px] mx-auto px-5 pt-10 pb-[30px] md:pt-[76px] md:pb-[50px] flex flex-col md:flex-row justify-between gap-y-10 md:gap-y-0 md:gap-x-[30px] flex-wrap"
         variants={footerVariants}
         initial="hidden"
         whileInView="visible"
@@ -124,14 +124,32 @@ const Footer = () => {
       >
         {/* Left Column */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
-          <Link to="/">
-            <motion.img
-              src={logo}
-              alt="Logo"
-              className="w-[160px] md:w-[208px] h-auto mb-6 md:mb-[38px]"
-              variants={itemVariants}
-            />
-          </Link>
+          <div className="flex flex-row items-center justify-between mb-[33px] md:mb-[38px]">
+            <Link to="/">
+              <motion.img
+                src={logo}
+                alt="Logo"
+                className="w-[100px] sm:w-[160px] md:w-[208px] h-auto "
+                variants={itemVariants}
+              />
+            </Link>
+
+            <motion.div className=" gap-4 md:hidden flex md:mt-[37px]" variants={columnVariants}>
+              {socialMediaItems.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  className="bg-white rounded-full p-2 flex items-center justify-center w-[30px] h-[30px]"
+                  variants={itemVariants}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </motion.div>
+          </div>
 
           <motion.ul
             className="font-kosans text-sm md:text-[16px] leading-[22px] md:leading-[24px] space-y-4"
@@ -148,14 +166,14 @@ const Footer = () => {
         {/* Quick Links */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
-            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            className="font-kosans text-[16px] sm:text-[18px]  md:text-[20px] leading-none mb-6 md:mb-[47px]"
             variants={itemVariants}
           >
             {t.quickLinks}
           </motion.h3>
 
           <motion.ul
-            className="space-y-4 md:space-y-[27px] font-kosans text-base md:text-[18px]"
+            className="space-y-4 md:space-y-[27px] font-kosans text-[14px] md:text-[18px]"
             variants={columnVariants}
           >
             {t.quickLinksList.map((item) => (
@@ -171,13 +189,13 @@ const Footer = () => {
         {/* Newsletter */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
-            className="font-kosans text-lg md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            className="font-kosans  text-[16px] sm:text-[18px] md:text-[20px] leading-none mb-[18px] sm:mb-6 md:mb-[47px]"
             variants={itemVariants}
           >
             {t.newsletter}
           </motion.h3>
 
-          <motion.div className="relative mb-6 md:mb-[37px]" variants={columnVariants}>
+          <motion.div className="relative" variants={columnVariants}>
             <motion.input
               type="email"
               placeholder={t.placeholder}
@@ -193,7 +211,7 @@ const Footer = () => {
             </motion.button>
           </motion.div>
 
-          <motion.div className="flex gap-4" variants={columnVariants}>
+          <motion.div className=" gap-4 hidden md:flex md:mt-[37px]" variants={columnVariants}>
             {socialMediaItems.map((social, index) => (
               <motion.a
                 key={index}
@@ -208,12 +226,13 @@ const Footer = () => {
               </motion.a>
             ))}
           </motion.div>
+
         </motion.div>
       </motion.div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/50">
-        <p className="text-center py-5 text-xs md:text-sm font-kosans md:text-[16px] md:leading-[18px]">
+        <p className="text-center pt-[15.6px] pb-[24.6px] md:py-5 text-[14px] md:text-[16px] font-kosans  leading-[18px] md:leading-[18px]">
           {t.rights}
         </p>
       </div>
