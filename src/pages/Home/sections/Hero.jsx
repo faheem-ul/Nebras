@@ -33,7 +33,7 @@ const Hero = () => {
   return (
     <section className="w-full bg-white overflow-hidden">
 
-      <div className="relative w-full h-[600px] sm:h-[750px] md:h-[800px] overflow-hidden">
+      <div className="relative w-full h-[432px] sm:h-[555px] md:h-[800px] overflow-hidden">
 
         {/* Zooming Background Layer */}
         <AnimatePresence>
@@ -51,7 +51,7 @@ const Hero = () => {
         {/* Black Overlay */}
         <div className="absolute inset-0 bg-black/40 "></div>
 
-        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[250px] md:pt-[353px]" dir={isArabic ? 'rtl' : 'ltr'}>
+        <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[145px] sm:pt-[250px] md:pt-[353px]" dir={isArabic ? 'rtl' : 'ltr'}>
           {/* Welcome Message */}
           <div className="max-w-[900px]">
             <div data-aos="fade-up" data-aos-delay="400">
@@ -62,7 +62,7 @@ const Hero = () => {
               </Text>
             </div>
             <div data-aos="fade-up" data-aos-delay="500">
-              <Text className="text-white">
+              <Text className="text-white leading-normal">
                 {isArabic
                   ? "خبرة استشارية. نحول التحديات إلى فرص بدقة وابتكار."
                   : "Consulting expertise. Transforming challenges into opportunities with precision and innovation."}
@@ -74,7 +74,7 @@ const Hero = () => {
       </div>
 
       {/* 3 Images Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
+      <div className="grid grid-cols-3 gap-0">
         {/* Engineering */}
         <div className="relative group overflow-hidden " data-aos="fade" data-aos-delay="400">
           <img
@@ -85,11 +85,11 @@ const Hero = () => {
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
+          <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
+            <Text className="text-white text-[15px] leading-none sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
               {isArabic ? "الهندسة" : "Engineering"}
             </Text>
-            <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "الهندسة" : "Engineering"}
             </button>
           </div>
@@ -105,11 +105,11 @@ const Hero = () => {
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
+          <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
+            <Text className="text-white text-[15px] leading-none  sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
               {isArabic ? "التخطيط" : "Planning"}
             </Text>
-            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "التخطيط" : "Planning"}
             </button>
           </div>
@@ -125,11 +125,11 @@ const Hero = () => {
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[20px] sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
+          <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
+            <Text className="text-white text-[15px] leading-none  sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
               {isArabic ? "الاستشارات" : "Consulting"}
             </Text>
-            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[16px] sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "الاستشارات" : "Consulting"}
             </button>
           </div>

@@ -43,16 +43,16 @@ const OpinionPieces = () => {
     ];
 
     return (
-        <section className="max-w-[1312px] w-full mx-auto px-5 pb-10 md:pb-[60px]">
+        <section className="max-w-[1312px] w-full mx-auto px-5 pb-[36px] md:pb-[60px]">
             {/* Heading */}
             <div className="max-w-[821px] mx-auto" data-aos="fade" data-aos-delay="400">
-                <Text className="text-center text-2xl md:text-[40px] md:leading-none font-logirent">
+                <Text className="text-center text-[30px] leading-none md:text-[40px] md:leading-none font-logirent">
                     {isArabic ? "مقالات الرأي" : "opinion pieces"}
                 </Text>
             </div>
 
             {/* Articles */}
-            <div className="flex flex-col md:flex-row md:flex-wrap justify-between gap-6 md:gap-[45px] mt-6 md:mt-[25px]"
+            <div className="flex flex-col md:flex-row md:flex-wrap justify-between gap-[16px] md:gap-[45px] mt-6 md:mt-[25px]"
                 data-aos="fade-up" data-aos-delay="400"
             >
                 {articles.map((article, index) => (

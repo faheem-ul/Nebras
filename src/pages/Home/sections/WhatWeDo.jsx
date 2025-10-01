@@ -59,7 +59,7 @@ export default function WhatWeDo() {
         <div data-aos="fade-right" data-aos-delay="400" dir={isArabic ? 'rtl' : 'ltr'}>
           <Text
             as="h2"
-            className={`text-[28px] md:text-[65px] font-logirent leading-tight mb-[14px] md:mb-0  md:text-left ${isArabic ? 'text-right' : ''}`}
+            className={`text-[28px] md:text-[65px] font-logirent leading-tight mb-[15px] md:mb-0  md:text-left ${isArabic ? 'text-right' : ''}`}
           >
             {isArabic ? (
               <>
@@ -87,10 +87,10 @@ export default function WhatWeDo() {
           </div>
 
           {/* Text content */}
-          <div className="pb-[85px] w-full md:max-w-[786px]" data-aos="fade-up" data-aos-delay="400"
+          <div className="pb-[48px] md:pb-[85px] w-full md:max-w-[786px]" data-aos="fade-up" data-aos-delay="400"
             dir={isArabic ? 'rtl' : 'ltr'}
           >
-            <Text className="mb-[35px]">
+            <Text className="mb-[12px] md:mb-[35px]">
               {isArabic
                 ? "تأسست نبراس للاستشارات في قلب عمّان، الأردن، وهي شركة رائدة في مجال الاستشارات الهندسية والفنية مكرسة لبناء مجتمعات مستدامة في جميع أنحاء المنطقة العربية. مع سنوات من الخبرة في البنية التحتية والتخطيط الحضري والتراث المعماري، نقدم حلولاً مبتكرة وموثوقة ومستدامة تلبي احتياجات العصر الحديث."
                 : "Established in the heart of Amman, Jordan, Nebras Consult is a leading engineering and technical consultancy dedicated to shaping sustainable communities across the Arab region. With years of experience in infrastructure, urban planning, and architectural heritage, we deliver innovative, reliable, and sustainable solutions that address the needs of the modern era."}
@@ -103,7 +103,7 @@ export default function WhatWeDo() {
 
             {/* Expandable Section */}
             {showMore && (
-              <div className="mt-6 space-y-6">
+              <div className="mt-[12px] md:mt-6 space-y-6">
                 <Text>
                   {isArabic
                     ? "في نبراس للاستشارات، نقدم خدمات هندسية واستشارية شاملة تغطي دورة حياة المشروع كاملة، من التخطيط المفاهيمي إلى التنفيذ والتقييم. خبرتنا متجذرة في فهم عميق للمناظر الثقافية والبيئية والتقنية في المنطقة."
