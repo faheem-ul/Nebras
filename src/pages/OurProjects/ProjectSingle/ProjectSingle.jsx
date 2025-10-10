@@ -142,7 +142,7 @@ function ProjectSingle() {
                         <Text className="font-logirent text-[30px] leading-none  md:text-[34px] mb-[24px] md:mb-[42px]">
                             {lang === 'ar' ? 'مدة الخدمة' : 'Period of Services'}
                         </Text>
-                        <Text className="text-[16px] md:text-[18px] ">
+                        <Text className="font-kosans text-[16px] md:text-[18px] ">
                             {project.details.periodsOfServices}
                         </Text>
                     </div>
