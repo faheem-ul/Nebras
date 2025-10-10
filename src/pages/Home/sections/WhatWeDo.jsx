@@ -80,7 +80,7 @@ export default function WhatWeDo() {
               <img
                 src={whatWeDoImage}
                 alt="What we do"
-                className="w-full h-[804px] object-cover"
+                className="w-full h-[578px] object-cover"
               />
             </div>
 

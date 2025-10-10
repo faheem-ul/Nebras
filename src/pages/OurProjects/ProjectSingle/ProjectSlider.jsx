@@ -31,22 +31,6 @@ const ProjectSlider = ({ images = [] }) => {
                     <img src={rightIcon} className='w-[8px] md:w-[12px] ' />
                 </button>
             </div>
-            {/* <div className="flex justify-center md:justify-end md:mb-[40px] gap-5 md:gap-3 
-                absolute bottom-0 left-1/2 -translate-x-1/2 w-full 
-                md:relative md:left-0 md:translate-x-0">
-                <button
-                    ref={prevRef}
-                    className="bg-[#393C3D] rounded-full cursor-pointer w-[40px] h-[40px] md:w-[58px] md:h-[58px] flex items-center justify-center"
-                >
-                    <img src={leftIcon} className='w-[12px]' />
-                </button>
-                <button
-                    ref={nextRef}
-                    className="bg-[#393C3D] rounded-full cursor-pointer w-[40px] h-[40px] md:w-[58px] md:h-[58px] flex items-center justify-center"
-                >
-                    <img src={rightIcon} className='w-[12px]' />
-                </button>
-            </div> */}
 
             {/* Swiper */}
             <Swiper
@@ -77,7 +61,7 @@ const ProjectSlider = ({ images = [] }) => {
                             <img
                                 src={img}
                                 alt={`Slide ${idx + 1}`}
-                                className="max-w-[636px] w-full h-[350px] md:h-[450px] object-cover transform transition duration-300 ease-in-out hover:scale-108"
+                                className="max-w-[636px] w-full h-[260px] md:h-[450px] object-cover transform transition duration-300 ease-in-out hover:scale-108"
                             />
                         </div>
                     </SwiperSlide>
