@@ -39,7 +39,7 @@ const Text = forwardRef(function Text(props, ref) {
         <p
             ref={ref}
             className={cn(
-                "font-kosans text-[18px]  leading-[38px] md:text-[20px] font-normal md:leading-[38px]",
+                "font-lato text-[18px]  leading-[38px] md:text-[20px] font-normal md:leading-[38px]",
                 className
             )}
             onClick={onClick}

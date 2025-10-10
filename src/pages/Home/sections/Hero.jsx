@@ -62,7 +62,7 @@ const Hero = () => {
               </Text>
             </div>
             <div data-aos="fade-up" data-aos-delay="500">
-              <Text className="text-white leading-normal">
+              <Text className="text-white leading-normal capitalize">
                 {isArabic
                   ? "خبرة استشارية. نحول التحديات إلى فرص بدقة وابتكار."
                   : "Consulting expertise. Transforming challenges into opportunities with precision and innovation."}
