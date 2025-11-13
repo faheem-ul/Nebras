@@ -44,7 +44,7 @@ const Navbar = () => {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[34.7px] md:pt-[97px] pb-[37px]">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-transparent pt-[34.7px] md:pt-[44px] pb-[33px] bg-[linear-gradient(180deg,_#FFFFFF_0%,_rgba(255,255,255,0)_120.06%)]">
       {/* Desktop Menu */}
       <div className="max-w-[1312px] mx-auto px-5 flex items-center justify-between">
         {/* Left - Dynamic Logo */}
@@ -58,51 +58,48 @@ const Navbar = () => {
 
         {/* Right - Nav Links (Desktop) */}
         <div
-          className={`hidden md:flex items-center justify-end gap-[43px] flex-wrap ${location.pathname === "/our-projects" || location.pathname === "/insights"
-            ? "text-black"
-            : "text-white"
-            }`}
+          className={` hidden md:flex items-center justify-end gap-[55px] flex-wrap text-black ${isArabic ? "font-zarid text-[24px]" : "text-[20px] font-ubuntu font-bold"} `}
         >
 
           <button
             onClick={() => toggleLanguage(lang === "en" ? "ar" : "en")}
-            className=" font-normal text-lg leading-none hover:text-[#016938] cursor-pointer"
+            className=" font-normal  leading-none hover:text-[#016938] cursor-pointer"
           >
             {lang === "en" ? "العربية" : "English"}
           </button>
 
           <NavLink
             to="/"
-            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            className={({ isActive }) => `   leading-none hover:text-[#016938]  ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="300"
           >
             {isArabic ? "الرئيسية" : "Home"}
           </NavLink>
           <NavLink
             to="/our-projects"
-            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            className={({ isActive }) => `   leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="400"
           >
             {isArabic ? "مشاريعنا" : "Our Projects"}
           </NavLink>
           <NavLink
             to="about-us"
-            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            className={({ isActive }) => `   leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="500"
           >
-            {isArabic ? "من نحن" : "About Us"}
+            {isArabic ? "معلومات عنا" : "About Us"}
           </NavLink>
           <NavLink
             to="insights"
-            className={({ isActive }) => `font-logirent font-normal text-lg leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
+            className={({ isActive }) => `   leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="600"
           >
-            {isArabic ? "رؤى" : "Insights"}
+            {isArabic ? "آخر الأخبار" : "Insights"}
           </NavLink>
 
           <NavLink
             to="contact-us"
-            className="ml-3 px-[15px] py-[14px] bg-green text-white cursor-pointer font-logirent font-normal text-lg leading-none min-w-[150px] text-center"
+            className="ml-3 px-[15px] py-[14px] bg-green text-white cursor-pointer    leading-none min-w-[150px] text-center"
             data-aos="fade-right" data-aos-delay="700"
           >
             {isArabic ? "اتصل بنا" : "Contact Us"}
@@ -158,7 +155,7 @@ const Navbar = () => {
               toggleLanguage(lang === "en" ? "ar" : "en");
               handleClose();
             }}
-            className="font-logirent text-xl hover:text-[#016938] mb-[12px]"
+            className=" text-xl hover:text-[#016938] mb-[12px]"
           >
             {isArabic ? "English" : "العربية"}
           </button>

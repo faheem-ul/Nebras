@@ -53,18 +53,34 @@ const Hero = () => {
 
         <div className="relative  max-w-[1312px] mx-auto px-5 h-full flex flex-col pt-[145px] sm:pt-[250px] md:pt-[353px]" dir={isArabic ? 'rtl' : 'ltr'}>
           {/* Welcome Message */}
-          <div className="max-w-[900px]">
+          <div className="max-w-[592px]">
             <div data-aos="fade-up" data-aos-delay="400">
-              <Text as="h1" className="text-white mb-[20px]">
+              <Text
+                as="h1"
+                className={`text-white leading-0 md:leading-none ${isArabic ? "mb-[8px] " : "mb-[8px]"} `}
+              >
+                {/* Top line: NEBRAS CONSULT */}
+                <span className="block">
+                {isArabic ? "نبراس كونسلت" : "Nebras Consult"}
+                </span>
+
+               {/* Green bar: ENGINEERING SOLUTIONS */}
+              <span
+                className="inline-flex items-center bg-[#016938] h-[69px] text-[40px] leading-none md:leading-none px-9 shadow-[0px_4px_6px_0px_#00000080]"
+              >
+                <span className="block">
                 {isArabic
-                  ? "نبراس كونسلت – حلول هندسية"
-                  : "Nebras Consult – Engineering solutions"}
+                  ? "للاستشارات الهندسية والتقنية"
+                  : "Engineering solutions"}
+                  </span>
+              </span>
               </Text>
             </div>
             <div data-aos="fade-up" data-aos-delay="500">
-              <Text className="text-white leading-normal capitalize">
+              <Text className={`text-white  md:leading-[26px] ${isArabic ? "font-arabic md:text-[50px] md:leading-[66px] " : ""} `}
+              >
                 {isArabic
-                  ? "خبرة استشارية. نحول التحديات إلى فرص بدقة وابتكار."
+                  ? "خبرات هندسية رائدة وحلول استشارية متكاملة."
                   : "Consulting expertise. Transforming challenges into opportunities with precision and innovation."}
               </Text>
             </div>
@@ -86,10 +102,10 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[15px] leading-none sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
+          <Text className={`text-white text-[15px] leading-none  sm:text-[28px] font-bold  md:text-[40px]  group-hover:hidden ${isArabic ? "md:text-[55px]" : "md:text-[40px]"}`}>
               {isArabic ? "الهندسة" : "Engineering"}
             </Text>
-            <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden  group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-bold text-[15px] leading-none sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "الهندسة" : "Engineering"}
             </button>
           </div>
@@ -106,10 +122,10 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[15px] leading-none  sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
-              {isArabic ? "التخطيط" : "Planning"}
+            <Text className={`text-white text-[15px] leading-none  sm:text-[28px] font-bold  md:text-[40px]  group-hover:hidden ${isArabic ? "md:text-[55px]" : "md:text-[40px]"}`}>
+            {isArabic ? "التخطيط" : "Planning"}
             </Text>
-            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-bold text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "التخطيط" : "Planning"}
             </button>
           </div>
@@ -126,10 +142,10 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="absolute bottom-[4.7px] md:bottom-6 left-1/2 -translate-x-1/2 text-center  z-10">
-            <Text className="text-white text-[15px] leading-none  sm:text-[28px] md:text-[40px] font-logirent group-hover:hidden">
+          <Text className={`text-white text-[15px] leading-none  sm:text-[28px] font-bold  md:text-[40px]  group-hover:hidden ${isArabic ? "md:text-[55px]" : "md:text-[40px]"}`}>
               {isArabic ? "الاستشارات" : "Consulting"}
             </Text>
-            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-kosans text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
+            <button className="hidden group-hover:inline-block w-[220px] sm:w-[280px] md:w-[412px] bg-[#393C3D] text-white font-bold text-[15px] leading-none  sm:text-[20px] md:text-[28px] py-2 cursor-pointer">
               {isArabic ? "الاستشارات" : "Consulting"}
             </button>
           </div>

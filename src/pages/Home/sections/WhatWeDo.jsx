@@ -52,14 +52,14 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full bg-white pt-[48px] md:pt-[58px] ">
+    <section className="w-full bg-white pt-[48px] md:pt-[93px] ">
       <div className="relative max-w-[1312px] px-5 w-full mx-auto">
 
         {/* Title */}
         <div data-aos="fade-right" data-aos-delay="400" dir={isArabic ? 'rtl' : 'ltr'}>
           <Text
-            as="h2"
-            className={`text-[28px] md:text-[65px] font-logirent leading-tight mb-[15px] md:mb-0  md:text-left ${isArabic ? 'text-right' : ''}`}
+            as="h1"
+            className={` mb-[15px] md:mb-0  `}
           >
             {isArabic ? (
               <>
@@ -141,9 +141,9 @@ export default function WhatWeDo() {
             {/* Read More/Less Button */}
             <button
               onClick={() => setShowMore(!showMore)}
-              className="mt-6 text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans md:text-[24px] leading-none cursor-pointer"
+              className={` mt-6 text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white md:text-[24px] leading-none cursor-pointer ${isArabic ? "font-zarid" : "font-ubuntu"}`}
             >
-              {showMore ? (isArabic ? "إقرأ أقل" : "Read Less") : (isArabic ? "إقرأ المزيد" : "Read More")}
+              {showMore ? (isArabic ? "إقرأ أقل" : "Read Less") : (isArabic ? "أ المزيد" : "Read More")}
             </button>
 
           </div>

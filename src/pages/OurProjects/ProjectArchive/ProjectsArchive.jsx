@@ -96,7 +96,9 @@ function ProjectsArchive() {
             <div className="max-w-[1312px] w-full mx-auto px-4">
 
                 {/* Hero Section */}
-                <div className="flex gap-6 flex-row justify-between items-center mb-[26px]  md:mb-[85px]">
+                <div className="flex gap-6 flex-row justify-between items-center mb-[26px]  md:mb-[85px]" 
+                dir={isArabic ? 'rtl' : 'ltr'}
+                >
                     {/* Title*/}
                     <div data-aos="fade-right" data-aos-delay="400">
                         <Text as="h1">
@@ -114,17 +116,39 @@ function ProjectsArchive() {
 
                     <div className="relative inline-flex justify-center">
                         {/* Filter Button */}
-                        <div data-aos="fade-left" data-aos-delay="400">
+                        {/* <div data-aos="fade-left" data-aos-delay="400" >
                             <button
                                 className="flex items-center justify-end gap-[11px] cursor-pointer"
                                 onClick={() => setIsFilterOpen((prev) => !prev)}
                             >
                                 <img src={filterIcon} className="w-[22px] h-auto md-w-[34px]]" />
-                                <Text className="text-[16px] md:text-[16px] md:block hidden " >
+                                <Text className={`text-[16px]  md:block hidden ${isArabic ? "md:text-[28px]" : "md:text-[16px] uppercase font-bold"}`} >
                                     {isArabic ? "تصفية" : "Filter"}
                                 </Text>
                             </button>
-                        </div>
+                        </div> */}
+                        <div data-aos="fade-left" data-aos-delay="400">
+                            <button
+                                onClick={() => setIsFilterOpen((prev) => !prev)}
+                                className={`flex items-center gap-[11px] cursor-pointer justify-end ${
+                                isArabic ? "flex-row-reverse" : ""
+                                }`}
+                            >
+                                <img
+                                src={filterIcon}
+                                className="w-[22px] h-auto md:w-[34px]"
+                                alt=""
+                                />
+                                <Text
+                                className={`hidden md:block text-[16px] ${
+                                    isArabic ? "md:text-[28px]" : "md:text-[16px] uppercase font-bold"
+                                }`}
+                                >
+                                {isArabic ? "تصفية" : "Filter"}
+                                </Text>
+                            </button>
+                            </div>
+
 
                         {/* Filter Box */}
                         {isFilterOpen && (
@@ -294,7 +318,7 @@ function ProjectsArchive() {
                     <div className="flex justify-center mt-[45px] md:mt-[64px]">
                         <button
                             onClick={() => setVisibleCount((prev) => prev + projectsPerPage)}
-                            className="mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer "
+                            className={`mx-auto md:w-[149px] text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white   leading-none cursor-pointer ${isArabic ? "font-zarid" : ""}`}
                         >
                             {isArabic ? "عرض المزيد" : "View More"}
                         </button>

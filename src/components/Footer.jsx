@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaLinkedinIn } from "react-icons/fa";
+// import { FaLinkedinIn } from "react-icons/fa";
 
 import { useLanguage } from "@/context/LanguageContext";
 import logo from "@/assets/footer/footerLogo.png";
+
+import linkedinIcon from "@/assets/footer/in.svg";
+import facebookIcon from "@/assets/footer/fb.svg";
+import instagramIcon from "@/assets/footer/insta.svg";
+import youtubeIcon from "@/assets/footer/yt.svg";
+import twitterIcon from "@/assets/footer/tweeter.svg";
+import mailIcon from "@/assets/footer/mail.svg";
+import phoneIcon from "@/assets/footer/phone.svg";
+import locationIcon from "@/assets/footer/location.svg";
+
+import Text from "./ui/Text";
 
 /* ---------- Variants ---------- */
 const footerVariants = {
@@ -21,15 +32,16 @@ const itemVariants = {
 
 const Footer = () => {
   const { lang } = useLanguage();
+  const isArabic = lang === "ar";
 
   // Labels for EN & AR
   const labels = {
     en: {
       quickLinks: "QUICK LINKS",
       newsletter: "Subscribe Newsletter",
-      placeholder: "ENTER YOUR EMAIL",
+      placeholder: "Enter your email",
       subscribe: "Subscribe",
-      rights: "© 2025 Nebras Consult, All rights reserved.",
+      rights: "NEBRAS CONSULT, ALL RIGHTS RESERVED. © 2025",
       quickLinksList: [
         { label: "Home", path: "/" },
         { label: "Our Projects", path: "/our-projects" },
@@ -39,9 +51,10 @@ const Footer = () => {
       ],
       contacts: {
         email: "info@nebrasconsult.com",
-        saudi: "Saudi Office Contact No.: +966 50 609 1166",
-        jordan: "Jordan Office Contact No.: +962 7 7605 5626",
-        address: "Pavilion, 2 Marina Boulevard, San Francisco, United States",
+        saudiPhone: "+966 50 609 1166",
+        jordanPhone: "+962 7 7605 5626",
+        saudiAddress: "Riyadh, Saudi Arabia",
+        jordanAddress: "Amman, Jordan",
       },
     },
     ar: {
@@ -49,7 +62,8 @@ const Footer = () => {
       newsletter: "اشترك في النشرة الإخبارية",
       placeholder: "أدخل بريدك الإلكتروني",
       subscribe: "اشترك",
-      rights: "© 2025 نيبراس للاستشارات، جميع الحقوق محفوظة.",
+      rights:
+        " نبراس كونسلت للاستشارات الهندسية والتقنية، جميع الحقوق محفوظة © 2025 ",
       quickLinksList: [
         { label: "الرئيسية", path: "/" },
         { label: "مشاريعنا", path: "/our-projects" },
@@ -59,57 +73,81 @@ const Footer = () => {
       ],
       contacts: {
         email: "info@nebrasconsult.com",
-        saudi: "مكتب السعودية: +966 50 609 1166",
-        jordan: "مكتب الأردن: +962 7 7605 5626",
-        address: "الجناح، 2 مارينا بوليفارد، سان فرانسيسكو، الولايات المتحدة",
+        saudiPhone: "+۹۶۶ - ۵۰ - ۶۰۹ - ۱۱۶۶",
+        jordanPhone: "++۹۶۲ - ۷ - ۷۶۰۵ - ۵۶۲۶",
+        saudiAddress: "الرياض، المملكة العربية السعودية",
+        jordanAddress: "عمان، الأردن",
       },
     },
   };
+  
 
   const t = labels[lang];
 
   const contactItems = [
     {
       key: "email",
-      node: (
-        <a href="mailto:info@nebrasconsult.com" className="hover:underline">
-          {t.contacts.email}
-        </a>
-      ),
+      icon: mailIcon,
+      href: "mailto:info@nebrasconsult.com",
+      label: t.contacts.email,
     },
     {
       key: "phone-saudi",
-      node: (
-        <a href="tel:+966506091166" className="hover:underline">
-          {t.contacts.saudi}
-        </a>
-      ),
+      icon: phoneIcon,
+      href: "tel:+966506091166",
+      label: t.contacts.saudiPhone,
     },
     {
       key: "phone-jordan",
-      node: (
-        <a href="tel:+962776055626" className="hover:underline">
-          {t.contacts.jordan}
-        </a>
-      ),
+      icon: phoneIcon,
+      href: "tel:+962776055626",
+      label: t.contacts.jordanPhone,
     },
     {
-      key: "address",
-      node: <span>{t.contacts.address}</span>,
+      key: "address-saudi",
+      icon: locationIcon,
+      label: t.contacts.saudiAddress,
+    },
+    {
+      key: "address-jordan",
+      icon: locationIcon,
+      label: t.contacts.jordanAddress,
     },
   ];
+  
+  
 
   const socialMediaItems = [
     {
       name: "LinkedIn",
-      icon: <FaLinkedinIn size={20} color="#393C3D" />,
+      icon: linkedinIcon,
       url: "https://www.linkedin.com/company/nebrasconsult/",
+    },
+    {
+      name: "Facebook",
+      icon: facebookIcon,
+      url: "https://www.facebook.com/your-page-slug", // ⬅️ replace with real URL
+    },
+    {
+      name: "Instagram",
+      icon: instagramIcon,
+      url: "https://www.instagram.com/your-handle", // ⬅️ replace
+    },
+    {
+      name: "YouTube",
+      icon: youtubeIcon,
+      url: "https://www.youtube.com/@your-channel", // ⬅️ replace
+    },
+    {
+      name: "Twitter",
+      icon: twitterIcon,
+      url: "https://x.com/your-handle", // ⬅️ replace
     },
   ];
 
   return (
     <motion.footer
-      className={`w-full bg-[#393C3D] text-white overflow-hidden "
+      className={`w-full bg-[#0C6039] text-white overflow-hidden ${    isArabic ? "font-zarid" : "font-ubuntu"} "
         }`}
       initial="hidden"
       whileInView="visible"
@@ -121,10 +159,11 @@ const Footer = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.12 }}
+       dir={isArabic ? 'rtl' : 'ltr'}
       >
         {/* Left Column */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
-          <div className="flex flex-row items-center justify-between mb-[33px] md:mb-[38px]">
+          <div className="flex flex-row items-center justify-between mb-[33px] md:mb-[38px] " >
             <Link to="/">
               <motion.img
                 src={logo}
@@ -135,6 +174,7 @@ const Footer = () => {
             </Link>
 
             <motion.div className=" gap-4 md:hidden flex md:mt-[37px]" variants={columnVariants}>
+
               {socialMediaItems.map((social, index) => (
                 <motion.a
                   key={index}
@@ -142,43 +182,66 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="bg-white rounded-full p-2 flex items-center justify-center w-[30px] h-[30px]"
+                 
                   variants={itemVariants}
                 >
-                  {social.icon}
+                 <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full" />
                 </motion.a>
               ))}
             </motion.div>
           </div>
 
           <motion.ul
-            className="font-kosans text-sm md:text-[16px] leading-[22px] md:leading-[24px] space-y-4"
-            variants={columnVariants}
-          >
-            {contactItems.map((c) => (
-              <motion.li key={c.key} variants={itemVariants}>
-                {c.node}
-              </motion.li>
-            ))}
-          </motion.ul>
+  className={`text-sm leading-[22px] md:leading-[24px] space-y-4 ${
+    lang === "ar" ? "md:text-[20px]" : "md:text-[18px]"
+  }`}
+  variants={columnVariants}
+  dir={isArabic ? 'rtl' : 'ltr'}
+>
+  {contactItems.map((item) => (
+    <motion.li key={item.key} variants={itemVariants}>
+      <div
+        className={`flex items-center gap-3 ${
+          isArabic ? " text-right" : "text-left"
+        }`}
+      >
+        {/* Icon in white circle */}
+        <span className="w-[28px] h-[28px]  flex items-center justify-center">
+          <img src={item.icon} alt="" className="w-full h-full" />
+        </span>
+
+        {/* Text (link if href exists) */}
+        {item.href ? (
+          <a href={item.href} className="hover:underline">
+            {item.label}
+          </a>
+        ) : (
+          <span>{item.label}</span>
+        )}
+      </div>
+    </motion.li>
+  ))}
+</motion.ul>
+
         </motion.div>
 
         {/* Quick Links */}
-        <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
+        <motion.div className="w-full  md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
-            className="font-kosans text-[16px] sm:text-[18px]  md:text-[20px] leading-none mb-6 md:mb-[47px]"
+            className={` text-[16px] sm:text-[18px]  font-bold uppercase md:text-[20px] leading-none mb-6 md:mb-[47px]
+              ${lang === "ar" ? "md:text-[34px]" : "md:text-[20px]"} `}
             variants={itemVariants}
           >
             {t.quickLinks}
           </motion.h3>
 
           <motion.ul
-            className="space-y-4 md:space-y-[27px] font-kosans text-[14px] md:text-[18px]"
+            className={`space-y-4 md:space-y-[27px]  text-[14px]    ${lang === "ar" ? "md:text-[26px]" : "md:text-[18px]"} `}
             variants={columnVariants}
           >
             {t.quickLinksList.map((item) => (
               <motion.li key={item.label} variants={itemVariants}>
-                <Link to={item.path} className="hover:underline">
+                <Link to={item.path} className="underline">
                   {item.label}
                 </Link>
               </motion.li>
@@ -189,52 +252,73 @@ const Footer = () => {
         {/* Newsletter */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
           <motion.h3
-            className="font-kosans  text-[16px] sm:text-[18px] md:text-[20px] leading-none mb-[18px] sm:mb-6 md:mb-[47px]"
+            className={`text-[16px] sm:text-[18px] font-bold uppercase md:text-[20px] leading-none mb-[18px] sm:mb-6 md:mb-[47px] 
+                ${lang === "ar" ? "md:text-[34px]" : "md:text-[20px]"}
+                `}
             variants={itemVariants}
           >
             {t.newsletter}
           </motion.h3>
 
-          <motion.div className="relative" variants={columnVariants}>
-            <motion.input
-              type="email"
-              placeholder={t.placeholder}
-              className={`w-full pl-4 pr-4 py-3 md:pl-[28px] md:pr-[140px] md:py-[23px] rounded-full text-black bg-white outline-none placeholder:text-sm md:placeholder:text-[15px] placeholder-[#DDDDDD] font-kosans text-sm md:text-[15px] leading-[22px] md:leading-[24px] ${lang === "ar" ? "text-right" : "text-left"
-                }`}
-              variants={itemVariants}
-            />
-            <motion.button
-              className="mt-2 relative md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-[19.8px] px-5 py-3 md:px-[20px] md:py-[17.5px] bg-green text-white rounded-full font-kosans text-sm md:text-[14px] leading-none cursor-pointer"
-              variants={itemVariants}
-            >
-              {t.subscribe}
-            </motion.button>
-          </motion.div>
+          <motion.div
+  className="relative"
+  variants={columnVariants}
+  dir={lang === "ar" ? "rtl" : "ltr"}
+>
+  <motion.input
+    type="email"
+    placeholder={t.placeholder}
+    className={`w-full py-3 md:py-[23px] rounded-full text-black bg-white outline-none
+      placeholder:text-sm md:placeholder:text-[15px] placeholder-[#DDDDDD]
+      text-sm md:text-[15px] leading-[22px] md:leading-[24px]
+      ${lang === "ar"
+        ? "text-right pr-4 md:pr-[28px] md:pl-[140px]"  // button on left → padding left
+        : "text-left pl-4 md:pl-[28px] md:pr-[140px]"   // button on right → padding right
+      }`}
+    variants={itemVariants}
+  />
 
-          <motion.div className=" gap-4 hidden md:flex md:mt-[37px]" variants={columnVariants}>
-            {socialMediaItems.map((social, index) => (
-              <motion.a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-                className="bg-white rounded-full p-2 flex items-center justify-center w-[40px] h-[40px]"
-                variants={itemVariants}
-              >
-                {social.icon}
-              </motion.a>
-            ))}
-          </motion.div>
+  <motion.button
+    className={`mt-2 relative uppercase md:mt-0 md:absolute font-bold
+      md:top-1/2 md:-translate-y-1/2 px-5 py-3 md:px-[20px] md:py-[17.5px]
+      bg-green text-white rounded-full text-sm md:text-[14px] leading-none cursor-pointer
+      ${lang === "ar" ? "md:left-[19.8px]" : "md:right-[19.8px]"}`}
+    variants={itemVariants}
+  >
+    {t.subscribe}
+  </motion.button>
+</motion.div>
+
+
+          <motion.div className="gap-4 hidden md:flex md:mt-[37px]" variants={columnVariants}>
+  {socialMediaItems.map((social, index) => (
+    <motion.a
+      key={index}
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={social.name}
+      className="bg-white rounded-full  flex items-center justify-center w-[42px] h-[42px]"
+      variants={itemVariants}
+    >
+      <img
+        src={social.icon}
+        alt={social.name}
+        className="w-full h-full"
+      />
+    </motion.a>
+  ))}
+</motion.div>
+
 
         </motion.div>
       </motion.div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/50">
-        <p className="text-center pt-[15.6px] pb-[24.6px] md:py-5 text-[14px] md:text-[16px] font-kosans  leading-[18px] md:leading-[18px]">
+        <Text className="text-center  pb-[24.6px] md:py-5 text-[14px] md:text-[14px]   leading-[18px] md:leading-[18px]">
           {t.rights}
-        </p>
+        </Text>
       </div>
     </motion.footer>
   );
