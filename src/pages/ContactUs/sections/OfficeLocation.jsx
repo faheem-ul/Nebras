@@ -1,89 +1,104 @@
 import { useLanguage } from "@/context/LanguageContext";
 import Text from "@/components/ui/Text";
 
-import locationNameIcon from '@/assets/contact/location-name.svg'
+// import locationNameIcon from '@/assets/contact/location-name.svg'
 import phoneIcon from '@/assets/contact/phone-icon.svg'
 import locationIcon from '@/assets/contact/location-icon.svg'
+import ksaFlagIcon from '@/assets/contact/ksa-flag.svg'
+import jordanFlagIcon from '@/assets/contact/jordan-flag.svg'
 
 const locations = [
     {
-        city: { en: "Riyadh", ar: "الرياض" },
-        phone: "+966506091166",
-        address: {
-            en: "Mousa Bin Nusayr Street, Al Olaya, Riyadh 12241",
-            ar: "شارع موسى بن نصير، العليا، الرياض 12241"
-        },
-        mapUrl: "",
+      flag: ksaFlagIcon,
+      city: { en: "KSA", ar: "الرياض: المملكة العربية السعودية" },
+      phone: {
+        en: "+966 50 609 1166",
+        ar: "+۹۶۶ - ۵۰ - ۶۰۹ - ۱۱۶۶",
+      },
+      address: {
+        en: "Riyadh, Saudia Arabia",
+        ar: "الرياض، المملكة العربية السعودية",
+      },
+      mapUrl: "",
     },
     {
-        city: { en: "Jordan", ar: "الأردن" },
-        phone: "+962776055626",
-        address: {
-            en: "Mousa Bin Nusayr Street, Al Olaya, Riyadh 12241",
-            ar: "شارع موسى بن نصير، العليا، الرياض 12241"
-        },
-        mapUrl: "",
+      flag: jordanFlagIcon,
+      city: { en: "Jordan", ar: "الأردن" },
+      phone: {
+        en: "+962 7 7605 5626",
+        ar: "+۹۶۲ - ۷ - ۷۶۰۵ - ۵۶۲۶",
+      },
+      address: {
+        en: "Amman, Jordan",
+        ar: "عمان، الأردن",
+      },
+      mapUrl: "",
     },
-];
+  ];
 
 const OfficeLocation = () => {
     const { lang } = useLanguage(); // 'en' or 'ar'
     const isArabic = lang === "ar";
 
     return (
-        <section className="bg-white py-[29.74px] md:pt-[53px] md:pb-[70px] max-w-[1312px] w-full mx-auto px-5">
+        <section className="bg-white py-[29.74px] md:pt-[53px] md:pb-[60px] max-w-[1312px] w-full mx-auto px-5">
             {/* Section Title */}
             <div data-aos="fade-up" data-aos-delay="400">
                 <Text as="h1" className="text-center mb-[29.74px] md:mb-[41px]" dir={isArabic ? "rtl" : "ltr"}>
-                    {isArabic ? "موقع المكتب" : "Office Location"}
+                    {isArabic ? "فروعنا" : "Office Location"}
                 </Text>
             </div>
 
             {/* Cards Grid */}
-            <div className=" grid grid-cols-1 md:grid-cols-2 gap-[25px]" data-aos="fade" data-aos-delay="500">
-                {locations.map((loc, idx) => (
-                    <div
-                        key={idx}
-                        className="border-[5px] border-[#52555A]/10 py-[30px] px-[26px] bg-white "
+            <div className=" flex flex-wrap flex-col md:flex-row  justify-center gap-[32px]" data-aos="fade" data-aos-delay="500" dir={isArabic ? "rtl" : "ltr"}>
+            {locations.map((loc, idx) => (
+  <div
+    key={idx}
+    className="md:w-[415px] py-[30px] px-[26px] bg-black/5"
+  >
+    {/* Header: flag + city */}
+    <div className="flex items-center gap-[12px] mb-[27px] md:mb-[28.8px]">
+      <img src={loc.flag} alt="" className="w-[28px]" />
+      <Text className={`text-[24px] leading-none md:text-[26px]
+         ${ isArabic ? "font-arabic" : " font-bold" }`} > 
+         {isArabic ? loc.city.ar : loc.city.en}</Text>
+     
+    </div>
 
-                    >
-                        {/* Header */}
-                        <div className="flex items-center gap-[18px] mb-[27px] md:mb-[28.8px]">
-                            <img src={locationNameIcon} alt="" className="w-[19px]" />
-                            <Text className="text-[24px] leading-none md:text-[24px] "> {isArabic ? loc.city.ar : loc.city.en}</Text>
-                        </div>
+    {/* Phone */}
+    <div className="flex items-center gap-[14.8px] mb-[16px] md:mb-5">
+      <img src={phoneIcon} alt="" className="w-[25px]" />
+      <div>
+        <Text className={`text-[14px] leading-none  text-black 
+          ${ isArabic ? "font-zarid md:text-[20px]" : "md:text-[18px] font-medium" }`} >
+          {isArabic ? loc.phone.ar : loc.phone.en}
+        </Text>
+      </div>
+    </div>
 
-                        {/* Phone */}
-                        <div className="flex items-start gap-[14.8px] mb-[16px] md:mb-5">
-                            <img src={phoneIcon} alt="" className="w-25px" />
-                            <div>
-                                <Text className="text-[16px] leading-none md:text-[16px] mb-[4px]"> {isArabic ? "الهاتف" : "Phone"}</Text>
-                                <Text className="text-[14px] leading-none md:text-[14px] text-black/20">{loc.phone}</Text>
-                            </div>
-                        </div>
+    {/* Location */}
+    <div className="flex items-center gap-3 mb-[26px] md:mb-6">
+      <img src={locationIcon} alt="" className="w-[25px]" />
+      <div>
+      <Text className={`text-[14px] leading-none  text-black 
+          ${ isArabic ? "font-zarid md:text-[20px]" : "md:text-[18px] font-medium" }`} >
+          {isArabic ? loc.address.ar : loc.address.en}
+        </Text>
+      </div>
+    </div>
 
-                        {/* Location */}
-                        <div className="flex items-start gap-3 mb-[26px] md:mb-6">
-                            <img src={locationIcon} alt="" className="w-25px" />
-                            <div>
-                                <Text className="text-[16px] leading-none md:text-[16px] mb-[4px]"> {isArabic ? "الموقع" : "Location"}</Text>
-                                <Text className="text-[14px] leading-none md:text-[14px] text-black/20">
-                                    {isArabic ? loc.address.ar : loc.address.en}
-                                </Text>
-                            </div>
-                        </div>
+    {/* Button */}
+    <a
+      href={loc.mapUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center justify-center w-[223px] h-[40px] bg-[#016938] hover:bg-green-900 text-white text-[12px] leading-none  px-[17px] py-[9px] md:px-4 md:py-2
+      ${ isArabic ? "font-zarid md:text-[22px]" : "md:text-[16px] font-bold" }`} >
+      {isArabic ? "عرض على خرائط جوجل" : "View on Google Maps"}
+    </a>
+  </div>
+))}
 
-                        {/* Button */}
-                        <a
-                            href={loc.mapUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-[#016938] hover:bg-green-900 text-white text-[12px] leading-none md:text-[16px] font-kosans uppercase px-[17px] py-[9px] md:px-4 md:py-2"
-                        >
-                            {isArabic ? "عرض على خرائط جوجل" : "View on Google Maps"}
-                        </a>
-                    </div>
-                ))}
             </div>
         </section>
     );

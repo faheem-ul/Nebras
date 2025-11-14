@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 // Import all logo variations
 import greenLogo from "@/assets/navbar/lobo-green.png";
 import whiteLogo from "@/assets/navbar/lobo-white.png";
-import blackLogo from "@/assets/navbar/lobo-black.png";
+// import blackLogo from "@/assets/navbar/lobo-black.png";
 // Mobile Menu Icon
 import HamburgerIcon from "@/assets/navbar/hamburger-icon.svg";
 
@@ -28,9 +28,9 @@ const Navbar = () => {
       location.pathname.startsWith("/our-projects/")
 
     ) {
-      setLogo(whiteLogo);
+      setLogo(greenLogo);
     } else if (location.pathname === "/insights") {
-      setLogo(blackLogo);
+      setLogo(greenLogo);
     } else {
       setLogo(greenLogo);
     }
@@ -90,11 +90,11 @@ const Navbar = () => {
             {isArabic ? "معلومات عنا" : "About Us"}
           </NavLink>
           <NavLink
-            to="insights"
+            to="latest-news"
             className={({ isActive }) => `   leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="600"
           >
-            {isArabic ? "آخر الأخبار" : "Insights"}
+            {isArabic ? "آخر الأخبار" : "Latest News"}
           </NavLink>
 
           <NavLink
@@ -168,8 +168,8 @@ const Navbar = () => {
             {[
               { to: "/", label: isArabic ? "الرئيسية" : "Home" },
               { to: "/our-projects", label: isArabic ? "مشاريعنا" : "Our Projects" },
-              { to: "/about-us", label: isArabic ? "من نحن" : "About Us" },
-              { to: "/insights", label: isArabic ? "رؤى" : "Insights" },
+              { to: "/about-us", label: isArabic ? "معلومات عنا" : "About Us" },
+              { to: "/latest-news", label: isArabic ? "آخر الأخبار" : "Latest News" },
               { to: "/contact-us", label: isArabic ? "اتصل بنا" : "Contact Us" },
             ].map((item, idx) => (
               <React.Fragment key={item.to}>

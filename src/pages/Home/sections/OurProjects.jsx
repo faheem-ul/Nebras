@@ -16,36 +16,45 @@ const OurProjects = () => {
         en: "Planning & Urban Heritage",
         ar: "التخطيط والتراث العمراني",
       },
+      sector: "Planning & Urban Heritage",
+      locationFilter: "Saudi Arabia",
+      sectorSlug: "planning-urban-heritage",
+      locationSlug: "saudi-arabia",
       location: {
         en: "Saudi Arabia",
         ar: "المملكة العربية السعودية",
       },
       image: "/our-projects/project-8/image-1.jpg",
-      href: "/our-projects/planning-urban-heritage",
     },
     {
       title: {
         en: "Infrastructure",
         ar: "البنية التحتية",
       },
+      sector: "Infrastructure",
+      locationFilter: "Saudi Arabia",
+      sectorSlug: "infrastructure",
+      locationSlug: "saudi-arabia",
       location: {
         en: "Saudi Arabia",
         ar: "المملكة العربية السعودية",
       },
       image: "/our-projects/project-6/image-1.jpg",
-      href: "/our-projects/infrastructure-saudi-arabia",
     },
     {
       title: {
         en: "Infrastructure",
         ar: "البنية التحتية",
       },
+      sector: "Infrastructure",
+      locationFilter: "Jordan",
+      sectorSlug: "infrastructure",
+      locationSlug: "jordan",
       location: {
         en: "Jordan",
         ar: "الأردن",
       },
       image: "/our-projects/project-1/image-1.jpg",
-      href: "/our-projects/infrastructure-jordan",
     },
   ];
 
@@ -84,11 +93,11 @@ const OurProjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px] lg:gap-[32px]" data-aos="fade-up" data-aos-delay="350">
           {cards.map((card, index) => (
             <HomeProjectCard
-              key={`${card.href}-${index}`}
+              key={`${card.sectorSlug}-${card.locationSlug}-${index}`}
               title={card.title}
               location={card.location}
               image={card.image}
-              href={card.href}
+              href={`/our-projects/${card.sectorSlug}/${card.locationSlug}`}
               isFeatured={index === featuredIndex}
               delay={400 + index * 100}
             />

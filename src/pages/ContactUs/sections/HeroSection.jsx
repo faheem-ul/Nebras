@@ -30,10 +30,13 @@ const HeroSection = () => {
                 </div>
                 <div className="w-[145px] h-px bg-white" data-aos="fade-right" data-aos-delay="500" />
                 <div data-aos="fade-up" data-aos-delay="400">
-                    <Text className="max-w-[648px] text-[14px] leading-[25px] md:text-[18px] md:leading-[32px] text-white mt-[14px] md:mt-[61px]">
+                    <Text className={` text-[14px] leading-[25px]  text-white mt-[14px] md:mt-[15px]
+                     ${
+                                    isArabic ? "md:text-[36px] md:leading-[39px] font-arabic max-w-[738px]" : "max-w-[540px] md:text-[18px] md:leading-[27px] "
+                                }`} >
                         {isArabic
                             ? "في شركة نبراس للاستشارات، نحن لا نقدم الحلول فحسب، بل نبني شراكات. نعمل جنباً إلى جنب مع عملائنا لفهم أهدافهم وتقديم خدمات هندسية واستشارية تُحدث أثراً حقيقياً."
-                            : "At Nebras Consult, we don’t just provide solutions, we build partnerships. We work closely with our clients to understand their goals and deliver engineering and consulting services that make a real impact."
+                            : "Reach out to Us for inquiries, partnerships, or more information about our services. We're here to assist you with any questions and look forward to connecting with you."
                         }
                     </Text>
                 </div>
