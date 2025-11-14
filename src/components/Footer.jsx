@@ -287,7 +287,7 @@ const Footer = () => {
           </motion.div>
 
 
-          <motion.div className="gap-4  flex-wrap mt-[24px]  flex md:mt-[37px]" variants={columnVariants}>
+          <motion.div className="gap-4  flex-wrap mt-[24px]  flex md:mt-[22px]" variants={columnVariants}>
             {socialMediaItems.map((social, index) => (
               <motion.a
                 key={index}
@@ -313,7 +313,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/50">
-        <Text className="text-center  py-[12.6px] md:py-5 text-[14px] md:text-[14px]   leading-[18px] md:leading-[18px]">
+        <Text className="text-center  py-[12.6px] md:py-5 text-[14px] md:text-[14px] font-medium   leading-[18px] md:leading-[18px]">
           {t.rights}
         </Text>
       </div>
