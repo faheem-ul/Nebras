@@ -19,7 +19,7 @@ function ProjectCard({ project }) {
                         className="w-full h-full object-cover object-center transform transition duration-300  ease-in-out hover:scale-110"
                     />
                 </div>
-                <ul className={`text-[14px] md:text-[16px] mt-[14px] ${isArabic ? "font-arabic md:text-[26px]" : " md:text-[18px]  font-bold"}`}>
+                <ul className={`text-[14px] md:text-[16px] mt-[14px] ${isArabic ? "font-arabic md:text-[26px] text-[18px]" : " md:text-[18px]  font-bold"}`}>
                     <li>
                         {project.details.locations[lang].map((location, idx, arr) => (
                             <span key={idx}>

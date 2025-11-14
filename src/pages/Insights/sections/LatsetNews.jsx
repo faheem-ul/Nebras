@@ -14,7 +14,7 @@ export const LatsetNews = () => {
             {/* Heading */}
             <div className="max-w-[821px] mx-auto px-5" data-aos="fade" data-aos-delay="100">
                 <Text className={`max-w-[254px] mx-auto  md:max-w-full text-center text-[30px] leading-none  md:text-[40px]  ${isArabic ? "md:text-[50px] md:leading-[100%] font-arabic" : "font-logirent   "
-                                }`}>
+                    }`}>
                     {isArabic ? "آخر الأخبار" : "Latest News"}
                 </Text>
             </div>
@@ -35,10 +35,9 @@ export const LatsetNews = () => {
                 <div className="flex-1" dir={isArabic ? 'rtl' : 'ltr'}>
                     {/* Title */}
                     <div data-aos="fade-up" data-aos-delay="400">
-                        <Text className={` md:mb-[16px] text-[16px] leading-[28px] sm:text-[18px]  md:max-w-[628px] w-full ${
-                                    isArabic ? "md:text-[45px] md:leading-[32px] font-arabic" : "md:text-[26px] md:leading-[28px] font-bold "
-                                }`} >
-                            {isArabic ? <>مستقبل الذكاء الاصطناعي في الأعمال:<br/> الاتجاهات والتوقعات</>: <>The Future of AI in Business:<br/> Trends and Predictions </>}
+                        <Text className={`mb-[8px] md:mb-[16px] text-[18px] leading-[28px]   md:max-w-[628px] w-full ${isArabic ? "text-[22px] md:text-[45px] md:leading-[32px] font-arabic" : "md:text-[26px] md:leading-[28px] font-bold "
+                            }`} >
+                            {isArabic ? <>مستقبل الذكاء الاصطناعي في الأعمال:<br /> الاتجاهات والتوقعات</> : <>The Future of AI in Business:<br /> Trends and Predictions </>}
 
                         </Text>
                     </div>
@@ -46,10 +45,9 @@ export const LatsetNews = () => {
                     {/* Description */}
                     <div data-aos="fade-up" data-aos-delay="400">
                         <Text className={`text-sm leading-6   mb-[20px] md:max-w-[721px] w-full 
-                        ${
-                                    isArabic ? "md:text-[24px] md:leading-[30px] font-zarid" : "md:text-[18px] md:leading-[28px] "
-                                }`} >
-                                    
+                        ${isArabic ? "md:text-[24px] md:leading-[30px] font-zarid" : "md:text-[18px] md:leading-[28px] "
+                            }`} >
+
                             {isArabic
                                 ? "استكشف التأثير التحويلي للذكاء الاصطناعي على مختلف الصناعات، بما في ذلك التمويل والرعاية الصحية وتجارة التجزئة. يتعمق هذا المقال في أحدث اتجاهات الذكاء الاصطناعي، مقدّمًا رؤى حول كيفية تمكّن الشركات من الاستفادة من الذكاء الاصطناعي لتعزيز الكفاءة، وتحسين تجارب العملاء، ودفع عجلة الابتكار."
                                 : "Explore the transformative impact of artificial intelligence on various industries, including finance, healthcare, and retail. This article delves into the latest AI trends, offering insights into how businesses can leverage AI to enhance efficiency, improve customer experiences, and drive innovation."
@@ -57,11 +55,10 @@ export const LatsetNews = () => {
                         </Text>
 
                         {/* Meta */}
-                        <Text className={ `text-[14px] leading-[24px]   ${
-                                    isArabic ? "md:text-[20px] md:leading-[24px] font-zarid" : "md:text-[16px] md:leading-[24px] font-bold"
-                                }`} >
-                                     {isArabic ? <>بقلم أليكس تيرنر | نُشر في ٢٦ يوليو ٢٠٢٤</>: <> By Alex Turner | Published on July 26, 2024</>}
-                           
+                        <Text className={`text-[14px] leading-[24px]   ${isArabic ? "md:text-[20px] md:leading-[24px] font-zarid" : "md:text-[16px] md:leading-[24px] font-bold"
+                            }`} >
+                            {isArabic ? <>بقلم أليكس تيرنر | نُشر في ٢٦ يوليو ٢٠٢٤</> : <> By Alex Turner | Published on July 26, 2024</>}
+
                         </Text>
                     </div>
                 </div>

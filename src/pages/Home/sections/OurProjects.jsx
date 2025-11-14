@@ -67,7 +67,7 @@ const OurProjects = () => {
         dir={isArabic ? "rtl" : "ltr"}
       >
         {/* Section header */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[40px] md:mb-[70px]">
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[0px] md:mb-[70px]">
           <div data-aos="fade-right" data-aos-delay="300">
             <Text as="h1" className="text-white leading-[66px]">
               {isArabic ? (
@@ -90,7 +90,7 @@ const OurProjects = () => {
         </div>
 
         {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px] lg:gap-[32px]" data-aos="fade-up" data-aos-delay="350">
+        <div className="flex flex-wrap flex-col md:flex-row  gap-[22px] lg:gap-[px]" data-aos="fade-up" data-aos-delay="350">
           {cards.map((card, index) => (
             <HomeProjectCard
               key={`${card.sectorSlug}-${card.locationSlug}-${index}`}

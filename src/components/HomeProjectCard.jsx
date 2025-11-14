@@ -52,26 +52,19 @@ function HomeProjectCard({
     >
       <article
         dir={isArabic ? "rtl" : "ltr"}
-        className={`${cardBase} ${cardState} h-full text-white`}
+        className={`${cardBase} ${cardState} w-full md:max-w-[407px] h-full text-white`}
       >
-        <div className="flex h-full flex-col gap-6 px-[32px] pt-[42px] pb-[40px] md:px-[43px] md:pt-[50px] md:pb-[48px]">
+        <div className="flex h-full md:min-h-[487px]  flex-col justify-between gap-y-[8px] md:gap-6 px-[32px] pt-[42px] pb-[40px] md:px-[43px] md:pt-[50px] md:pb-[48px]">
           <header className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <Text
-                className={`text-lg  ${ isArabic ? "font-zarid md:text-[30px] md:leading-[30px]" : "font-ubuntu md:text-[26px] md:leading-[30px]" } `}
+                className={`text-lg  ${isArabic ? "font-zarid md:text-[30px] md:leading-[30px]" : "font-ubuntu md:text-[26px] md:leading-[30px]"} `}
               >
                 {displayTitle}
               </Text>
-              {displayLocation && (
-                <Text
-                className={` text-sm  ${ isArabic ? "font-zarid md:text-[25px] md:leading-[30px]" : "font-ubuntu font-light md:text-[20px] md:leading-[43px]" } `}
-                >
-                    ({displayLocation})
-                </Text>
-              
-              )}
             </div>
-            <span className={`${arrowBase} ${arrowState}`} aria-hidden>
+
+            <span className={` ${arrowBase} ${arrowState}`} aria-hidden>
               <svg
                 width="18"
                 height="18"
@@ -90,19 +83,28 @@ function HomeProjectCard({
               </svg>
             </span>
           </header>
+          <div>
+            {displayLocation && (
+              <Text
+                className={` text-sm  ${isArabic ? "font-zarid md:text-[25px] md:leading-[30px]" : "font-ubuntu font-light md:text-[20px] md:leading-[43px]"} `}
+              >
+                ({displayLocation})
+              </Text>
 
-          <span className={`block h-px w-full ${dividerState}`} />
+            )}
+            <span className={`block h-px w-full mt-[8px] mb-[32px] ${dividerState}`} />
 
-          {image && (
-            <div className="mt-auto overflow-hidden shadow-[0px_8px_20px_rgba(0,0,0,0.25)]">
-              <img
-                src={image}
-                alt={displayTitle}
-                className="h-[220px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-          )}
+            {image && (
+              <div className="mt-auto overflow-hidden shadow-[0px_8px_20px_rgba(0,0,0,0.25)]">
+                <img
+                  src={image}
+                  alt={displayTitle}
+                  className="h-[243px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </div>
         </div>
       </article>
     </Link>

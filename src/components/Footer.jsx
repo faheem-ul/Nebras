@@ -80,7 +80,7 @@ const Footer = () => {
       },
     },
   };
-  
+
 
   const t = labels[lang];
 
@@ -114,8 +114,8 @@ const Footer = () => {
       label: t.contacts.jordanAddress,
     },
   ];
-  
-  
+
+
 
   const socialMediaItems = [
     {
@@ -147,7 +147,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className={`w-full bg-[#0C6039] text-white overflow-hidden ${    isArabic ? "font-zarid" : "font-ubuntu"} "
+      className={`w-full bg-[#0C6039] text-white overflow-hidden ${isArabic ? "font-zarid" : "font-ubuntu"} "
         }`}
       initial="hidden"
       whileInView="visible"
@@ -159,7 +159,7 @@ const Footer = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.12 }}
-       dir={isArabic ? 'rtl' : 'ltr'}
+        dir={isArabic ? 'rtl' : 'ltr'}
       >
         {/* Left Column */}
         <motion.div className="w-full md:w-[calc(33.333%-20px)]" variants={columnVariants}>
@@ -173,7 +173,7 @@ const Footer = () => {
               />
             </Link>
 
-            <motion.div className=" gap-4 md:hidden flex md:mt-[37px]" variants={columnVariants}>
+            <motion.div className=" gap-4 hidden  md:mt-[37px]" variants={columnVariants}>
 
               {socialMediaItems.map((social, index) => (
                 <motion.a
@@ -182,46 +182,44 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                 
+
                   variants={itemVariants}
                 >
-                 <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full" />
+                  <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full" />
                 </motion.a>
               ))}
             </motion.div>
           </div>
 
           <motion.ul
-  className={`text-sm leading-[22px] md:leading-[24px] space-y-4 ${
-    lang === "ar" ? "md:text-[20px]" : "md:text-[18px]"
-  }`}
-  variants={columnVariants}
-  dir={isArabic ? 'rtl' : 'ltr'}
->
-  {contactItems.map((item) => (
-    <motion.li key={item.key} variants={itemVariants}>
-      <div
-        className={`flex items-center gap-3 ${
-          isArabic ? " text-right" : "text-left"
-        }`}
-      >
-        {/* Icon in white circle */}
-        <span className="w-[28px] h-[28px]  flex items-center justify-center">
-          <img src={item.icon} alt="" className="w-full h-full" />
-        </span>
+            className={`text-sm leading-[22px] md:leading-[24px] space-y-4 ${lang === "ar" ? "md:text-[20px]" : "md:text-[18px]"
+              }`}
+            variants={columnVariants}
+            dir={isArabic ? 'rtl' : 'ltr'}
+          >
+            {contactItems.map((item) => (
+              <motion.li key={item.key} variants={itemVariants}>
+                <div
+                  className={`flex items-center gap-3 ${isArabic ? " text-right" : "text-left"
+                    }`}
+                >
+                  {/* Icon in white circle */}
+                  <span className="w-[28px] h-[28px]  flex items-center justify-center">
+                    <img src={item.icon} alt="" className="w-full h-full" />
+                  </span>
 
-        {/* Text (link if href exists) */}
-        {item.href ? (
-          <a href={item.href} className="hover:underline">
-            {item.label}
-          </a>
-        ) : (
-          <span>{item.label}</span>
-        )}
-      </div>
-    </motion.li>
-  ))}
-</motion.ul>
+                  {/* Text (link if href exists) */}
+                  {item.href ? (
+                    <a href={item.href} className="hover:underline">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <span>{item.label}</span>
+                  )}
+                </div>
+              </motion.li>
+            ))}
+          </motion.ul>
 
         </motion.div>
 
@@ -261,54 +259,54 @@ const Footer = () => {
           </motion.h3>
 
           <motion.div
-  className="relative"
-  variants={columnVariants}
-  dir={lang === "ar" ? "rtl" : "ltr"}
->
-  <motion.input
-    type="email"
-    placeholder={t.placeholder}
-    className={`w-full py-3 md:py-[23px] rounded-full text-black bg-white outline-none
+            className="relative"
+            variants={columnVariants}
+            dir={lang === "ar" ? "rtl" : "ltr"}
+          >
+            <motion.input
+              type="email"
+              placeholder={t.placeholder}
+              className={`w-full py-3 md:py-[23px] rounded-full text-black bg-white outline-none
       placeholder:text-sm md:placeholder:text-[15px] placeholder-[#DDDDDD]
       text-sm md:text-[15px] leading-[22px] md:leading-[24px]
       ${lang === "ar"
-        ? "text-right pr-4 md:pr-[28px] md:pl-[140px]"  // button on left → padding left
-        : "text-left pl-4 md:pl-[28px] md:pr-[140px]"   // button on right → padding right
-      }`}
-    variants={itemVariants}
-  />
+                  ? "text-right pr-4 md:pr-[28px] md:pl-[140px]"  // button on left → padding left
+                  : "text-left pl-4 md:pl-[28px] md:pr-[140px]"   // button on right → padding right
+                }`}
+              variants={itemVariants}
+            />
 
-  <motion.button
-    className={`mt-2 relative uppercase md:mt-0 md:absolute font-bold
+            <motion.button
+              className={`mt-2 relative uppercase md:mt-0 md:absolute font-bold
       md:top-1/2 md:-translate-y-1/2 px-5 py-3 md:px-[20px] md:py-[17.5px]
       bg-green text-white rounded-full text-sm md:text-[14px] leading-none cursor-pointer
       ${lang === "ar" ? "md:left-[19.8px]" : "md:right-[19.8px]"}`}
-    variants={itemVariants}
-  >
-    {t.subscribe}
-  </motion.button>
-</motion.div>
+              variants={itemVariants}
+            >
+              {t.subscribe}
+            </motion.button>
+          </motion.div>
 
 
-          <motion.div className="gap-4 hidden md:flex md:mt-[37px]" variants={columnVariants}>
-  {socialMediaItems.map((social, index) => (
-    <motion.a
-      key={index}
-      href={social.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={social.name}
-      className="bg-white rounded-full  flex items-center justify-center w-[42px] h-[42px]"
-      variants={itemVariants}
-    >
-      <img
-        src={social.icon}
-        alt={social.name}
-        className="w-full h-full"
-      />
-    </motion.a>
-  ))}
-</motion.div>
+          <motion.div className="gap-4  flex-wrap mt-[24px]  flex md:mt-[37px]" variants={columnVariants}>
+            {socialMediaItems.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                className="bg-white rounded-full shrink-0  flex  items-center justify-center w-[42px] h-[42px]"
+                variants={itemVariants}
+              >
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="w-full h-full"
+                />
+              </motion.a>
+            ))}
+          </motion.div>
 
 
         </motion.div>
@@ -316,7 +314,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/50">
-        <Text className="text-center  pb-[24.6px] md:py-5 text-[14px] md:text-[14px]   leading-[18px] md:leading-[18px]">
+        <Text className="text-center  py-[12.6px] md:py-5 text-[14px] md:text-[14px]   leading-[18px] md:leading-[18px]">
           {t.rights}
         </Text>
       </div>

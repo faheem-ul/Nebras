@@ -87,14 +87,14 @@ function Categories() {
 
       const matchesSector = sectorTargets.length
         ? sectors.some((sector) =>
-            sectorTargets.some((target) => sector.includes(target))
-          )
+          sectorTargets.some((target) => sector.includes(target))
+        )
         : true;
 
       const matchesLocation = locationTargets.length
         ? locations.some((loc) =>
-            locationTargets.some((target) => loc.includes(target))
-          )
+          locationTargets.some((target) => loc.includes(target))
+        )
         : true;
 
       return matchesSector && matchesLocation;
@@ -105,7 +105,7 @@ function Categories() {
   const headingTitle = isArabic
     ? sectorConfig.display.ar || "القطاع"
     : sectorConfig.display.en || "Category";
-    
+
   const headingSubtitle = isArabic
     ? locationConfig.display.ar || ""
     : locationConfig.display.en || "";
@@ -120,14 +120,13 @@ function Categories() {
           <div data-aos="fade-up" data-aos-delay="300">
             <Text
               as="h1"
-              className={`text-black  ${
-                isArabic ? "font-arabic" : "font-logirent"
-              }`}
+              className={`text-black  ${isArabic ? "font-arabic" : "font-logirent"
+                }`}
             >
               {headingTitle}
             </Text>
             {headingSubtitle && (
-              <Text className={`text-base  ${ isArabic ? "font-arabic md:text-[50px]  mt-1" : " mt-3 md:text-[40px]"} `}>
+              <Text className={`text-base  ${isArabic ? "font-arabic text-[32px] md:text-[50px]  mt-1" : "text-[26px] mt-3 md:text-[40px]"} `}>
                 ({headingSubtitle})
               </Text>
             )}
