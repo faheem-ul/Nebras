@@ -59,7 +59,7 @@ function ProjectSingle() {
                 <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className={`transition-all duration-300 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
                     <div className="relative flex flex-col  max-w-[1312px] mx-auto pb-[101px] md:pb-[30px] pt-[165px] sm:pt-[250px] md:pt-[368px] px-5"
                         data-aos="fade-up" data-aos-delay="400">
-                        <Text className={`text-white max-w-[708px]  w-full ${isArabic ? "font-arabic md:leading-[60px] leading-[42px] text-[32px] md:text-[55px]" : "leading-[30px] text-[28px] md:leading-[60px] md:text-[50px] font-ubuntu font-bold"}`}>
+                        <Text className={`text-white max-w-[708px] w-full md:!leading-[60px] ${isArabic ? "font-arabic  leading-[42px] text-[32px] md:text-[55px]" : "leading-[30px] text-[28px]  md:text-[50px] font-ubuntu font-bold"}`}>
                             {project.title[lang]}
                         </Text>
                     </div>

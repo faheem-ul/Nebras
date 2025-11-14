@@ -82,7 +82,7 @@ const OurProjects = () => {
           <div data-aos="fade-left" data-aos-delay="300">
             <button
               onClick={() => navigate("/our-projects")}
-              className="hidden md:inline-flex items-center justify-center gap-2 text-[18px] md:text-[20px] lg:text-[24px] px-[24px] py-[14px] bg-green text-white font-kosans leading-none cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
+              className="hidden md:inline-flex items-center justify-center gap-2 text-[18px] md:text-[20px] lg:text-[24px] px-[24px] py-[14px] bg-green text-white  leading-none cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
             >
               {isArabic ? "عرض الكل" : "See All"}
             </button>
@@ -107,7 +107,7 @@ const OurProjects = () => {
         <div className="mt-[40px] md:mt-[64px] flex justify-center md:hidden">
           <button
             onClick={() => navigate("/our-projects")}
-            className="text-[18px] md:text-[24px] px-[18px] py-[14px] bg-green text-white font-kosans leading-none cursor-pointer"
+            className="text-[18px] md:text-[24px] px-[18px] py-[14px] bg-green text-white  leading-none cursor-pointer"
           >
             {isArabic ? "عرض الكل" : "See All"}
           </button>

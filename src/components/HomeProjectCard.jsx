@@ -54,11 +54,11 @@ function HomeProjectCard({
         dir={isArabic ? "rtl" : "ltr"}
         className={`${cardBase} ${cardState} w-full md:max-w-[407px] h-full text-white`}
       >
-        <div className="flex h-full md:min-h-[487px]  flex-col justify-between gap-y-[8px] md:gap-6 px-[32px] pt-[42px] pb-[40px] md:px-[43px] md:pt-[50px] md:pb-[48px]">
+        <div className="flex h-full md:min-h-[487px]  flex-col justify-between gap-y-[8px] md:gap-[8px] px-[32px] pt-[42px] pb-[40px] md:px-[43px] md:pt-[50px] md:pb-[48px]">
           <header className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <Text
-                className={`text-lg  ${isArabic ? "font-zarid md:text-[30px] md:leading-[30px]" : "font-ubuntu md:text-[26px] md:leading-[30px]"} `}
+                className={`text-lg  ${isArabic ? "font-zarid md:text-[30px] md:leading-[30px]" : "font-ubuntu font-bold md:text-[26px] md:leading-[30px]"} `}
               >
                 {displayTitle}
               </Text>
