@@ -12,7 +12,7 @@ const AboutUs = () => {
             <MissionVission />
             <OurGoals />
             <OurValues />
-            <OurCulture />
+            {/* <OurCulture /> */}
         </>
     )
 }

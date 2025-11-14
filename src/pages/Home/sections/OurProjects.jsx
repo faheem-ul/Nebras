@@ -2,8 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useLanguage } from "@/context/LanguageContext";
 import Text from "@/components/ui/Text";
-import projectsData from "@/data/projects.json";
-import ProjectCard from "@/components/ProjectCard";
+import HomeProjectCard from "@/components/HomeProjectCard";
 
 const OurProjects = () => {
   const { lang } = useLanguage();
@@ -11,19 +10,68 @@ const OurProjects = () => {
 
   const navigate = useNavigate();
 
-  const currentProjects = projectsData.projects.slice(0, 8);
+  const cards = [
+    {
+      title: {
+        en: "Planning & Urban Heritage",
+        ar: "التخطيط والتراث العمراني",
+      },
+      sector: "Planning & Urban Heritage",
+      locationFilter: "Saudi Arabia",
+      sectorSlug: "planning-urban-heritage",
+      locationSlug: "saudi-arabia",
+      location: {
+        en: "Saudi Arabia",
+        ar: "المملكة العربية السعودية",
+      },
+      image: "/our-projects/project-8/image-1.jpg",
+    },
+    {
+      title: {
+        en: "Infrastructure",
+        ar: "البنية التحتية",
+      },
+      sector: "Infrastructure",
+      locationFilter: "Saudi Arabia",
+      sectorSlug: "infrastructure",
+      locationSlug: "saudi-arabia",
+      location: {
+        en: "Saudi Arabia",
+        ar: "المملكة العربية السعودية",
+      },
+      image: "/our-projects/project-6/image-1.jpg",
+    },
+    {
+      title: {
+        en: "Infrastructure",
+        ar: "البنية التحتية",
+      },
+      sector: "Infrastructure",
+      locationFilter: "Jordan",
+      sectorSlug: "infrastructure",
+      locationSlug: "jordan",
+      location: {
+        en: "Jordan",
+        ar: "الأردن",
+      },
+      image: "/our-projects/project-1/image-1.jpg",
+    },
+  ];
+
+  const featuredIndex = 1;
 
   return (
     <section className="w-full bg-[#393C3D] pt-[38px] pb-[42px] md:pt-[105px] md:pb-[95px]">
-      <div className="max-w-[1312px] w-full mx-auto px-5">
+      <div
+        className="max-w-[1312px] w-full mx-auto px-5"
+        dir={isArabic ? "rtl" : "ltr"}
+      >
         {/* Section header */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[13px] md:mb-[110px]">
-          <div data-aos="fade-right" data-aos-delay="400">
-            <Text as="h1" className={`text-white leading-[66px] md:text-left ${isArabic ? 'text-right' : ''}`} dir={isArabic ? 'rtl' : 'ltr'}>
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between sm:items-center mb-[0px] md:mb-[70px]">
+          <div data-aos="fade-right" data-aos-delay="300">
+            <Text as="h1" className="text-white leading-[66px]">
               {isArabic ? (
-                <>
-                  مشاريعنا
-                </>
+                <>مشاريعنا</>
               ) : (
                 <>
                   <span className="text-outline-white">Our</span> Projects
@@ -31,40 +79,43 @@ const OurProjects = () => {
               )}
             </Text>
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-delay="400"
-            className="w-full md:w-[169px]"
-          >
+          <div data-aos="fade-left" data-aos-delay="300">
             <button
               onClick={() => navigate("/our-projects")}
-              className="text-[18px] ml-auto md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer hidden md:block"
+              className="hidden md:inline-flex items-center justify-center gap-2 text-[18px] md:text-[20px] lg:text-[24px] px-[24px] py-[14px] bg-green text-white font-kosans leading-none cursor-pointer transition-transform duration-200 hover:scale-[1.02]"
             >
-              {isArabic ? 'عرض الكل' : 'See All'}
+              {isArabic ? "عرض الكل" : "See All"}
             </button>
           </div>
         </div>
 
         {/* Project cards */}
-        <div
-          className="flex flex-col md:flex-row flex-wrap  gap-x-[27px] gap-y-[30px] text-white"
-          data-aos="fade"
-          data-aos-delay="400"
-        >
-          {currentProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+        <div className="flex flex-wrap flex-col md:flex-row  gap-[22px] lg:gap-[px]" data-aos="fade-up" data-aos-delay="350">
+          {cards.map((card, index) => (
+            <HomeProjectCard
+              key={`${card.sectorSlug}-${card.locationSlug}-${index}`}
+              title={card.title}
+              location={card.location}
+              image={card.image}
+              href={`/our-projects/${card.sectorSlug}/${card.locationSlug}`}
+              isFeatured={index === featuredIndex}
+              delay={400 + index * 100}
+            />
           ))}
         </div>
 
-        <button
-          onClick={() => navigate("/our-projects")}
-          className="mt-[30px] mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer block md:hidden"
-        >
-          {isArabic ? 'عرض الكل' : 'See All'}
-        </button>
+        <div className="mt-[40px] md:mt-[64px] flex justify-center md:hidden">
+          <button
+            onClick={() => navigate("/our-projects")}
+            className="text-[18px] md:text-[24px] px-[18px] py-[14px] bg-green text-white font-kosans leading-none cursor-pointer"
+          >
+            {isArabic ? "عرض الكل" : "See All"}
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default OurProjects;
+

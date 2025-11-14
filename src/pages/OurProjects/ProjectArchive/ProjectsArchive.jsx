@@ -8,6 +8,8 @@ import Text from "@/components/ui/Text"
 import ProjectCard from "@/components/ProjectCard";
 import closeIcon from "@/assets/our-projects/close-icon.svg"
 import filterIcon from "@/assets/our-projects/filter-icon.svg"
+import homeIcon from "@/assets/our-projects/home-icon.svg"
+import globeIcon from "@/assets/our-projects/globe-icon.svg"
 
 function ProjectsArchive() {
     const { lang } = useLanguage();
@@ -37,14 +39,14 @@ function ProjectsArchive() {
         // setIsFilterOpen(false);   // close filter box (optional)
     };
 
-    const handleSelectCity = (city) => {
-        setSelectedCity(city);
-        setSelectedCountry("");   // clear other filters
-        setSelectedSector("");
-        // setOpenDropdown(null);
-        setVisibleCount(projectsPerPage);
-        // setIsFilterOpen(false);
-    };
+    // const handleSelectCity = (city) => {
+    //     setSelectedCity(city);
+    //     setSelectedCountry("");   // clear other filters
+    //     setSelectedSector("");
+    //     // setOpenDropdown(null);
+    //     setVisibleCount(projectsPerPage);
+    //     // setIsFilterOpen(false);
+    // };
 
     const handleSelectSector = (sector) => {
         setSelectedSector(sector);
@@ -96,7 +98,9 @@ function ProjectsArchive() {
             <div className="max-w-[1312px] w-full mx-auto px-4">
 
                 {/* Hero Section */}
-                <div className="flex gap-6 flex-row justify-between items-center mb-[26px]  md:mb-[85px]">
+                <div className="flex gap-6 flex-row justify-between items-center mb-[26px]  md:mb-[85px]"
+                    dir={isArabic ? 'rtl' : 'ltr'}
+                >
                     {/* Title*/}
                     <div data-aos="fade-right" data-aos-delay="400">
                         <Text as="h1">
@@ -114,25 +118,49 @@ function ProjectsArchive() {
 
                     <div className="relative inline-flex justify-center">
                         {/* Filter Button */}
-                        <div data-aos="fade-left" data-aos-delay="400">
+                        {/* <div data-aos="fade-left" data-aos-delay="400" >
                             <button
                                 className="flex items-center justify-end gap-[11px] cursor-pointer"
                                 onClick={() => setIsFilterOpen((prev) => !prev)}
                             >
                                 <img src={filterIcon} className="w-[22px] h-auto md-w-[34px]]" />
-                                <Text className="text-[16px] md:text-[16px] md:block hidden " >
+                                <Text className={`text-[16px]  md:block hidden ${isArabic ? "md:text-[28px]" : "md:text-[16px] uppercase font-bold"}`} >
+                                    {isArabic ? "تصفية" : "Filter"}
+                                </Text>
+                            </button>
+                        </div> */}
+                        <div data-aos="fade-left" data-aos-delay="400">
+                            <button
+                                onClick={() => setIsFilterOpen((prev) => !prev)}
+                                className={`flex items-center gap-[11px] cursor-pointer justify-end ${isArabic ? "flex-row-reverse" : ""
+                                    }`}
+                            >
+                                <img
+                                    src={filterIcon}
+                                    className="w-[22px] h-auto md:w-[34px]"
+                                    alt=""
+                                />
+                                <Text
+                                    className={`hidden md:block text-[16px] ${isArabic ? "md:text-[28px]" : "md:text-[16px] uppercase font-bold"
+                                        }`}
+                                >
                                     {isArabic ? "تصفية" : "Filter"}
                                 </Text>
                             </button>
                         </div>
 
+
                         {/* Filter Box */}
                         {isFilterOpen && (
-                            <div className="absolute right-[8px] md:right-0 top-full mt-[4px] md:mt-3 z-40 w-[185px] max-w-[100vw] md:w-[390px] bg-[#9EE7B8] overflow-hidden">
+                            <div className={`absolute  top-full mt-[4px] md:mt-3 z-40 w-[185px] max-w-[100vw] md:w-[390px] text-white bg-[#016938]/95 overflow-hidden
+                                ${isArabic ? "left-[8px] md:left-0" : "right-[8px] md:right-0"
+                                }`}
+                            >
                                 <button
                                     onClick={() => setIsFilterOpen(false)}
 
-                                    className={`cursor-pointer block mt-[11px] md:mt-[24px] ml-auto mr-[13px] 
+                                    className={`cursor-pointer block mt-[11px] md:mt-[24px]  
+                                        ${isArabic ? "mr-auto ml-[13px]" : "ml-auto mr-[13px]"}
                                     `}
 
                                 >
@@ -146,13 +174,13 @@ function ProjectsArchive() {
                                         Jordan: isArabic ? "الأردن" : "Jordan",
                                     };
 
-                                    var cityLabels = {
-                                        Riyadh: isArabic ? "الرياض" : "Riyadh",
-                                        Amman: isArabic ? "عمّان" : "Amman",
-                                        Irbid: isArabic ? "إربد / مادبا / الزرقاء / السلط" : "Irbid / Madaba / Al Zarqa / Al Salt",
-                                        Ajloun: isArabic ? "عجلون" : "Ajloun",
-                                        "Wadi Mousa - Petra": isArabic ? "وادي موسى - البترا" : "Wadi Mousa - Petra",
-                                    };
+                                    // var cityLabels = {
+                                    //     Riyadh: isArabic ? "الرياض" : "Riyadh",
+                                    //     Amman: isArabic ? "عمّان" : "Amman",
+                                    //     Irbid: isArabic ? "إربد / مادبا / الزرقاء / السلط" : "Irbid / Madaba / Al Zarqa / Al Salt",
+                                    //     Ajloun: isArabic ? "عجلون" : "Ajloun",
+                                    //     "Wadi Mousa - Petra": isArabic ? "وادي موسى - البترا" : "Wadi Mousa - Petra",
+                                    // };
 
 
                                     var sectorLabels = {
@@ -165,27 +193,32 @@ function ProjectsArchive() {
                                     return (
                                         <>
                                             {/* All Projects */}
-                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
+                                            <div className="px-[14.5px] md:px-[19px] py-[12px]  md:pb-[19px]">
                                                 <button
                                                     onClick={handleClearAll}
-                                                    className="text-[12px] md:text-[16px] font-kosans flex items-center gap-2 cursor-pointer"
+                                                    className={`text-[12px] md:text-[16px] md:leading-[100%] flex items-center gap-2 cursor-pointer
+                                                     ${isArabic ? "md:text-[26px]  font-zarid" : "md:text-[20px]  font-bold"
+                                                        }`}
                                                 >
                                                     {/* <span className="w-2 h-2 rounded-full bg-black"></span> */}
                                                     {isArabic ? "جميع المشاريع" : "All Projects"}
                                                 </button>
                                             </div>
 
-                                            <hr className="border-t border-black/50" />
+                                            <hr className="border-t border-white/50" />
 
                                             {/* COUNTRY */}
-                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
+                                            {/* <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[13px]">
                                                 <button
                                                     onClick={() =>
                                                         setOpenDropdown(openDropdown === "country" ? null : "country")
                                                     }
-                                                    className="cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] font-kosans"
+                                                    className={`cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] 
+                                                        ${
+                                    isArabic ? "md:text-[24px]  font-zarid" : "md:text-[16px]  font-bold"
+                                }`} 
                                                 >
-                                                    <span>{isArabic ? "الدولة" : "Country"}</span>
+                                                    <span>{isArabic ? "دولة" : "Country"}</span>
                                                     <span>{openDropdown === "country" ? (
                                                         <LuChevronUp className="text-[16px] md:text-[18px]" />
                                                     ) : (
@@ -193,7 +226,7 @@ function ProjectsArchive() {
                                                     )}</span>
                                                 </button>
                                                 {openDropdown === "country" && (
-                                                    <div className="pl-4 mt-2 flex flex-col gap-1">
+                                                    <div className="pl-4 mt-2 flex flex-col gap-1" >
                                                         {Object.keys(countryLabels).map((country) => (
                                                             <button
                                                                 key={country}
@@ -206,17 +239,63 @@ function ProjectsArchive() {
                                                         ))}
                                                     </div>
                                                 )}
+                                            </div> */}
+
+                                            {/* COUNTRY */}
+                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[13px]">
+                                                <button
+                                                    onClick={() =>
+                                                        setOpenDropdown(openDropdown === "country" ? null : "country")
+                                                    }
+                                                    className={`cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] ${isArabic ? "md:text-[24px] font-zarid" : "md:text-[16px] font-bold"
+                                                        }`}
+                                                >
+                                                    <span className="flex items-center gap-2">
+                                                        <img
+                                                            src={globeIcon}
+                                                            alt=""
+                                                            className="w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
+                                                        />
+                                                        <span>{isArabic ? "دولة" : "Country"}</span>
+                                                    </span>
+
+                                                    <span>
+                                                        {openDropdown === "country" ? (
+                                                            <LuChevronUp className="text-[16px] md:text-[18px]" />
+                                                        ) : (
+                                                            <LuChevronDown className="text-[16px] md:text-[18px]" />
+                                                        )}
+                                                    </span>
+                                                </button>
+
+                                                {openDropdown === "country" && (
+                                                    <div className="pl-4 mt-2 flex flex-col gap-1">
+                                                        {Object.keys(countryLabels).map((country) => (
+                                                            <button
+                                                                key={country}
+                                                                onClick={() => handleSelectCountry(country)}
+                                                                className={`cursor-pointer text-[12px] md:text-[14px] flex items-center gap-2 ${selectedCountry === country ? "font-bold underline" : ""
+                                                                    }`}
+                                                            >
+                                                                {/* white dot bullet */}
+                                                                <span className="w-[6px] h-[6px] shrink-0 rounded-full bg-white" />
+                                                                <span>{countryLabels[country]}</span>
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                )}
                                             </div>
 
-                                            <hr className="border-t border-black/50" />
+
+                                            {/* <hr className="border-t border-white/50" /> */}
 
                                             {/* CITY */}
-                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
+                                            {/* <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
                                                 <button
                                                     onClick={() =>
                                                         setOpenDropdown(openDropdown === "city" ? null : "city")
                                                     }
-                                                    className="cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] font-kosans"
+                                                    className="cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] "
                                                 >
                                                     <span>{isArabic ? "المدينة" : "Location"}</span>
                                                     <span>{openDropdown === "city" ? (
@@ -239,18 +318,22 @@ function ProjectsArchive() {
                                                         ))}
                                                     </div>
                                                 )}
-                                            </div>
+                                            </div> */}
 
-                                            <hr className="border-t border-black/50" />
+                                            <hr className="border-t border-white/50" />
 
                                             {/* SECTOR */}
-                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
+                                            {/* <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
                                                 <button
                                                     onClick={() =>
                                                         setOpenDropdown(openDropdown === "sector" ? null : "sector")
                                                     }
-                                                    className="cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] font-kosans"
+                                                    className={`cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] 
+                                                        ${
+                                    isArabic ? "md:text-[24px]  font-zarid" : "md:text-[16px]  font-bold"
+                                }`} 
                                                 >
+                                                   
                                                     <span>{isArabic ? "القطاع" : "Sector"}</span>
                                                     <span>{openDropdown === "sector" ? (
                                                         <LuChevronUp className="text-[16px] md:text-[18px]" />
@@ -272,7 +355,53 @@ function ProjectsArchive() {
                                                         ))}
                                                     </div>
                                                 )}
+                                            </div> */}
+                                            {/* SECTOR */}
+                                            <div className="px-[14.5px] md:px-[24px] py-[12px] md:py-[19px]">
+                                                <button
+                                                    onClick={() =>
+                                                        setOpenDropdown(openDropdown === "sector" ? null : "sector")
+                                                    }
+                                                    className={`cursor-pointer flex justify-between items-center w-full text-[12px] md:text-[16px] ${isArabic ? "md:text-[24px] font-zarid " : "md:text-[16px] font-bold"
+                                                        }`}
+                                                >
+                                                    <span className="flex items-center gap-2">
+                                                        <img
+                                                            src={homeIcon}
+                                                            alt=""
+                                                            className="w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
+                                                        />
+                                                        <span>{isArabic ? "القطاع" : "Sector"}</span>
+                                                    </span>
+
+                                                    <span>
+                                                        {openDropdown === "sector" ? (
+                                                            <LuChevronUp className="text-[16px] md:text-[18px]" />
+                                                        ) : (
+                                                            <LuChevronDown className="text-[16px] md:text-[18px]" />
+                                                        )}
+                                                    </span>
+                                                </button>
+
+                                                {openDropdown === "sector" && (
+                                                    <div className="pl-4 mt-2 flex flex-col  gap-1">
+                                                        {Object.keys(sectorLabels).map((sector) => (
+                                                            <button
+                                                                key={sector}
+                                                                onClick={() => handleSelectSector(sector)}
+                                                                className={`cursor-pointer  text-[12px] md:text-[14px] flex items-center gap-2 ${selectedSector === sector ? "font-bold underline" : ""
+                                                                    }`}
+                                                            >
+                                                                {/* white dot bullet */}
+                                                                <span className="w-[6px] h-[6px] rounded-full shrink-0 bg-white" />
+                                                                <span className={` ${isArabic ? "text-right" : "text-left"
+                                                                    }`}> {sectorLabels[sector]}</span>
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                )}
                                             </div>
+
                                         </>
                                     );
                                 })()}
@@ -284,7 +413,8 @@ function ProjectsArchive() {
                 </div>
 
                 {/* Our Projects Cards */}
-                <div className="flex flex-col md:flex-row flex-wrap gap-x-[27px] gap-y-[27px]" data-aos="fade-up" data-aos-delay="400">
+                <div className="flex flex-col md:flex-row flex-wrap gap-x-[27px] gap-y-[27px]" data-aos="fade-up" data-aos-delay="400"
+                    dir={isArabic ? 'rtl' : 'ltr'}>
                     {currentProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
@@ -294,7 +424,7 @@ function ProjectsArchive() {
                     <div className="flex justify-center mt-[45px] md:mt-[64px]">
                         <button
                             onClick={() => setVisibleCount((prev) => prev + projectsPerPage)}
-                            className="mx-auto text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white font-kosans  leading-none cursor-pointer "
+                            className={`mx-auto md:w-[149px] text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white   leading-none cursor-pointer ${isArabic ? "font-zarid" : ""}`}
                         >
                             {isArabic ? "عرض المزيد" : "View More"}
                         </button>
