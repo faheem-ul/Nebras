@@ -3,11 +3,11 @@ import React from 'react';
 import { useLanguage } from "@/context/LanguageContext";
 import Text from '@/components/ui/Text';
 // Import images
-import quoteIcon from '@/assets/about/quote-icon.svg';
+// import quoteIcon from '@/assets/about/quote-icon.svg';
 import bg from '@/assets/about/value-card-bg.png';
 import inovation from '@/assets/about/inovation.jpg';
-import integrity from '@/assets/about/integrity.jpg';
-import excelence from '@/assets/about/excelence.jpeg';
+import integrity from '@/assets/about/integrity.png';
+import excelence from '@/assets/about/excelence.png';
 import collaboration from '@/assets/about/collaboration.png';
 import sustainability from '@/assets/about/sustainability.png';
 
@@ -17,14 +17,14 @@ const OurValues = () => {
 
     const values = [
         {
-            title: isArabic ? 'الابتكار' : 'INNOVATION',
+            title: isArabic ? 'ابتكار' : 'INNOVATION',
             description: isArabic
                 ? 'نحن نقدر الإبداع والتقنيات الجديدة لتعزيز النمو المستدام.'
                 : 'We value creativity and new technologies to promote sustainable growth.',
             hoverBg: inovation
         },
         {
-            title: isArabic ? 'النزاهة' : 'INTEGRITY',
+            title: isArabic ? 'نزاهة' : 'INTEGRITY',
             description: isArabic
                 ? 'نتمسك بأعلى معايير الأخلاق والشفافية والمساءلة في جميع مشاريعنا.'
                 : 'We uphold the highest standards of ethics, transparency, and accountability.',
@@ -45,7 +45,7 @@ const OurValues = () => {
             hoverBg: sustainability
         },
         {
-            title: isArabic ? 'التعاون' : 'COLLABORATION',
+            title: isArabic ? 'تعاون' : 'COLLABORATION',
             description: isArabic
                 ? 'نحن نعزز بيئة عمل تعاونية شاملة حيث يتم تقدير واحترام وجهات النظر المختلفة.'
                 : 'We foster a collaborative and inclusive environment that values all voices.',
@@ -54,16 +54,16 @@ const OurValues = () => {
     ];
 
     return (
-        <section className="bg-white mt-[42.6px] md:mt-[87.73px] max-w-[1312px] w-full mx-auto px-5 md:px-0">
+        <section className="bg-white mt-[42.6px] pb-[30px] md:pb-[60px] md:mt-[87.73px] max-w-[1312px] w-full mx-auto px-5 md:px-0">
             {/* Section Title */}
             <div data-aos="fade-up" data-aos-delay="400">
-                <Text as="h1" className="text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[43px] md:mb-[48px]">
-                    {isArabic ? 'قِيَمُنَا' : 'Our Values'}
+            <Text as="h1" className={`text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[22px] md:mb-[48px] ${isArabic ? 'md:text-[75px]' : ''}`}>
+                    {isArabic ? 'قيمنا' : 'Our Values'}
                 </Text>
             </div>
 
             {/* Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[19.6px] md:gap-[23.94px] place-items-center" data-aos="fade-up" data-aos-delay="500" dir={isArabic ? 'rtl' : 'ltr'}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[19.6px] md:gap-[23.94px] place-items-center" data-aos="fade-up" data-aos-delay="500" >
                 {values.map((item, index) => (
                     <div
                         key={index}
@@ -96,13 +96,13 @@ const OurValues = () => {
                         {/* Content */}
                         <div className={`relative z-20 pt-[75.7px] md:pt-[90px] pb-[27.44px] md:pb-[42px] pl-[27px] pr-[14.6px] md:px-[35px] flex flex-col justify-between h-full ${isArabic ? 'text-right' : 'text-left'} `}>
                             <div>
-                                <img
+                                {/* <img
                                     src={quoteIcon} className='w-[40px] h-[31.9px] mb-[15.6px]'
-                                />
-                                <Text className="text-[18px] leading-[42px]">{item.title}</Text>
+                                /> */}
+                                <Text className={`text-[18px] leading-[42px] ${isArabic ? 'md:text-[50px] md:leading-[42px] font-arabic' : 'md:text-[30px] md:leading-[42px] font-bold'}`}>{item.title}</Text>
                             </div>
                             <div>
-                                {/* <Text className="md:text-[18px] text-[16px] md:leading-[24px]">{item.description}</Text> */}
+                                <Text className={` md:text-[18px] text-[16px] md:leading-[24px] ${isArabic ?  'md:text-[30px] md:leading-[30px]' : ''}`}  >{item.description}</Text>
                             </div>
                         </div>
                     </div>

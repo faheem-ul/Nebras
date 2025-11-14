@@ -1,8 +1,11 @@
 import React, { forwardRef } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 import { cn } from "../../lib/utils";
 
 const Text = forwardRef(function Text(props, ref) {
+    const { lang } = useLanguage();
+    const isArabic = lang === "ar";
     const { children, className, as, onClick } = props;
 
     if (as === "h1") {
@@ -10,7 +13,8 @@ const Text = forwardRef(function Text(props, ref) {
             <h1
                 ref={ref}
                 className={cn(
-                    "font-logirent text-[30px] leading-[40px] md:text-[65px] md:leading-[100%]",
+                    "text-[30px] ",
+                    isArabic ? "font-arabic md:text-[85px] text-[55px] leading-[100%]" : "md:text-[65px] font-logirent leading-[100%]",
                     className
                 )}
                 onClick={onClick}
@@ -39,7 +43,8 @@ const Text = forwardRef(function Text(props, ref) {
         <p
             ref={ref}
             className={cn(
-                "font-lato text-[18px]  leading-[38px] md:text-[20px] font-normal md:leading-[38px]",
+                "text-[18px] leading-[30px]  ",
+                isArabic ? "font-zarid md:text-[28px] font-normal md:leading-[38px]" : "md:text-[24px] font-normal md:leading-[38px] font-ubuntu",
                 className
             )}
             onClick={onClick}
