@@ -46,7 +46,7 @@ const Footer = () => {
         { label: "Home", path: "/" },
         { label: "Our Projects", path: "/our-projects" },
         { label: "About Us", path: "/about-us" },
-        { label: "Insights", path: "/insights" },
+        { label: "Latest News", path: "/latest-news" },
         { label: "Contact Us", path: "/contact-us" },
       ],
       contacts: {
@@ -67,8 +67,8 @@ const Footer = () => {
       quickLinksList: [
         { label: "الرئيسية", path: "/" },
         { label: "مشاريعنا", path: "/our-projects" },
-        { label: "من نحن", path: "/about-us" },
-        { label: "رؤى", path: "/insights" },
+        { label: "معلومات عنا", path: "/about-us" },
+        { label: "آخر الأخبار", path: "/latest-news" },
         { label: "اتصل بنا", path: "/contact-us" },
       ],
       contacts: {
@@ -195,13 +195,12 @@ const Footer = () => {
             className={`text-sm leading-[22px] md:leading-[24px] space-y-4 ${lang === "ar" ? "md:text-[20px]" : "md:text-[18px]"
               }`}
             variants={columnVariants}
-            dir={isArabic ? 'rtl' : 'ltr'}
+
           >
             {contactItems.map((item) => (
               <motion.li key={item.key} variants={itemVariants}>
                 <div
-                  className={`flex items-center gap-3 ${isArabic ? " text-right" : "text-left"
-                    }`}
+                  className={`flex items-center gap-3 `}
                 >
                   {/* Icon in white circle */}
                   <span className="w-[28px] h-[28px]  flex items-center justify-center">
@@ -210,7 +209,7 @@ const Footer = () => {
 
                   {/* Text (link if href exists) */}
                   {item.href ? (
-                    <a href={item.href} className="hover:underline">
+                    <a href={item.href} className="hover:underline " dir={lang === "ar" ? "ltr" : "ltr"}>
                       {item.label}
                     </a>
                   ) : (

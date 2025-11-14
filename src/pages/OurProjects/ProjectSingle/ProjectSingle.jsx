@@ -10,15 +10,10 @@ import ProjectSlider from "./ProjectSlider";
 
 function ProjectSingle() {
     const { slug } = useParams();
-    const project = projectsData.projects.find((p) => p.slug === slug);
-
     const { lang } = useLanguage(); // 'en' or 'ar'
     const isArabic = lang === "ar";
 
-
-    if (!project) {
-        return <h2 className="text-center text-white text-2xl">Project not found</h2>;
-    }
+    const project = projectsData.projects.find((p) => p.slug === slug);
 
     // Slider Current Image State
     const [currentImage, setCurrentImage] = useState(0);
@@ -32,7 +27,11 @@ function ProjectSingle() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [project.heroImages.length]);
+    }, [project.heroImages]);
+
+    if (!project) {
+        return <h2 className="text-center text-white text-2xl">Project not found</h2>;
+    }
 
     return (
         <>
@@ -153,10 +152,6 @@ function ProjectSingle() {
                     </div>
                 </div>
             </section>
-
-
-
-
 
             {/* Project Slider */}
             <ProjectSlider images={project.sliderImages} />
