@@ -13,14 +13,14 @@ export const LatsetNews = () => {
 
             {/* Heading */}
             <div className="max-w-[821px] mx-auto px-5" data-aos="fade" data-aos-delay="100">
-                <Text className={`max-w-[254px] mx-auto  md:max-w-full text-center text-[30px] leading-none  md:text-[40px]  ${isArabic ? "md:text-[50px] md:leading-[100%] font-arabic" : "font-logirent   "
+                <Text className={`max-w-[254px] mx-auto  md:max-w-full text-center text-[30px] leading-none  md:text-[50px] md:leading-[100%]  ${isArabic ? " font-arabic" : "font-logirent   "
                     }`}>
                     {isArabic ? "آخر الأخبار" : "Latest News"}
                 </Text>
             </div>
 
             {/* News */}
-            <div className="flex flex-col md:flex-row items-center justify-between max-w-[1312px] w-full mx-auto gap-[20px] md:gap-[38px] px-5 mt-[12px] md:mt-[53px]">
+            <div className="flex flex-col md:flex-row items-center justify-between max-w-[1312px] w-full mx-auto gap-[20px] md:gap-[32px] px-5 mt-[12px] md:mt-[53px]">
 
                 {/* Image Column */}
                 <div className="w-full md:max-w-[522px] flex-shrink-0 overflow-hidden" data-aos="fade-right" data-aos-delay="400">
@@ -35,7 +35,7 @@ export const LatsetNews = () => {
                 <div className="flex-1" dir={isArabic ? 'rtl' : 'ltr'}>
                     {/* Title */}
                     <div data-aos="fade-up" data-aos-delay="400">
-                        <Text className={`mb-[8px] md:mb-[16px] text-[18px] leading-[28px]   md:max-w-[628px] w-full ${isArabic ? "text-[22px] md:text-[45px] md:leading-[32px] font-arabic" : "md:text-[26px] md:leading-[28px] font-bold "
+                        <Text className={`mb-[8px] md:mb-[16px] text-[18px] leading-[28px]   md:max-w-[628px] w-full ${isArabic ? "text-[22px] md:text-[45px] md:leading-[32px] font-arabic" : "md:text-[26px] md:leading-[32px] font-bold "
                             }`} >
                             {isArabic ? <>مستقبل الذكاء الاصطناعي في الأعمال:<br /> الاتجاهات والتوقعات</> : <>The Future of AI in Business:<br /> Trends and Predictions </>}
 
