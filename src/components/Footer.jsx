@@ -67,7 +67,7 @@ const Footer = () => {
       quickLinksList: [
         { label: "الرئيسية", path: "/" },
         { label: "مشاريعنا", path: "/our-projects" },
-        { label: "معلومات عنا", path: "/about-us" },
+        { label: "من نحن", path: "/about-us" },
         { label: "آخر الأخبار", path: "/latest-news" },
         { label: "اتصل بنا", path: "/contact-us" },
       ],
