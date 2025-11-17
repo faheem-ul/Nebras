@@ -4,6 +4,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import Text from "@/components/ui/Text";
 import HomeProjectCard from "@/components/HomeProjectCard";
 
+import planningSaudia from "@/assets/home/our-projects/planning-saudia.jpg"
+import infraSaudia from "@/assets/home/our-projects/infra-saudia.jpg"
+import infraJordan from "@/assets/home/our-projects/infra-jordan.jpg"
+
 const OurProjects = () => {
   const { lang } = useLanguage();
   const isArabic = lang === "ar";
@@ -22,14 +26,14 @@ const OurProjects = () => {
       locationSlug: "saudi-arabia",
       location: {
         en: "Saudi Arabia",
-        ar: "المملكة العربية السعودية",
+        ar: "السعودية",
       },
-      image: "/our-projects/project-8/image-1.jpg",
+      image: planningSaudia,
     },
     {
       title: {
         en: "Infrastructure",
-        ar: "البنية التحتية",
+        ar: "مشاريع الطرق والمرور",
       },
       sector: "Infrastructure",
       locationFilter: "Saudi Arabia",
@@ -37,14 +41,14 @@ const OurProjects = () => {
       locationSlug: "saudi-arabia",
       location: {
         en: "Saudi Arabia",
-        ar: "المملكة العربية السعودية",
+        ar: "السعودية",
       },
-      image: "/our-projects/project-6/image-1.jpg",
+      image: infraSaudia,
     },
     {
       title: {
         en: "Infrastructure",
-        ar: "البنية التحتية",
+        ar: "مشاريع الطرق والمرور",
       },
       sector: "Infrastructure",
       locationFilter: "Jordan",
@@ -54,7 +58,7 @@ const OurProjects = () => {
         en: "Jordan",
         ar: "الأردن",
       },
-      image: "/our-projects/project-1/image-1.jpg",
+      image: infraJordan,
     },
   ];
 
