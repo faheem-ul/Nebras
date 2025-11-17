@@ -87,7 +87,7 @@ const Navbar = () => {
             className={({ isActive }) => `   leading-none hover:text-[#016938] ${isActive ? "text-[#016938]" : ""}`}
             data-aos="fade-right" data-aos-delay="500"
           >
-            {isArabic ? "معلومات عنا" : "About Us"}
+            {isArabic ? "من نحن" : "About Us"}
           </NavLink>
           <NavLink
             to="latest-news"
@@ -168,7 +168,7 @@ const Navbar = () => {
             {[
               { to: "/", label: isArabic ? "الرئيسية" : "Home" },
               { to: "/our-projects", label: isArabic ? "مشاريعنا" : "Our Projects" },
-              { to: "/about-us", label: isArabic ? "معلومات عنا" : "About Us" },
+              { to: "/about-us", label: isArabic ? "من نحن" : "About Us" },
               { to: "/latest-news", label: isArabic ? "آخر الأخبار" : "Latest News" },
               { to: "/contact-us", label: isArabic ? "اتصل بنا" : "Contact Us" },
             ].map((item, idx) => (

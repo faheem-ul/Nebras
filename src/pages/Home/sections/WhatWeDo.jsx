@@ -143,7 +143,7 @@ export default function WhatWeDo() {
               onClick={() => setShowMore(!showMore)}
               className={` mt-6 w-[120px] h-[46px] md:w-[164px] md:h-[50px] text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white md:text-[24px] leading-none cursor-pointer ${isArabic ? "font-zarid" : "font-ubuntu"}`}
             >
-              {showMore ? (isArabic ? "إقرأ أقل" : "Read Less") : (isArabic ? "أ المزيد" : "Read More")}
+              {showMore ? (isArabic ? "إقرأ أقل" : "Read Less") : (isArabic ? "المزيد" : "Read More")}
             </button>
 
           </div>
