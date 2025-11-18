@@ -99,7 +99,7 @@ const Navbar = () => {
 
           <NavLink
             to="contact-us"
-            className="ml-3 px-[15px] py-[14px] bg-green text-white cursor-pointer    leading-none min-w-[150px] text-center"
+            className="ml-3 px-[15px] py-[14px] bg-green hover:bg-green-900 text-white cursor-pointer    leading-none min-w-[150px] text-center"
             data-aos="fade-right" data-aos-delay="700"
           >
             {isArabic ? "اتصل بنا" : "Contact Us"}

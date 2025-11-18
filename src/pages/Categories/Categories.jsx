@@ -24,14 +24,14 @@ const SECTOR_LOOKUP = {
     search: ["urban planning & architectural heritage"],
     display: {
       en: "Planning & Urban Heritage",
-      ar: "مشاريع  التراث  العمراني",
+      ar: "مشاريع التخطيط الحضري والتراث العمراني",
     },
   },
   infrastructure: {
     search: ["infrastructure"],
     display: {
       en: "Infrastructure",
-      ar: "مشاريع  الطرق  والمرور ",
+      ar: "مشاريع البنية التحتية  ",
     },
   },
 };

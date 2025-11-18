@@ -17,14 +17,14 @@ const OurValues = () => {
 
     const values = [
         {
-            title: isArabic ? 'ابتكار' : 'INNOVATION',
+            title: isArabic ? 'الابتكار' : 'INNOVATION',
             description: isArabic
                 ? 'نحن نقدر الإبداع والتقنيات الجديدة لتعزيز النمو المستدام.'
                 : 'We value creativity and new technologies to promote sustainable growth.',
             hoverBg: inovation
         },
         {
-            title: isArabic ? 'نزاهة' : 'INTEGRITY',
+            title: isArabic ? 'النزاهة' : 'INTEGRITY',
             description: isArabic
                 ? 'نتمسك بأعلى معايير الأخلاق والشفافية والمساءلة في جميع مشاريعنا.'
                 : 'We uphold the highest standards of ethics, transparency, and accountability.',
@@ -45,7 +45,7 @@ const OurValues = () => {
             hoverBg: sustainability
         },
         {
-            title: isArabic ? 'تعاون' : 'COLLABORATION',
+            title: isArabic ? 'التعاون' : 'COLLABORATION',
             description: isArabic
                 ? 'نحن نعزز بيئة عمل تعاونية شاملة حيث يتم تقدير واحترام وجهات النظر المختلفة.'
                 : 'We foster a collaborative and inclusive environment that values all voices.',
@@ -57,7 +57,7 @@ const OurValues = () => {
         <section className="bg-white mt-[42.6px] pb-[30px] md:pb-[60px] md:mt-[87.73px] max-w-[1312px] w-full mx-auto px-5 md:px-0">
             {/* Section Title */}
             <div data-aos="fade-up" data-aos-delay="400">
-            <Text as="h1" className={`text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[22px] md:mb-[48px] ${isArabic ? 'md:text-[75px]' : ''}`}>
+                <Text as="h1" className={`text-center text-[30px] md:text-[55px] leading-[42px] md:leading-[42px] mb-[22px] md:mb-[48px] ${isArabic ? 'md:text-[75px]' : ''}`}>
                     {isArabic ? 'قيمنا' : 'Our Values'}
                 </Text>
             </div>
@@ -102,7 +102,7 @@ const OurValues = () => {
                                 <Text className={`text-[18px] leading-[42px] ${isArabic ? 'md:text-[50px] md:leading-[42px] font-arabic' : 'md:text-[30px] md:leading-[42px] font-bold'}`}>{item.title}</Text>
                             </div>
                             <div>
-                                <Text className={` md:text-[18px] text-[16px] md:leading-[24px] ${isArabic ?  'md:text-[30px] md:leading-[30px]' : ''}`}  >{item.description}</Text>
+                                <Text className={` md:text-[18px] text-[16px] md:leading-[24px] ${isArabic ? 'md:text-[30px] md:leading-[30px]' : ''}`}  >{item.description}</Text>
                             </div>
                         </div>
                     </div>

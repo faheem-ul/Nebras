@@ -130,7 +130,7 @@ export default function WhatWeDo() {
                   ))}
                 </ul>
 
-                <Text>
+                <Text className="text-center">
                   {isArabic
                     ? "من خلال عملنا، تسعى نبراس للاستشارات إلى تقديم حلول مستدامة ومبتكرة وعملية تدفع إلى نجاح العملاء، وتعزز المجتمعات، وتحافظ على البيئة."
                     : "Through our work, Nebras Consult strives to deliver sustainable, innovative, and practical solutions that drive client success, enhance communities, and safeguard the environment."}
@@ -141,7 +141,7 @@ export default function WhatWeDo() {
             {/* Read More/Less Button */}
             <button
               onClick={() => setShowMore(!showMore)}
-              className={` mt-6 w-[120px] h-[46px] md:w-[164px] md:h-[50px] text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white md:text-[24px] leading-none cursor-pointer ${isArabic ? "font-zarid" : "font-ubuntu"}`}
+              className={` mt-6 w-[120px] h-[46px] md:w-[164px] md:h-[50px] text-[18px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green hover:bg-green-900 text-white md:text-[24px] leading-none cursor-pointer ${isArabic ? "font-zarid" : "font-ubuntu"}`}
             >
               {showMore ? (isArabic ? "إقرأ أقل" : "Read Less") : (isArabic ? "المزيد" : "Read More")}
             </button>

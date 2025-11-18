@@ -12,14 +12,14 @@ const OurGoals = () => {
 
     const values = [
         {
-            title: isArabic ? "تعزيز الابتكار" : "Driving Innovation",
+            title: isArabic ? "ابتكار القيادة" : "Driving Innovation",
             description: isArabic
                 ? "تطوير حلول متطورة لمستقبل مستدام."
                 : "Developing cutting-edge solutions for a sustainable future.",
             icon: driveInovation
         },
         {
-            title: isArabic ? "الحفاظ على البيئة" : "Environmental Stewardship",
+            title: isArabic ? "الاستدامة" : "Environmental Stewardship",
             description: isArabic
                 ? "الحد من تأثيرنا البيئي من خلال الممارسات المستدامة."
                 : "Reducing our environmental impact through sustainable practices.",
@@ -28,7 +28,7 @@ const OurGoals = () => {
         {
             title: isArabic ? "نجاح العميل" : "Client Success",
             description: isArabic
-                ? "تقديم قيمة استثنائية وتجاوز توقعات العميل."
+                ? "تقديم قيمة استثنائية وتجاوز توقعات العملاء."
                 : "Delivering exceptional value and exceeding client expectations.",
             icon: clientSuccess
         },
@@ -53,9 +53,9 @@ const OurGoals = () => {
                             <img src={item.icon} className='w-auto max-h-[42px] md:max-h-[60px] ' />
                         </div>
                         <Text className={` capitalize ${isArabic ? 'md:text-[45px] md:leading-[42px] font-arabic' : 'md:text-[24px] md:leading-[42px] font-bold'}`}>{item.title} </Text>
-                        <Text className={`mx-auto  text-[15px] leading-[26px] ${isArabic ? 'md:text-[26px] md:leading-[30px] mt-[9px]' : ' max-w-[296px] font-ubuntu md:text-[18px] md:leading-[26px]' } `} >{item.description}</Text>
-                   
-                        </div>
+                        <Text className={`mx-auto  text-[15px] leading-[26px] ${isArabic ? 'md:text-[26px] md:leading-[30px] mt-[9px]' : ' max-w-[296px] font-ubuntu md:text-[18px] md:leading-[26px]'} `} >{item.description}</Text>
+
+                    </div>
                 ))}
             </div>
 

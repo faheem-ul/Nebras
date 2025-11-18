@@ -57,7 +57,10 @@
             "IDOM"
           ]
         },
-        "periodsOfServices": "2021-2022"
+        "periodsOfServices": {
+          "en": "2021-2022",
+          "ar": "٢٠٢١-٢٠٢٢"
+        }
       }
     },
     {
@@ -113,7 +116,10 @@
           "en": ["Greater Amman Municipality", "STEER"],
           "ar": ["أمانة عمان الكبرى", "STEER"]
         },
-        "periodsOfServices": "2019"
+        "periodsOfServices": {
+          "en": "2019",
+          "ar": "٢٠١٩"
+        }
       }
     },
     {
@@ -177,7 +183,10 @@
           "en": ["Greater Amman Municipality", "WSP"],
           "ar": ["أمانة عمان الكبرى", "WSP"]
         },
-        "periodsOfServices": "2021"
+        "periodsOfServices": {
+          "en": "2021",
+          "ar": "٢٠٢١"
+        }
       }
     },
     {
@@ -238,7 +247,10 @@
             "البنك الأوروبي لإعادة الإعمار والتنمية"
           ]
         },
-        "periodsOfServices": "2018-2019"
+        "periodsOfServices": {
+          "en": "2018-2019",
+          "ar": "٢٠١٨-٢٠١٩"
+        }
       }
     },
     {
@@ -298,7 +310,10 @@
           "en": ["Madi Partners Consulting Engineering"],
           "ar": ["شركة ماضي و شركاه للاستشارات الهندسية."]
         },
-        "periodsOfServices": "2021"
+        "periodsOfServices": {
+          "en": "2021",
+          "ar": "٢٠٢١"
+        }
       }
     },
     {
@@ -379,7 +394,10 @@
           "en": ["Petra Development & Tourism Region Authority"],
           "ar": ["سلطة إقليم البترا التنموي السياحي"]
         },
-        "periodsOfServices": "2021"
+        "periodsOfServices": {
+          "en": "2021",
+          "ar": "٢٠٢١"
+        }
       }
     },
     {
@@ -444,7 +462,10 @@
           "en": ["Riyadh Municipality", "Consolidated Consultants Group"],
           "ar": ["أمانة منطقة الرياض", "مجموعة اتحاد المستشارين"]
         },
-        "periodsOfServices": "2024-2025"
+        "periodsOfServices": {
+          "en": "2024-2025",
+          "ar": "٢٠٢٤-٢٠٢٥"
+        }
       }
     },
     {
@@ -509,7 +530,10 @@
           "en": ["Riyadh Municipality", "Consolidated Consultants Group"],
           "ar": ["أمانة منطقة الرياض", "مجموعة اتحاد المستشارين "]
         },
-        "periodsOfServices": "2024-2025"
+        "periodsOfServices": {
+          "en": "2024-2025",
+          "ar": "٢٠٢٤-٢٠٢٥"
+        }
       }
     },
     {
@@ -580,7 +604,10 @@
           "en": ["Dar Al Omran", "Riyadh Municipality"],
           "ar": ["أمانة منطقة الرياض", "شركة دار العمران للاستشارات الهندسية"]
         },
-        "periodsOfServices": "2023"
+        "periodsOfServices": {
+          "en": "2023",
+          "ar": "٢٠٢٣"
+        }
       }
     },
     {
@@ -632,7 +659,10 @@
           "en": ["Ministry of Culture", "Heritage Commision"],
           "ar": ["مجموعة اتحاد المستشارين", "هية التراث / وزارة الثقافة"]
         },
-        "periodsOfServices": "2023-2024"
+        "periodsOfServices": {
+          "en": "2023-2024",
+          "ar": "٢٠٢٣-٢٠٢٤"
+        }
       }
     },
     {
@@ -685,7 +715,10 @@
           "en": ["CCG", "Heritage Commission / Ministry of Culture"],
           "ar": ["مجموعة اتحاد المستشارين", "هية التراث / وزارة الثقافة"]
         },
-        "periodsOfServices": "2025"
+        "periodsOfServices": {
+          "en": "2025",
+          "ar": "٢٠٢٥"
+        }
       }
     },
     {
@@ -737,7 +770,10 @@
           "en": ["Al-Madar AlOula", "Riyadh Municipality"],
           "ar": ["المدار الأولى للاستشارات الهندسة", "أمانة منطقة الرياض"]
         },
-        "periodsOfServices": "2019"
+        "periodsOfServices": {
+          "en": "2019",
+          "ar": "٢٠١٩"
+        }
       }
     }
   ]

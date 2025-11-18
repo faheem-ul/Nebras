@@ -73,10 +73,10 @@ const Footer = () => {
       ],
       contacts: {
         email: "info@nebrasconsult.com",
-        saudiPhone: "+۹۶۶ - ۵۰ - ۶۰۹ - ۱۱۶۶",
-        jordanPhone: "++۹۶۲ - ۷ - ۷۶۰۵ - ۵۶۲۶",
+        saudiPhone: "+966 50 609 1166",
+        jordanPhone: "+962 7 7605 5626",
         saudiAddress: "الرياض، المملكة العربية السعودية",
-        jordanAddress: "عمان، الأردن",
+        jordanAddress: "عمان، المملكة الأردنية الهاشمية",
       },
     },
   };
@@ -278,7 +278,7 @@ const Footer = () => {
             <motion.button
               className={`mt-2 relative uppercase md:mt-0 md:absolute font-bold
       md:top-1/2 md:-translate-y-1/2 px-5 py-3 md:px-[20px] md:py-[17.5px]
-      bg-green text-white rounded-full text-sm md:text-[14px] leading-none cursor-pointer
+      bg-green hover:bg-green-900 text-white rounded-full text-sm md:text-[14px] w-full md:w-[116px] h-[48px] border-white border leading-none cursor-pointer
       ${lang === "ar" ? "md:left-[19.8px]" : "md:right-[19.8px]"}`}
               variants={itemVariants}
             >
