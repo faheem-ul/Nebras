@@ -171,7 +171,7 @@ function ProjectsArchive() {
                                 {(() => {
                                     var countryLabels = {
                                         KSA: isArabic ? "السعودية" : "KSA",
-                                        Jordan: isArabic ? "الأردن" : "Jordan",
+                                        Jordan: isArabic ? "المملكة الأردنية الهاشمية" : "Jordan",
                                     };
 
                                     // var cityLabels = {
@@ -256,7 +256,7 @@ function ProjectsArchive() {
                                                             alt=""
                                                             className="w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
                                                         />
-                                                        <span>{isArabic ? "دولة" : "Country"}</span>
+                                                        <span>{isArabic ? "الدولة" : "Country"}</span>
                                                     </span>
 
                                                     <span>
@@ -424,7 +424,7 @@ function ProjectsArchive() {
                     <div className="flex justify-center mt-[45px] md:mt-[64px]">
                         <button
                             onClick={() => setVisibleCount((prev) => prev + projectsPerPage)}
-                            className={`mx-auto md:w-[149px] text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green text-white   leading-none cursor-pointer ${isArabic ? "font-zarid" : ""}`}
+                            className={`mx-auto md:w-[149px] text-[18px] md:text-[24px] px-[15px] py-[14px] md:px-[15px] md:py-[14px] bg-green hover:bg-green-900 text-white   leading-none cursor-pointer ${isArabic ? "font-zarid" : ""}`}
                         >
                             {isArabic ? "عرض المزيد" : "View More"}
                         </button>
