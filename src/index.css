@@ -67,14 +67,14 @@
   font-weight: 400;
 }
 
-
 /* Then define your custom theme tokens (fonts, colors) using @theme syntax or in tailwind.config.js */
 @theme {
   --color-dark-gray: #393c3d;
   --color-green: #016938;
   --color-custom-black: #070808;
 
-  --font-sans: "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-sans:
+    "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 
   --font-alyermook: "AlYermook", sans-serif;
@@ -86,7 +86,6 @@
   --font-ubuntu: "Ubuntu", system-ui, sans-serif;
   --font-zarid: "Zarid", system-ui, serif;
 }
-
 
 /* Outline Text Utility */
 .text-outline-white {
@@ -123,7 +122,12 @@
 }
 
 body {
-  font-family: "Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family:
+    "Ubuntu",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
   font-weight: 400; /* Regular */
 }

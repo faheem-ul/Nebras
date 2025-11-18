@@ -11,12 +11,11 @@ import Insights from "./pages/Insights/Insights";
 import ProjectsArchive from "./pages/OurProjects/ProjectArchive/ProjectsArchive";
 import ProjectSingle from "./pages/OurProjects/ProjectSingle/ProjectSingle";
 import Categories from "./pages/Categories/Categories";
-import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
 /* ---------- Inner app: can safely use useLanguage ---------- */
 function AppContent() {
   const location = useLocation();
-  const { lang } = useLanguage(); // ✅ now inside Provider
 
   // AOS refresh on route change
   useEffect(() => {
@@ -37,15 +36,6 @@ function AppContent() {
     });
   }, []);
 
-  // Update <html> and <body> when language changes
-  useEffect(() => {
-    const isArabic = lang === "ar";
-
-    document.documentElement.lang = isArabic ? "ar" : "en";
-
-    document.body.classList.toggle("font-zarid", isArabic);
-    document.body.classList.toggle("font-sans", !isArabic);
-  }, [lang]);
 
   return (
     <Routes>
