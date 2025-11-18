@@ -29,7 +29,7 @@ const HeroSection = () => {
                     </Text>
                 </div>
                 <div data-aos="fade-up" data-aos-delay="400">
-                    <Text className={`text-[14px] leading-[25px] md:text-[18px] md:leading-[27px] text-white ${isArabic ? "md:text-[36px] md:leading-[39px] max-w-[898px] font-arabic " : "max-w-[665px] md:text-[18px] md:leading-[27px]"}`}>
+                    <Text className={`text-[14px] leading-[25px] md:text-[18px] md:leading-[27px] text-white ${isArabic ? "md:text-[36px] md:leading-[39px] max-w-[898px] font-zarid " : "max-w-[665px] md:text-[18px] md:leading-[27px]"}`}>
                         {isArabic
                             ? "تأسست شركة نبراس تهامة للاستشارات الهندسية والفنية في قلب مدينة عمان بالأردن، وقد نجحت في ترسيخ مكانتها كمزود رائد للاستشارات الهندسية وخدمات التخطيط الحضري."
                             : "Established in the heart of Amman, Jordan, Nebras Tihamah Engineering and Technical Consultancy has carved a niche for itself as a leading provider of engineering consultancy and urban planning services."

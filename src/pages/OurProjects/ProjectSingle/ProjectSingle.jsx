@@ -101,9 +101,9 @@ function ProjectSingle() {
                         </div>
 
                         {/* Clients */}
-                        <div className="w-[calc(50%-12px)] min-w-[216px] md:max-w-[216px]" data-aos="fade-up" data-aos-delay="300">
+                        <div className="w-[calc(50%-12px)] min-w-[183px] md:max-w-[183px]" data-aos="fade-up" data-aos-delay="300">
                             <Text className={` text-[30px] leading-none ] mb-[24px] md:mb-[42px  ${isArabic ? "font-arabic md:text-[50px]" : "md:text-[34px] font-bold"}`}>
-                                {lang === 'ar' ? 'الجهات المستفيدة' : 'Clients'}
+                                {lang === 'ar' ? 'صاحب العمل' : 'Clients'}
                             </Text>
                             <ul className="text-[16px] md:text-[18px] ">
                                 {project.details.clients[lang].map((client, idx) => (
@@ -117,11 +117,11 @@ function ProjectSingle() {
                         {/* Period Of Services */}
                         <div className="w-[calc(50%-12px)] min-w-[182px]  md:max-w-[382px]" data-aos="fade-up" data-aos-delay="400">
                             <Text className={` text-[30px] leading-none ] mb-[24px] md:mb-[42px  ${isArabic ? "font-arabic md:text-[50px]" : "md:text-[34px] font-bold"}`}>
-                                {lang === 'ar' ? 'مدة الخدمة' : 'Period of Services'}
+                                {lang === 'ar' ? 'مدة المشروع' : 'Period of Services'}
                             </Text>
 
                             <Text className={`mb-[16px] md:mb-[27px]   ${isArabic ? "font-zarid md:text-[28px]" : "md:text-[18px] font-medium"}`}>
-                                {project.details.periodsOfServices}
+                                {project.details.periodsOfServices[lang]}
                             </Text>
                         </div>
                     </div>
