@@ -14,40 +14,40 @@ export default function WhatWeDo() {
 
   const services = [
     {
-      en: { title: "Urban Planning & Urban Design", desc: "Crafting functional, aesthetically appealing, and sustainable urban environments." },
-      ar: { title: "التخطيط الحضري والتصميم العمراني", desc: "إعداد بيئات حضرية عملية وجذابة وجمالية ومستدامة." }
+      en: { title: "- Urban Planning & Urban Design: Crafting functional, aesthetically appealing, and sustainable urban environments." },
+      ar: { title: "–  التخطيط والتصميم الحضري: تطوير مخططات شمولية متكاملة تعزز جودة الحياة وتدعم التنمية المستدامة." }
     },
     {
-      en: { title: "Urban Heritage", desc: "Preserving and revitalizing historical and cultural assets." },
-      ar: { title: "التراث الحضري", desc: "الحفاظ على الأصول التاريخية والثقافية وإحياؤها." }
+      en: { title: "- Urban Heritage: Preserving and revitalizing historical and cultural assets." },
+      ar: { title: "–  التراث العمراني: اكتشاف وتسجيل وتوثيق الأصول التاريخية والثقافية." }
     },
     {
-      en: { title: "Project Management", desc: "Ensuring projects are delivered efficiently, on time, and within budget." },
-      ar: { title: "إدارة المشاريع", desc: "ضمان تنفيذ المشاريع بكفاءة وفي الوقت المحدد وضمن الميزانية." }
+      en: { title: "- Project Management: Ensuring projects are delivered efficiently, on time, and within budget." },
+      ar: { title: "–  إدارة المشاريع: ضمان تنفيذ المشاريع بكفاءة، ضمن الوقت والميزانية المحددين" }
     },
     {
-      en: { title: "Engineering Design & Review", desc: "Providing innovative and technically sound design solutions." },
-      ar: { title: "التصميم الهندسي والمراجعة", desc: "تقديم حلول تصميم مبتكرة ومبنية على أسس تقنية سليمة." }
+      en: { title: "- Engineering Design & Review: Providing innovative and technically sound design solutions." },
+      ar: { title: "–  التصاميم الهندسية: تقديم حلول تصميمية مبتكرة ومبنية على أسس فنية." }
     },
     {
-      en: { title: "Infrastructure Engineering", desc: "Developing roads, bridges, tunnels, and other critical infrastructure." },
-      ar: { title: "الهندسة التحتية", desc: "تطوير الطرق والجسور والأنفاق وغيرها من البنية التحتية الحيوية." }
+      en: { title: "- Infrastructure Engineering: Developing roads, bridges, tunnels, and other critical infrastructure." },
+      ar: { title: "–  هندسة البنية التحتية: تطوير الطرق والجسور والأنفاق وشبكات تصريف مياه الأمطار والبنى التحتية الأخرى." }
     },
     {
-      en: { title: "Transportation & Traffic Studies", desc: "Optimizing mobility, enhancing safety, and managing traffic." },
-      ar: { title: "النقل ودراسات المرور", desc: "تحسين التنقل، تعزيز السلامة، وإدارة حركة المرور." }
+      en: { title: "- Transportation & Traffic Studies: Optimizing mobility, enhancing safety, and managing traffic." },
+      ar: { title: "–  دراسات النقل والمرور: تحسين أداء شبكات الطرق، رفع مستوى السلامة المرورية، إدارة الازدحام بفعالية." }
     },
     {
-      en: { title: "Quantity Surveying & Field Surveys", desc: "Conducting detailed technical and socio-economic surveys." },
-      ar: { title: "الكيل والمسوح الميدانية", desc: "إجراء مسوح تقنية واجتماعية واقتصادية مفصلة." }
+      en: { title: "- Quantity Surveying & Field Surveys: Conducting detailed technical and socio-economic surveys." },
+      ar: { title: "–  حساب الكميات والمسوحات الميدانية: إعداد دراسات فنية واجتماعية واقتصادية دقيقة." }
     },
     {
-      en: { title: "Laser Scanning", desc: "Leveraging technology for precise measurements and analysis." },
-      ar: { title: "المسح بالليزر", desc: "استخدام التكنولوجيا للحصول على قياسات دقيقة وتحليلات." }
+      en: { title: "- Laser Scanning: Leveraging technology for precise measurements and analysis." },
+      ar: { title: "–  المسح بالليزر: توظيف أحدث التقنيات للحصول على رفع مساحي دقيق." }
     },
     {
-      en: { title: "Administrative Consulting & Governance", desc: "Supporting compliance, strategy, and organizational excellence." },
-      ar: { title: "الاستشارات الإدارية والحوكمة", desc: "دعم الامتثال، الاستراتيجيات، والتميز المؤسسي." }
+      en: { title: "- Administrative Consulting & Governance: Supporting compliance, strategy, and organizational excellence." },
+      ar: { title: "–  الاستشارات الإدارية والحوكمة: دعم الالتزام المؤسسي والاستراتيجيات والتميز التنظيمي." }
     },
   ];
 
@@ -90,36 +90,37 @@ export default function WhatWeDo() {
           <div className="pb-[48px] md:pb-[85px] w-full md:max-w-[786px]" data-aos="fade-up" data-aos-delay="400"
             dir={isArabic ? 'rtl' : 'ltr'}
           >
-            <Text className="mb-[12px] md:mb-[35px]">
+            <Text className="">
               {isArabic
-                ? "تأسست نبراس للاستشارات في قلب عمّان، الأردن، وهي شركة رائدة في مجال الاستشارات الهندسية والفنية مكرسة لبناء مجتمعات مستدامة في جميع أنحاء المنطقة العربية. مع سنوات من الخبرة في البنية التحتية والتخطيط الحضري والتراث المعماري، نقدم حلولاً مبتكرة وموثوقة ومستدامة تلبي احتياجات العصر الحديث."
+                ? "في نبراس كونسلت، نقدم خدمات هندسية واستشارية متكاملة تشمل جميع مراحل دورة حياة المشروع، من التخطيط الأولي إلى التصميم والتنفيذ."
                 : "Established in the heart of Amman, Jordan, Nebras Consult is a leading engineering and technical consultancy dedicated to shaping sustainable communities across the Arab region. With years of experience in infrastructure, urban planning, and architectural heritage, we deliver innovative, reliable, and sustainable solutions that address the needs of the modern era."}
             </Text>
             <Text>
               {isArabic
-                ? "مسترشدين بقيمنا في الابتكار والنزاهة والتميز والاستدامة والتعاون، يعمل فريقنا الماهر من المهندسين والمستشارين بشكل وثيق مع العملاء والشركاء لتحويل التحديات المعقدة إلى نتائج عملية وفعالة. في نبراس للاستشارات، نحن لا نقدم الاستشارات فحسب، بل نبني حلولًا دائمة تخدم المجتمعات والأجيال القادمة."
+                ? "وتستند خبراتنا إلى فهم عميق للجوانب الثقافية والبيئية والفنية في المنطقة."
                 : "Guided by our values of Innovation, Integrity, Excellence, Sustainability, and Collaboration, our highly skilled team of engineers and consultants works closely with clients and partners to transform complex challenges into practical, impactful results. At Nebras Consult, we don’t just consult, we build lasting solutions that serve communities and future generations."}
             </Text>
 
             {/* Expandable Section */}
             {showMore && (
-              <div className="mt-[12px] md:mt-6 space-y-6">
+              <div className="mt-[12px] md:mt-7 space-y-2">
                 <Text>
                   {isArabic
-                    ? "في نبراس للاستشارات، نقدم خدمات هندسية واستشارية شاملة تغطي دورة حياة المشروع كاملة، من التخطيط المفاهيمي إلى التنفيذ والتقييم. خبرتنا متجذرة في فهم عميق للمناظر الثقافية والبيئية والتقنية في المنطقة."
+                    ? ""
                     : "At Nebras Consult, we provide comprehensive engineering and consulting services that span the full project lifecycle, from conceptual planning to execution and evaluation. Our expertise is rooted in a deep understanding of the region’s cultural, environmental, and technical landscape."}
                 </Text>
 
-                <Text className="font-semibold font-logirent">
+                <Text className={`font-semibold  ${isArabic ? " font-zarid text-[36px] leading-[45px]" : "font-ubuntu"
+                  }`}>
                   {isArabic ? "تشمل خدماتنا الأساسية:" : "Our Core Services Include:"}
                 </Text>
 
-                <ul className="space-y-5">
+                <ul className="space-y-2">
                   {services.map((service, index) => (
                     <li key={index} className="flex flex-col ">
                       {/* Heading with icon */}
                       <div className="flex items-center gap-2">
-                        <FaChevronRight className={`w-4 h-4 text-[#016938] ${isArabic ? "transform rotate-180" : ""}`} />
+                        {/* <FaChevronRight className={`w-4 h-4 text-[#016938] ${isArabic ? "transform rotate-180" : ""}`} /> */}
                         <Text>{isArabic ? service.ar.title : service.en.title}</Text>
                       </div>
                       {/* Description */}
@@ -132,7 +133,7 @@ export default function WhatWeDo() {
 
                 <Text className="text-center">
                   {isArabic
-                    ? "من خلال عملنا، تسعى نبراس للاستشارات إلى تقديم حلول مستدامة ومبتكرة وعملية تدفع إلى نجاح العملاء، وتعزز المجتمعات، وتحافظ على البيئة."
+                    ? "من خلال أعمالنا، نسعى في نبراس كونسلت إلى تقديم حلول مستدامة ومبتكرة وعملية تُسهم في نجاح عملائنا، وتعزيز المجتمعات."
                     : "Through our work, Nebras Consult strives to deliver sustainable, innovative, and practical solutions that drive client success, enhance communities, and safeguard the environment."}
                 </Text>
               </div>

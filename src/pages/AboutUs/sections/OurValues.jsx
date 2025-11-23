@@ -26,29 +26,29 @@ const OurValues = () => {
         {
             title: isArabic ? 'النزاهة' : 'INTEGRITY',
             description: isArabic
-                ? 'نتمسك بأعلى معايير الأخلاق والشفافية والمساءلة في جميع مشاريعنا.'
-                : 'We uphold the highest standards of ethics, transparency, and accountability.',
+                ? 'نحن نحافظ على أعلى معايير الأخلاق والشفافية والمساءلة في جميع مشاريعنا.'
+                : 'We uphold the highest standards of ethics, transparency, and accountability in all our projects.',
             hoverBg: integrity
         },
         {
             title: isArabic ? 'التميز' : 'EXCELLENCE',
             description: isArabic
-                ? 'نسعى للتميز في كل ما نقوم به، بتقديم جودة وخدمة استثنائيتين.'
-                : 'We strive for excellence in everything we do, delivering high quality and service.',
+                ? 'نحن نسعى جاهدين لتحقيق التميز في كل ما نقوم به، وتقديم جودة وخدمة استثنائية.'
+                : 'We strive for excellence in everything we do, delivering exceptional quality and service.',
             hoverBg: excelence
         },
         {
             title: isArabic ? 'الاستدامة' : 'SUSTAINABILITY',
             description: isArabic
-                ? 'نحن ملتزمون بالريادة البيئية والمسؤولية الاجتماعية في مشاريعنا وعملياتنا.'
-                : 'We are committed to environmental and social responsibility.',
+                ? 'نحن ملتزمون بالحفاظ على البيئة والمسؤولية الاجتماعية في مشاريعنا وعملياتنا.'
+                : 'We are committed to environmental stewardship and social responsibility in our projects and operations.',
             hoverBg: sustainability
         },
         {
             title: isArabic ? 'التعاون' : 'COLLABORATION',
             description: isArabic
-                ? 'نحن نعزز بيئة عمل تعاونية شاملة حيث يتم تقدير واحترام وجهات النظر المختلفة.'
-                : 'We foster a collaborative and inclusive environment that values all voices.',
+                ? 'نحن نعمل على تعزيز بيئة عمل تعاونية وشاملة حيث يتم تقدير وجهات النظر المتنوعة واحترامها.'
+                : 'We foster a collaborative and inclusive work environment where diverse perspectives are valued and respected.',
             hoverBg: collaboration
         }
     ];
@@ -102,7 +102,7 @@ const OurValues = () => {
                                 <Text className={`text-[18px] leading-[42px] ${isArabic ? 'md:text-[50px] md:leading-[42px] font-arabic' : 'md:text-[30px] md:leading-[42px] font-bold'}`}>{item.title}</Text>
                             </div>
                             <div>
-                                <Text className={` md:text-[18px] text-[16px] md:leading-[24px] ${isArabic ? 'md:text-[30px] md:leading-[30px]' : ''}`}  >{item.description}</Text>
+                                <Text className={` md:text-[18px] font-normal text-[16px] md:leading-[24px] ${isArabic ? 'md:text-[30px] md:leading-[30px] font-zarid' : 'font-ubuntu'}`}  >{item.description}</Text>
                             </div>
                         </div>
                     </div>
