@@ -14,15 +14,15 @@ const MissionVission = () => {
     <section className="w-full  " >
 
       {/* Info */}
-      <div className='bg-[#f7f7f7] py-[20px] md:py-[70px]'>
+      <div className='bg-[#f7f7f7] py-[20px] md:pb-[120px] md:pt-[70px]'>
         <div className="max-w-[991px]  mx-auto px-5" data-aos="fade-up" data-aos-delay="400" dir={isArabic ? 'rtl' : 'ltr'}>
           {/* <Text className="text-base leading-6 md:text-[24px] md:leading-[42px] text-left md:text-center "> */}
           <Text className={` md:text-center ${isArabic ? 'text-right md:text-[30px] md:leading-[46px]' : 'text-left md:text-[24px] md:leading-[40px]'}`}>
             {isArabic
               ? <>
-                بدأت مسيرتنا بتقديم حلول مبتكرة في مجال البنية التحتية والتراث العمراني، مستندين إلى فهم عميق للتراث الثقافي والطبيعي للمنطقة. ومنذ ذلك الحين، توسعنا لتشمل خدماتنا مجالات الاستشارات الهندسية والتقنية وإدارة المشاريع.
+                بدأت رحلتنا بالتركيز على تقديم حلول مبتكرة في مجال البنية التحتية والتراث المعماري، انطلاقًا من فهمنا العميق للتراث الثقافي والطبيعي للمنطقة. ومنذ ذلك الحين، توسعنا في خدماتنا لتشمل الاستشارات الهندسية، وإدارة المشاريع، والاستشارات الفنية.
                 <br /> <br />
-                بفضل خبراتنا المتراكمة وفريقنا المتخصص من المهندسين والاستشاريين ذوي الخبرة الواسعة، تمكنا من تحقيق نجاحات بارزة في العديد من المشاريع الحيوية في المنطقة العربية، مما أكسبنا ثقة عملائنا وشركائنا.
+                بفضل خبراتنا المتراكمة وفريقنا من المهندسين والاستشاريين ذوي المهارات العالية، حققنا نجاحاً ملحوظاً في العديد من المشاريع الحيوية في مختلف أنحاء المنطقة العربية، وكسبنا ثقة عملائنا وشركائنا.
               </>
               : <>
                 Our journey began with a focus on delivering innovative solutions in infrastructure and architectural heritage, rooted in a deep understanding of the region's cultural and natural heritage. Since then, we have expanded our services to encompass engineering consultancy, project management and technical consultancy.
@@ -70,7 +70,7 @@ const MissionVission = () => {
             {/* <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]"> */}
             <Text className={`mb-[24px] md:mb-[78px]  ${isArabic ? "md:text-[30px] md:leading-[40px] font-zarid " : " md:text-[24px] md:leading-[39px] "}`}>
               {isArabic
-                ? 'تتميز نبراس كونسلت برؤية مستقبلية واضحة ورسالة سامية تتمثل في المساهمة في بناء مجتمعات مستدامة من خلال تقديم خدمات استشارية متكاملة تلبي احتياجات العصر.'
+                ? 'تسترشد شركة نبراس للاستشارات برؤية واضحة ورسالة نبيلة وهي المساهمة في بناء مجتمعات مستدامة من خلال تقديم خدمات استشارية متكاملة تلبي احتياجات العصر الحديث.'
                 : ' Nebras Consult is guided by a clear vision and a noble mission: to contribute to the building of sustainable communities by providing integrated consultancy services that meet the needs of the modern era.'
               }
 
@@ -85,7 +85,7 @@ const MissionVission = () => {
             {/* <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]"> */}
             <Text className={`  ${isArabic ? "md:text-[30px] md:leading-[40px] font-zarid " : " md:text-[24px] md:leading-[39px] "}`}>
               {isArabic
-                ? 'أن تكون شركتنا في مقدمة الشركات المتخصصة في مجال الاستشارات الهندسية على المستوى الإقليمي. وسنعمل بمسؤولية تجاه ذلك من خلال تقديم حلولاً مبتكرة وموثوقة تُسهم في تحسين البيئة وبناء المجتمعات.'
+                ? 'تطمح شركتنا إلى أن تكون رائدة إقليمية في مجال الاستشارات الهندسية، ملتزمة بتقديم حلول مبتكرة وموثوقة تساهم في تحسين البيئة وتنمية المجتمع.'
                 : 'Our company aspires to be a regional leader in engineering consulting, committed to delivering innovative and reliable solutions that contribute to environmental improvement and community development.'
               }
             </Text>
@@ -108,7 +108,7 @@ const MissionVission = () => {
             {/* <Text className="text-base leading-6 md:text-[24px] md:leading-[42px]"> */}
             <Text className={`  ${isArabic ? "md:text-[30px] md:leading-[40px] font-zarid " : " md:text-[24px] md:leading-[39px] "}`}>
               {isArabic
-                ? 'نحن نسعى لتقديم حلول مبتكرة ومستدامة تلبي احتياجات عملائنا المتطورة. نؤمن بأن الابتكار المستمر هو مفتاح النجاح، لذلك نعمل دائماً لتطوير حلول فريدة من نوعها تتناسب مع طبيعة كل مشروع. كما نولي أهمية كبيرة للاستدامة، حيث نعمل على دمج الممارسات المستدامة في جميع جوانب عملنا.'
+                ? "نسعى جاهدين لتقديم حلول مبتكرة ومستدامة تلبي احتياجات عملائنا المتغيرة. نؤمن بأن الابتكار المستمر هو مفتاح النجاح، ولذلك نطور حلولاً فريدة مصممة خصيصاً لتلبية  المتطلبات الخاصة بكل مشروع. كما نولي أهمية كبيرة للاستدامة، وندمج ممارسات الاستدامة في جميع جوانب أعمالنا."
                 : 'We strive to provide innovative and sustainable solutions that meet our clients evolving needs. We believe that continuous innovation is the key to success, and therefore we develop unique solutions tailored to the specific requirements of each project. We also place great emphasis on sustainability, integrating sustainable practices into all aspects of our business.'
               }
             </Text>
