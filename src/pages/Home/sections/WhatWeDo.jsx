@@ -90,7 +90,8 @@ export default function WhatWeDo() {
           <div className="pb-[48px] md:pb-[85px] w-full md:max-w-[786px]" data-aos="fade-up" data-aos-delay="400"
             dir={isArabic ? 'rtl' : 'ltr'}
           >
-            <Text className="">
+            <Text className={` ${isArabic ? "" : "mb-[12px]"
+              }`}>
               {isArabic
                 ? "في نبراس كونسلت، نقدم خدمات هندسية واستشارية متكاملة تشمل جميع مراحل دورة حياة المشروع، من التخطيط الأولي إلى التصميم والتنفيذ."
                 : "Established in the heart of Amman, Jordan, Nebras Consult is a leading engineering and technical consultancy dedicated to shaping sustainable communities across the Arab region. With years of experience in infrastructure, urban planning, and architectural heritage, we deliver innovative, reliable, and sustainable solutions that address the needs of the modern era."}
